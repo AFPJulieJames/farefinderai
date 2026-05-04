@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1HYCKVZ48"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-T1HYCKVZ48');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hidden City Flights Explained: How to Save Hundreds on Airfare | FareFinderAI</title>
+<meta name="description" content="Hidden city flights are one of the best-kept secrets in air travel. Learn how hidden city ticketing works, when it's worth it, and which tools like Kiwi.com make it easy to find hidden city fares legally.">
+<link rel="canonical" href="https://farefinderai.com/hidden-city-flights.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --sky:#0EA5E9;
+  --sky-dark:#0284C7;
+  --sky-light:#E0F2FE;
+  --night:#0C1445;
+  --night2:#111827;
+  --sunset:#F97316;
+  --sunset-light:#FED7AA;
+  --white:#FAFEFF;
+  --muted:rgba(12,20,69,0.55);
+  --border:#E2EFF8;
+  --surface:#F0F9FF;
+  --font-display:'Cabinet Grotesk',sans-serif;
+  --font-body:'Cabinet Grotesk',sans-serif;
+  --font-serif:'Lora',Georgia,serif;
+}
+
+body{font-family:var(--font-body);background:var(--white);color:var(--night);line-height:1.65;font-size:16px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-size:1.2rem;font-weight:900;color:var(--night);display:flex;align-items:center;gap:0.4rem;letter-spacing:-0.02em}
+.nav-logo-icon{color:var(--sky)}
+.nav-trust{font-size:0.75rem;color:var(--muted);display:flex;align-items:center;gap:0.4rem}
+.nav-trust-dot{width:6px;height:6px;background:#22C55E;border-radius:50%;display:inline-block}
+.nav-cta{background:var(--sky);color:white;padding:0.5rem 1.25rem;border-radius:100px;font-size:0.875rem;font-weight:700;cursor:pointer;border:none;transition:background 0.2s}
+.nav-cta:hover{background:var(--sky-dark)}
+
+/* HERO */
+.hero{background:var(--night);color:white;padding:6rem 2rem 4rem;position:relative;overflow:hidden}
+.hero-clouds{position:absolute;inset:0;background-image:radial-gradient(ellipse 800px 400px at 50% 120%,rgba(14,165,233,0.15) 0%,transparent 70%);z-index:0}
+.hero-stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 20% 30%,rgba(255,255,255,0.4) 0%,transparent 100%),radial-gradient(1px 1px at 80% 20%,rgba(255,255,255,0.3) 0%,transparent 100%),radial-gradient(1px 1px at 60% 60%,rgba(255,255,255,0.2) 0%,transparent 100%),radial-gradient(1px 1px at 40% 80%,rgba(255,255,255,0.3) 0%,transparent 100%),radial-gradient(2px 2px at 90% 50%,rgba(255,255,255,0.2) 0%,transparent 100%);z-index:0}
+.hero-content{position:relative;z-index:1;max-width:900px;margin:0 auto;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);color:#7DD3FC;font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:2rem}
+.hero-badge-num{background:var(--sky);color:white;padding:0.15rem 0.5rem;border-radius:100px;font-size:0.7rem}
+.hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:1;letter-spacing:-0.03em;margin-bottom:1.5rem;color:white}
+.hero h1 .sky{color:#7DD3FC}
+.hero h1 .sunset{color:var(--sunset)}
+.hero-sub{font-family:var(--font-serif);font-size:1.2rem;font-style:italic;color:rgba(255,255,255,0.65);max-width:580px;margin:0 auto 3rem;line-height:1.7}
+.hero-plane{text-align:center;font-size:4rem;margin-bottom:-1rem;position:relative;z-index:1;animation:float 3s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(2deg)}}
+
+/* STATS BAR */
+.stats-bar{background:var(--sky);padding:1rem 2rem}
+.stats-inner{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;max-width:900px;margin:0 auto}
+.stat{text-align:center;color:white}
+.stat-num{font-size:1.5rem;font-weight:900;letter-spacing:-0.02em;display:block}
+.stat-label{font-size:0.7rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;opacity:0.85}
+
+/* SECTIONS */
+.section{padding:5rem 2rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.eyebrow{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);margin-bottom:0.75rem}
+.title{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:900;letter-spacing:-0.03em;color:var(--night);margin-bottom:1.25rem;line-height:1.1}
+.title em{font-family:var(--font-serif);font-style:italic;color:var(--sky);font-weight:400}
+.subtitle{font-size:1.05rem;color:var(--muted);max-width:560px;line-height:1.75;margin-bottom:3rem}
+
+/* EXPLAINER */
+.explainer{background:var(--surface)}
+.explainer-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;max-width:1100px;margin:0 auto}
+@media(max-width:768px){.explainer-grid{grid-template-columns:1fr}}
+.explainer-prose h2{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:900;letter-spacing:-0.03em;line-height:1.15;margin-bottom:1.25rem;color:var(--night)}
+.explainer-prose h2 em{font-family:var(--font-serif);font-style:italic;color:var(--sky);font-weight:400}
+.explainer-prose p{font-size:0.975rem;color:var(--muted);line-height:1.8;margin-bottom:1.25rem}
+.explainer-prose strong{color:var(--night);font-weight:700}
+.example-box{background:white;border:1.5px solid var(--border);border-radius:16px;padding:2rem}
+.example-box-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);margin-bottom:1rem}
+.example-box h3{font-size:1.1rem;font-weight:800;color:var(--night);margin-bottom:1.25rem;letter-spacing:-0.02em}
+.route-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.875rem;padding:0.875rem 1rem;border-radius:10px;border:1px solid var(--border)}
+.route-row.highlight{background:var(--sky-light);border-color:var(--sky)}
+.route-city{font-size:0.875rem;font-weight:700;color:var(--night);min-width:90px}
+.route-arrow{color:var(--sky);font-size:0.875rem;flex-shrink:0}
+.route-price{font-size:1rem;font-weight:900;color:var(--night);margin-left:auto}
+.route-price.savings{color:#16A34A}
+.route-tag{font-size:0.65rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:var(--sky);color:white;padding:0.2rem 0.5rem;border-radius:100px;margin-left:auto}
+.route-tag.green{background:#16A34A}
+.example-note{font-size:0.8rem;color:var(--muted);margin-top:1rem;font-style:italic;line-height:1.6}
+
+/* HOW-IT-WORKS STEPS */
+.how{background:white}
+.how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
+.how-card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:2rem;transition:border-color 0.2s,transform 0.2s}
+.how-card:hover{border-color:var(--sky);transform:translateY(-3px)}
+.how-icon{font-size:2rem;margin-bottom:1rem;display:block}
+.how-step{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);margin-bottom:0.4rem}
+.how-card h3{font-size:1.05rem;font-weight:800;color:var(--night);margin-bottom:0.6rem;letter-spacing:-0.01em}
+.how-card p{font-size:0.875rem;color:var(--muted);line-height:1.65}
+
+/* RULES */
+.rules{background:var(--night);color:white;padding:5rem 2rem}
+.rules-inner{max-width:900px;margin:0 auto}
+.rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-top:2.5rem}
+.rule-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:1.75rem}
+.rule-icon{font-size:1.5rem;margin-bottom:0.75rem;display:block}
+.rule-card h3{font-size:1rem;font-weight:800;color:white;margin-bottom:0.5rem}
+.rule-card p{font-size:0.875rem;color:rgba(255,255,255,0.6);line-height:1.65}
+.rule-card.do{border-color:rgba(34,197,94,0.3);background:rgba(34,197,94,0.05)}
+.rule-card.dont{border-color:rgba(239,68,68,0.3);background:rgba(239,68,68,0.05)}
+.rule-label{font-size:0.65rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem}
+.rule-label.do{color:#4ADE80}
+.rule-label.dont{color:#F87171}
+
+/* TOOL HIGHLIGHT */
+.tool-highlight{background:var(--surface);padding:5rem 2rem}
+.tool-highlight-inner{max-width:900px;margin:0 auto}
+.tool-card-featured{border:1.5px solid var(--border);border-radius:20px;padding:2.5rem;background:white;position:relative;overflow:hidden}
+.tool-card-featured::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:#FF6B35}
+.tool-badge{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--sky);margin-bottom:0.5rem}
+.tool-card-featured h3{font-size:1.5rem;font-weight:900;color:var(--night);margin-bottom:0.75rem;letter-spacing:-0.02em}
+.tool-card-featured p{font-size:0.975rem;color:var(--muted);line-height:1.8;margin-bottom:1.5rem}
+.tool-features{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.75rem}
+.tool-feature{background:var(--surface);border:1px solid var(--border);color:var(--night);padding:0.35rem 0.875rem;border-radius:100px;font-size:0.8rem;font-weight:500}
+.tool-link{display:inline-flex;align-items:center;gap:0.4rem;background:var(--night);color:white;padding:0.75rem 1.75rem;border-radius:100px;font-size:0.925rem;font-weight:700;transition:background 0.2s}
+.tool-link:hover{background:var(--sky)}
+
+/* TIPS */
+.tips{background:white}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;max-width:1100px;margin:0 auto}
+.tip-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.75rem}
+.tip-num{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);margin-bottom:0.5rem}
+.tip-card h3{font-size:1rem;font-weight:800;color:var(--night);margin-bottom:0.5rem;letter-spacing:-0.01em}
+.tip-card p{font-size:0.875rem;color:var(--muted);line-height:1.65}
+
+/* FAQ */
+.faq{background:var(--surface);padding:5rem 2rem}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem}
+.faq-item{background:white;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.faq-q{font-size:1rem;font-weight:800;color:var(--night);padding:1.25rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;letter-spacing:-0.01em}
+.faq-q::after{content:'＋';font-size:1.1rem;color:var(--sky);flex-shrink:0;transition:transform 0.2s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{font-size:0.9rem;color:var(--muted);line-height:1.75;padding:0 1.5rem 1.25rem;display:none}
+.faq-item.open .faq-a{display:block}
+
+/* CTA STRIP */
+.cta-strip{background:var(--sky);padding:4rem 2rem;text-align:center}
+.cta-strip h2{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:900;color:white;letter-spacing:-0.03em;margin-bottom:0.75rem;line-height:1.15}
+.cta-strip h2 em{font-family:var(--font-serif);font-style:italic;font-weight:400}
+.cta-strip p{font-size:1rem;color:rgba(255,255,255,0.8);margin-bottom:2rem}
+.cta-btn{display:inline-flex;align-items:center;gap:0.5rem;background:white;color:var(--sky-dark);padding:0.875rem 2rem;border-radius:100px;font-size:1rem;font-weight:800;transition:background 0.2s;letter-spacing:-0.01em}
+.cta-btn:hover{background:var(--sky-light)}
+
+/* DISCLOSURE */
+.disclosure{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center}
+.disclosure p{font-size:0.8rem;color:var(--muted);max-width:700px;margin:0 auto;line-height:1.6}
+
+/* FOOTER */
+footer{background:var(--night);color:rgba(255,255,255,0.45);padding:2rem;text-align:center}
+footer p{font-size:0.8rem}
+footer a{color:rgba(255,255,255,0.45);margin:0 0.5rem;transition:color 0.2s}
+footer a:hover{color:var(--sky)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{animation:fadeUp 0.5s ease forwards}
+.hero h1{animation:fadeUp 0.6s 0.1s ease both}
+.hero-sub{animation:fadeUp 0.6s 0.2s ease both}
+
+@media(max-width:600px){
+  nav{padding:0.75rem 1rem}
+  .nav-trust{display:none}
+  .stats-inner{gap:1.5rem}
+  .hero{padding:4rem 1rem 2rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><span class="nav-logo-icon">✈</span> FareFinderAI</a>
+  <div class="nav-trust"><span class="nav-trust-dot"></span> 5,000+ travelers flying smarter</div>
+  <a href="/" class="nav-cta">Find Cheap Flights</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-clouds"></div>
+  <div class="hero-stars"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="hero-badge-num">GUIDE</span> The airline pricing loophole</div>
+    <h1>Hidden City <span class="sky">Flights</span> — <br>Pay Less, <span class="sunset">Fly Smarter</span></h1>
+    <p class="hero-sub">Hidden city ticketing is one of the best-kept secrets in air travel. Here's exactly how it works, when to use it, and which tools find these fares automatically.</p>
+  </div>
+  <div class="hero-plane">✈️</div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-num">$200–$500</span><span class="stat-label">Typical hidden city savings</span></div>
+    <div class="stat"><span class="stat-num">Kiwi.com</span><span class="stat-label">Best tool for hidden city fares</span></div>
+    <div class="stat"><span class="stat-num">5,000+</span><span class="stat-label">Travelers using FareFinderAI</span></div>
+    <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Always free to search</span></div>
+  </div>
+</div>
+
+<!-- WHAT IS IT -->
+<section class="section explainer">
+  <div class="explainer-grid">
+    <div class="explainer-prose">
+      <p class="eyebrow">What is hidden city ticketing?</p>
+      <h2>When Flying <em>Further</em> Actually Costs Less</h2>
+      <p>Hidden city ticketing is a flight booking strategy where you book a ticket to a <strong>connecting city as your final destination</strong> — instead of flying all the way to where the ticket says you're going.</p>
+      <p>It sounds counterintuitive, but airlines price routes in ways that create these gaps. A direct flight from New York to Dallas might cost $350, while a connecting flight from New York to Phoenix — with a layover in Dallas — costs only $180. If Dallas is where you actually want to go, you simply get off at the layover and never board the second flight.</p>
+      <p>The airline doesn't benefit from telling you this. Search engines like Google Flights won't show you it. But the savings are very real — often $200 to $500 per ticket on popular domestic routes.</p>
+      <p><strong>The key rule:</strong> Hidden city ticketing only works on one-way tickets. Never check a bag (it'll go to the final destination), and never do this on a return leg of a round trip.</p>
+    </div>
+    <div>
+      <div class="example-box">
+        <div class="example-box-label">Live Example</div>
+        <h3>New York → Dallas (The Hidden City Way)</h3>
+        <div class="route-row">
+          <div class="route-city">New York</div>
+          <div class="route-arrow">✈ direct →</div>
+          <div class="route-city">Dallas</div>
+          <div class="route-price">$349</div>
+        </div>
+        <div style="text-align:center;font-size:0.8rem;color:var(--muted);padding:0.5rem 0">vs.</div>
+        <div class="route-row highlight">
+          <div>
+            <div style="font-size:0.875rem;font-weight:700;color:var(--night)">New York → <span style="color:var(--sky)">Dallas*</span> → Phoenix</div>
+            <div style="font-size:0.75rem;color:var(--muted);margin-top:0.2rem">*Get off here. Don't board Phoenix flight.</div>
+          </div>
+          <div class="route-price savings" style="margin-left:auto">$159</div>
+        </div>
+        <div class="route-row" style="border:none;background:var(--surface);justify-content:space-between">
+          <div style="font-size:0.875rem;font-weight:800;color:var(--night)">You save</div>
+          <div style="font-size:1.1rem;font-weight:900;color:#16A34A">$190 per ticket</div>
+        </div>
+        <p class="example-note">Prices are illustrative. Actual savings vary by route and date. Kiwi.com finds these combinations automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS STEPS -->
+<section class="section how">
+  <div class="section-inner">
+    <p class="eyebrow">Step by step</p>
+    <h2 class="title">How to Book a <em>Hidden City Flight</em></h2>
+    <p class="subtitle">The process is simpler than it sounds. Here's exactly what to do.</p>
+    <div class="how-grid">
+      <div class="how-card">
+        <span class="how-icon">🔍</span>
+        <div class="how-step">Step 01</div>
+        <h3>Search on Kiwi.com</h3>
+        <p>Go to Kiwi.com and search for your actual destination. Kiwi automatically identifies routes where a connecting itinerary through your city costs less than a direct flight to it.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-icon">🎯</span>
+        <div class="how-step">Step 02</div>
+        <h3>Look for Layover Deals</h3>
+        <p>Filter results to find connecting flights with a layover in your real destination. The final leg is the one you'll skip — so make sure the layover city is where you actually want to end up.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-icon">🧳</span>
+        <div class="how-step">Step 03</div>
+        <h3>Only Bring Carry-On Luggage</h3>
+        <p>This is critical. Never check a bag on a hidden city ticket — checked bags travel to the final ticketed destination, not your layover city. Pack everything in a carry-on and personal item only.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-icon">🎫</span>
+        <div class="how-step">Step 04</div>
+        <h3>Book as One-Way Only</h3>
+        <p>Hidden city ticketing only works on one-way bookings. If you use it on the outbound leg of a round trip, the airline may cancel your return flight. Always book one-way for any hidden city fare.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-icon">🚪</span>
+        <div class="how-step">Step 05</div>
+        <h3>Exit at the Layover</h3>
+        <p>When you land at your real destination (the layover city), simply collect your carry-on and walk out of the airport. You don't board the connecting flight to the final ticketed destination.</p>
+      </div>
+      <div class="how-card">
+        <span class="how-icon">💰</span>
+        <div class="how-step">Step 06</div>
+        <h3>Keep the Savings</h3>
+        <p>That's it. The fare difference is yours to keep. On popular domestic routes, hidden city ticketing regularly saves travelers $100 to $500 per ticket — sometimes more on international routes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RULES: DO AND DON'T -->
+<section class="rules">
+  <div class="rules-inner">
+    <p class="eyebrow" style="color:#7DD3FC">Rules of the game</p>
+    <h2 class="title" style="color:white">Hidden City Flights: <em>What to Do and Avoid</em></h2>
+    <p style="font-size:1rem;color:rgba(255,255,255,0.6);max-width:560px;line-height:1.75">Hidden city ticketing is legal for passengers — but there are rules that determine whether it works in your favor. Know these before you book.</p>
+    <div class="rules-grid">
+      <div class="rule-card do">
+        <div class="rule-label do">✓ Do This</div>
+        <span class="rule-icon">🧳</span>
+        <h3>Carry-On Only</h3>
+        <p>Only bring bags you can take on the plane with you. Checked luggage travels to the final ticketed city — not your layover city.</p>
+      </div>
+      <div class="rule-card do">
+        <div class="rule-label do">✓ Do This</div>
+        <span class="rule-icon">🎫</span>
+        <h3>Book One-Way</h3>
+        <p>Always book hidden city fares as one-way tickets. Round trips risk automatic cancellation of your return if you skip the final leg.</p>
+      </div>
+      <div class="rule-card do">
+        <div class="rule-label do">✓ Do This</div>
+        <span class="rule-icon">🔁</span>
+        <h3>Use Kiwi.com</h3>
+        <p>Kiwi's virtual interlining engine finds hidden city combinations automatically — saving you hours of manual searching across booking sites.</p>
+      </div>
+      <div class="rule-card dont">
+        <div class="rule-label dont">✗ Avoid This</div>
+        <span class="rule-icon">🏆</span>
+        <h3>Don't Use Frequent Flyer Miles</h3>
+        <p>If you're flying on redeemed miles, no-showing on the final leg can result in points being clawed back or your status downgraded.</p>
+      </div>
+      <div class="rule-card dont">
+        <div class="rule-label dont">✗ Avoid This</div>
+        <span class="rule-icon">🔄</span>
+        <h3>Don't Do It on Return Legs</h3>
+        <p>Skipping the outbound final leg can cause the airline to cancel your return flight entirely. One-way only, every time.</p>
+      </div>
+      <div class="rule-card dont">
+        <div class="rule-label dont">✗ Avoid This</div>
+        <span class="rule-icon">📋</span>
+        <h3>Don't Over-Do It on One Carrier</h3>
+        <p>Repeatedly using this on the same airline can flag your account. Mix up airlines and routes, and don't make it a pattern on a single carrier.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KIWI TOOL HIGHLIGHT -->
+<section class="tool-highlight">
+  <div class="tool-highlight-inner">
+    <p class="eyebrow">Best tool for hidden city flights</p>
+    <h2 class="title">Why <em>Kiwi.com</em> Is the Go-To Search Engine</h2>
+    <p class="subtitle">Kiwi is the only major flight search engine built specifically to find these kinds of combinations — automatically and at scale.</p>
+    <div class="tool-card-featured">
+      <div class="tool-badge">Best for Hidden City and Flexible Routes</div>
+      <h3>Kiwi.com</h3>
+      <p>Kiwi.com pioneered a technology called <strong>virtual interlining</strong> — connecting flights from airlines that don't normally codeshare or sell tickets together. This opens up a completely different universe of routes and combinations that traditional search engines like Google Flights, Kayak, and Expedia simply cannot find.</p>
+      <p>When you search on Kiwi, it automatically evaluates thousands of route combinations — including connecting itineraries where your layover city is cheaper to "stop through" than to fly to directly. It does the hidden city math for you, surfaces the best combinations, and lets you book in one place. For travelers with any flexibility on routes, connections, or dates, Kiwi consistently beats every other flight search tool available.</p>
+      <div class="tool-features">
+        <span class="tool-feature">🔀 Virtual interlining technology</span>
+        <span class="tool-feature">🗺 Interactive route map</span>
+        <span class="tool-feature">📅 Flexible date search</span>
+        <span class="tool-feature">✈ Multi-airline combinations</span>
+        <span class="tool-feature">💸 Kiwi Guarantee protection</span>
+      </div>
+      <a href="https://tp.media/r?marker=624395&trs=408984&p=3791&u=https%3A%2F%2Fwww.kiwi.com&campaign_id=100" target="_blank" rel="noopener" class="tool-link">Find Hidden City Fares on Kiwi →</a>
+    </div>
+  </div>
+</section>
+
+<!-- AVIASALES WIDGET -->
+<section style="background:var(--night);padding:4rem 2rem;border-top:1px solid rgba(255,255,255,0.08)">
+  <div style="max-width:1000px;margin:0 auto;text-align:center">
+    <p class="eyebrow" style="color:#7DD3FC">Search flights now</p>
+    <h2 class="title" style="color:white;margin-bottom:0.5rem">Find the <em>Cheapest Fares</em> Right Now</h2>
+    <p style="font-size:1rem;color:rgba(255,255,255,0.6);margin-bottom:2rem;max-width:540px;margin-left:auto;margin-right:auto">Compare hundreds of airlines and agencies in one search — no fees, no markups.</p>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem;">
+      <script async src="https://tpwgts.com/content?trs=408984&shmarker=624395&locale=en&curr=USD&default_origin=PHX&powered_by=true&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
+    </div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section class="section tips">
+  <div class="section-inner">
+    <p class="eyebrow">Pro tips</p>
+    <h2 class="title">Make Hidden City Ticketing <em>Work Every Time</em></h2>
+    <p class="subtitle" style="margin-bottom:2.5rem">A few habits that experienced hidden city flyers swear by.</p>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">Tip 01</div>
+        <h3>Search Early and Set Price Alerts</h3>
+        <p>Hidden city fare gaps are most pronounced 3–6 weeks before departure. Search early and use Kiwi's price alerts to track when a good combination appears for your route.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 02</div>
+        <h3>Hub Cities Create the Most Opportunities</h3>
+        <p>Major airline hubs — Dallas, Chicago, Atlanta, Phoenix, Denver — show up as layover cities most often. If you live near or want to visit a hub, hidden city fares are especially common.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 03</div>
+        <h3>Check In Online, Never at the Gate</h3>
+        <p>Always check in online and go straight to your gate. Gate agents can see your itinerary and may ask questions if you're at the gate for just the first segment.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 04</div>
+        <h3>Use a Personal Email and Different Card</h3>
+        <p>If you're using hidden city fares regularly, some travelers use a non-loyalty account for booking. This keeps your status account clean and avoids any flag from repeated no-shows on one carrier.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 05</div>
+        <h3>Combine With Mistake Fares for Max Savings</h3>
+        <p>Hidden city fares and mistake fares sometimes overlap — an already-mispriced ticket that also has a cheaper connection. FareFinderAI covers both strategies so you never miss a deal.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 06</div>
+        <h3>Book Travel Insurance Separately</h3>
+        <p>Since hidden city bookings are non-standard, always add EKTA travel insurance to cover the trip. Policies issue in minutes and are accepted by embassies worldwide for visa applications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="faq-inner">
+    <p class="eyebrow">Common questions</p>
+    <h2 class="title">Hidden City Flights — <em>FAQ</em></h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Is hidden city ticketing legal?</div>
+        <div class="faq-a">Yes — hidden city ticketing is legal for passengers. It does violate most airlines' terms of service, meaning they can theoretically revoke your frequent flyer miles or close your account if you do it repeatedly and are flagged. But it carries no legal risk for travelers. The practice is entirely on the passenger side: you bought a ticket, you flew a portion of the route. Doing it occasionally and sensibly (no checked bags, no miles redemptions, booking one-way) carries minimal practical risk.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Will the airline cancel my seat if I don't show up for the final leg?</div>
+        <div class="faq-a">On a one-way ticket, no — the journey is complete once you've used the leg you needed. The risk of automatic cancellation applies to round trips: if you no-show on the final outbound segment, some airlines will cancel your return flight. This is exactly why hidden city ticketing must always be done on one-way bookings only.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I check a bag on a hidden city flight?</div>
+        <div class="faq-a">No. Checked bags are automatically routed to the final ticketed destination — not the layover city where you exit. If you check a bag on a hidden city ticket, it will continue to the final city without you. Always travel carry-on only when using this strategy.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does Kiwi.com find hidden city flights automatically?</div>
+        <div class="faq-a">Yes. Kiwi's virtual interlining technology automatically evaluates thousands of route combinations — including itineraries where the layover city is cheaper to route through than to fly to directly. It surfaces these combinations alongside regular results, so you can compare and choose. It's the most powerful tool available for finding hidden city fares without manually piecing together routes yourself.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How much can I realistically save with hidden city flights?</div>
+        <div class="faq-a">Savings vary significantly by route, date, and timing. On popular domestic routes in the US — especially those connecting through major hubs — hidden city fares regularly save $100 to $400 per ticket. On some international routes with hub connections, the gap can be even larger. The savings are most pronounced on routes where direct flights are expensive because of limited competition, but connecting itineraries involve more competitive markets.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What's the difference between hidden city flights and mistake fares?</div>
+        <div class="faq-a">Hidden city ticketing is a deliberate routing strategy — you're booking a ticket to a farther destination and exiting at the layover. Mistake fares are pricing errors by airlines or booking agencies where a flight is accidentally listed far below its intended price. Both strategies can save significant money, but they work differently. FareFinderAI covers both — see our <a href="/mistake-fares.html" style="color:var(--sky);font-weight:700">Mistake Fares guide</a> for the full breakdown.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <h2>Ready to Find a <em>Hidden City Deal?</em></h2>
+  <p>FareFinderAI combines the best flight search tools — including Kiwi.com — so you find cheaper flights faster.</p>
+  <a href="/" class="cta-btn">✈ Search Flights on FareFinderAI</a>
+</section>
+
+<!-- DISCLOSURE -->
+<div class="disclosure">
+  <p>FareFinderAI contains affiliate links. We may earn a commission if you book through our links at no extra cost to you. All tools featured are independently selected based on our testing and research.</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>This site contains affiliate links. We may earn a commission if you sign up through our links at no extra cost to you.</p>
+  <p style="margin-top:0.5rem">&copy; 2026 FareFinderAI.com by Automated Income Tools LLC. All rights reserved.
+  <a href="mailto:hello@farefinderai.com">Contact</a>
+  <a href="https://automatedincometools.com/pages/privacy-policy">Privacy Policy</a>
+  <a href="https://automatedincometools.com/pages/terms-of-use">Terms of Use</a>
+  <a href="https://automatedincometools.com/pages/affiliate-disclosure">Affiliate Disclosure</a>
+  <a href="https://automatedincometools.com">Automated Income Tools</a></p>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
