@@ -15,6 +15,17 @@
 <title>FareFinderAI -- Find Cheaper Flights with AI | Aviasales, Kiwi, Expedia, Trip.com & Travel Insurance</title>
 <meta name="description" content="FareFinderAI helps you find cheaper flights and plan smarter trips using AI. Compare Aviasales, Kiwi hidden city fares, Expedia flight and hotel bundles, Trip.com international routes, and EKTA travel insurance. Over 5,000 travelers already use FareFinderAI to fly smarter and spend less.">
 <meta name="keywords" content="find cheaper flights AI, hidden city fares, mistake fares, cheap flights hack, WayAway cashback flights, Kiwi hidden city flights, Going flight deals, cheap flights tool, AI flight search, how to find cheap flights, flight deals AI, farefinderai, fare finder ai, budget travel flights">
+
+<!-- Open Graph / Pinterest meta tags -->
+<meta property="og:title" content="FareFinderAI -- Find Cheaper Flights with AI">
+<meta property="og:description" content="Hidden city fares, mistake fares, cashback flights, and flexible routes. The tools the airlines don't want you to know about. 5,000+ travelers already flying smarter.">
+<meta property="og:image" content="https://farefinderai.com/og-image.jpg">
+<meta property="og:url" content="https://farefinderai.com">
+<meta property="og:type" content="website">
+
+<!-- Pinterest verification (add your Pinterest verification code here if you have one) -->
+<!-- <meta name="p:domain_verify" content="YOUR_VERIFICATION_CODE"/> -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -174,15 +185,100 @@ footer a:hover{color:var(--sky)}
 .hero-sub{animation:fadeUp 0.6s 0.2s ease both}
 .hero-tools{animation:fadeUp 0.6s 0.3s ease both}
 
+/* PINTEREST FLOATING BUTTON */
+.pinterest-float{
+  position:fixed;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0.35rem;
+  text-decoration:none;
+}
+.pinterest-float-btn{
+  background:#E60023;
+  color:white;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 16px rgba(230,0,35,0.4);
+  transition:transform 0.2s, box-shadow 0.2s;
+  border:none;
+  cursor:pointer;
+}
+.pinterest-float-btn:hover{
+  transform:scale(1.12);
+  box-shadow:0 6px 24px rgba(230,0,35,0.55);
+}
+.pinterest-float-btn svg{
+  width:22px;
+  height:22px;
+  fill:white;
+}
+.pinterest-float-label{
+  font-size:0.6rem;
+  font-weight:700;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+  color:#E60023;
+  background:white;
+  padding:0.2rem 0.5rem;
+  border-radius:100px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.12);
+  white-space:nowrap;
+  opacity:0;
+  transform:translateX(8px);
+  transition:opacity 0.2s, transform 0.2s;
+}
+.pinterest-float:hover .pinterest-float-label{
+  opacity:1;
+  transform:translateX(0);
+}
+
 @media(max-width:600px){
   nav{padding:0.75rem 1rem}
   .nav-trust{display:none}
   .stats-inner{gap:1.5rem}
   .hero{padding:4rem 1rem 0}
+  /* Move Pinterest button to bottom-right on mobile so it doesn't overlap content */
+  .pinterest-float{
+    top:auto;
+    bottom:24px;
+    right:16px;
+    transform:none;
+    flex-direction:row;
+  }
+  .pinterest-float-label{
+    opacity:1;
+    transform:none;
+    font-size:0.65rem;
+  }
 }
 </style>
 </head>
 <body>
+
+<!-- PINTEREST FLOATING SAVE BUTTON -->
+<a class="pinterest-float"
+   href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Ffarefinderai.com&media=https%3A%2F%2Ffarefinderai.com%2Fog-image.jpg&description=Find%20cheaper%20flights%20with%20AI%20%E2%80%94%20hidden%20city%20fares%2C%20mistake%20fares%2C%20cashback%20flights%20and%20more.%205%2C000%2B%20travelers%20already%20flying%20smarter."
+   data-pin-do="none"
+   target="_blank"
+   rel="noopener"
+   aria-label="Save FareFinderAI to Pinterest">
+  <div class="pinterest-float-btn">
+    <!-- Pinterest P logo -->
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+    </svg>
+  </div>
+  <span class="pinterest-float-label">Save</span>
+</a>
 
 <nav>
   <div class="nav-logo"><span class="nav-logo-icon">✈</span> FareFinderAI</div>
@@ -426,7 +522,8 @@ footer a:hover{color:var(--sky)}
   <a href="https://automatedincometools.com">Automated Income Tools</a></p>
 </footer>
 
-<script></script>
+<!-- Pinterest JS SDK — loads once, enables Save buttons and cookie tagging -->
+<script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
 </body>
 </html>
