@@ -9,22 +9,61 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-T1HYCKVZ48');
-</script>
-<!-- Travelpayouts Drive removed -- tracking handled by widget embed codes and tp.media links -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FareFinderAI -- Find Cheaper Flights with AI | Aviasales, Kiwi, Expedia, Trip.com & Travel Insurance</title>
-<meta name="description" content="FareFinderAI helps you find cheaper flights and plan smarter trips using AI. Compare Aviasales, Kiwi hidden city fares, Expedia flight and hotel bundles, Trip.com international routes, and EKTA travel insurance. Over 5,000 travelers already use FareFinderAI to fly smarter and spend less.">
-<meta name="keywords" content="find cheaper flights AI, hidden city fares, mistake fares, cheap flights hack, WayAway cashback flights, Kiwi hidden city flights, Going flight deals, cheap flights tool, AI flight search, how to find cheap flights, flight deals AI, farefinderai, fare finder ai, budget travel flights">
 
-<!-- Open Graph / Pinterest meta tags -->
-<meta property="og:title" content="FareFinderAI -- Find Cheaper Flights with AI">
-<meta property="og:description" content="Hidden city fares, mistake fares, cashback flights, and flexible routes. The tools the airlines don't want you to know about. 5,000+ travelers already flying smarter.">
+  // Outbound affiliate click tracking - fires a GA4 event with the program name + label
+  // so you can finally see WHICH links get clicked in Reports > Events.
+  function trackAffiliate(program, placement){
+    try{
+      gtag('event', 'affiliate_click', {
+        'affiliate_program': program,
+        'placement': placement || 'unknown'
+      });
+    }catch(e){}
+    return true;
+  }
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO: long-tail, buying-intent title + meta ============ -->
+<title>Cheap Flights to Anywhere - AI Flight Finder | FareFinderAI</title>
+<meta name="description" content="Find cheap flights with an AI flight finder. Compare hidden city fares, mistake fares, and flexible routes across Aviasales, Kiwi, Trip.com and Expedia. Search cheap flights to Cancún, Tokyo, London, Hawaii and worldwide - free.">
+<meta name="keywords" content="ai flight finder, cheap flights finder, cheap flights to anywhere, hidden city flights, mistake fares, cheap flights to cancun, cheap flights to tokyo, cheap flights to europe, find cheap flights ai, skiplagging, flexible date flight search, cheap international flights">
+<link rel="canonical" href="https://farefinderai.com">
+
+<!-- Open Graph / Pinterest -->
+<meta property="og:title" content="Cheap Flights to Anywhere - AI Flight Finder | FareFinderAI">
+<meta property="og:description" content="Hidden city fares, mistake fares, cashback flights, and flexible routes - the tools the airlines don't advertise. Search free.">
 <meta property="og:image" content="https://farefinderai.com/og-image.jpg">
 <meta property="og:url" content="https://farefinderai.com">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 
-<!-- Pinterest verification (add your Pinterest verification code here if you have one) -->
-<!-- <meta name="p:domain_verify" content="YOUR_VERIFICATION_CODE"/> -->
+<!-- ============ Structured data: Organization + FAQ (rich results) ============ -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"FareFinderAI",
+  "url":"https://farefinderai.com",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://www.aviasales.com/search?marker=624395",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"How do I find the cheapest flights with AI?","acceptedAnswer":{"@type":"Answer","text":"Search flexible dates across multiple airlines at once. FareFinderAI compares Aviasales, Kiwi, and Trip.com so you can see the lowest fare on your route, plus nearby airports and alternate dates that are often cheaper."}},
+    {"@type":"Question","name":"What is a hidden city fare?","acceptedAnswer":{"@type":"Answer","text":"A hidden city (or skiplagging) fare is a flight where your real destination is a layover city, so you book a longer itinerary and get off early. It can save up to 60% on some routes, though it carries airline-policy risks."}},
+    {"@type":"Question","name":"Are mistake fares real?","acceptedAnswer":{"@type":"Answer","text":"Yes. Airlines occasionally publish pricing errors - fares 50 to 90% below normal. They get corrected fast, so the key is finding and booking them quickly."}},
+    {"@type":"Question","name":"Is FareFinderAI free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every search tool and guide on FareFinderAI is free. We earn an affiliate commission when you book through our partner links, at no extra cost to you."}}
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,13 +83,13 @@
   --muted:rgba(12,20,69,0.55);
   --border:#E2EFF8;
   --surface:#F0F9FF;
+  --green:#22C55E;
   --font-display:'Cabinet Grotesk',sans-serif;
   --font-body:'Cabinet Grotesk',sans-serif;
   --font-serif:'Lora',Georgia,serif;
 }
 
 body{font-family:var(--font-body);background:var(--white);color:var(--night);line-height:1.65;font-size:16px;overflow-x:hidden}
-
 a{color:inherit;text-decoration:none}
 
 /* NAV */
@@ -58,34 +97,38 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .nav-logo{font-size:1.2rem;font-weight:900;color:var(--night);display:flex;align-items:center;gap:0.4rem;letter-spacing:-0.02em}
 .nav-logo-icon{color:var(--sky)}
 .nav-trust{font-size:0.75rem;color:var(--muted);display:flex;align-items:center;gap:0.4rem}
-.nav-trust-dot{width:6px;height:6px;background:#22C55E;border-radius:50%;display:inline-block}
-.nav-cta{background:var(--sky);color:white;padding:0.5rem 1.25rem;border-radius:100px;font-size:0.875rem;font-weight:700;cursor:pointer;border:none;transition:background 0.2s}
-.nav-cta:hover{background:var(--sky-dark)}
+.nav-trust-dot{width:6px;height:6px;background:var(--green);border-radius:50%;display:inline-block}
+.nav-cta{background:var(--sunset);color:white;padding:0.5rem 1.25rem;border-radius:100px;font-size:0.875rem;font-weight:800;cursor:pointer;border:none;transition:transform 0.15s,background 0.2s}
+.nav-cta:hover{background:#ea6a0c;transform:translateY(-1px)}
 
 /* HERO */
-.hero{background:var(--night);color:white;padding:6rem 2rem 4rem;position:relative;overflow:hidden}
-.hero-clouds{position:absolute;inset:0;background-image:radial-gradient(ellipse 800px 400px at 50% 120%,rgba(14,165,233,0.15) 0%,transparent 70%);z-index:0}
+.hero{background:var(--night);color:white;padding:5rem 2rem 4rem;position:relative;overflow:hidden}
+.hero-clouds{position:absolute;inset:0;background-image:radial-gradient(ellipse 800px 400px at 50% 120%,rgba(14,165,233,0.18) 0%,transparent 70%);z-index:0}
 .hero-stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 20% 30%,rgba(255,255,255,0.4) 0%,transparent 100%),radial-gradient(1px 1px at 80% 20%,rgba(255,255,255,0.3) 0%,transparent 100%),radial-gradient(1px 1px at 60% 60%,rgba(255,255,255,0.2) 0%,transparent 100%),radial-gradient(1px 1px at 40% 80%,rgba(255,255,255,0.3) 0%,transparent 100%),radial-gradient(2px 2px at 90% 50%,rgba(255,255,255,0.2) 0%,transparent 100%);z-index:0}
-.hero-content{position:relative;z-index:1;max-width:900px;margin:0 auto;text-align:center}
-.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);color:#7DD3FC;font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:2rem}
-.hero-badge-num{background:var(--sky);color:white;padding:0.15rem 0.5rem;border-radius:100px;font-size:0.7rem}
-.hero h1{font-size:clamp(2.5rem,6vw,5rem);font-weight:900;line-height:1;letter-spacing:-0.03em;margin-bottom:1.5rem;color:white}
+.hero-content{position:relative;z-index:1;max-width:880px;margin:0 auto;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(14,165,233,0.15);border:1px solid rgba(14,165,233,0.3);color:#7DD3FC;font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 1rem;border-radius:100px;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.3rem,5.5vw,4.2rem);font-weight:900;line-height:1.02;letter-spacing:-0.03em;margin-bottom:1.25rem;color:white}
 .hero h1 .sky{color:#7DD3FC}
 .hero h1 .sunset{color:var(--sunset)}
-.hero-sub{font-family:var(--font-serif);font-size:1.2rem;font-style:italic;color:rgba(255,255,255,0.65);max-width:580px;margin:0 auto 3rem;line-height:1.7}
-.hero-tools{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;margin-bottom:3rem}
-.hero-tool{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);padding:0.6rem 1.25rem;border-radius:100px;font-size:0.875rem;font-weight:500;transition:all 0.2s;cursor:pointer;display:flex;align-items:center;gap:0.4rem}
-.hero-tool:hover{background:rgba(14,165,233,0.2);border-color:rgba(14,165,233,0.4);color:white}
-.hero-tool a{color:inherit}
-.hero-plane{text-align:center;font-size:4rem;margin-bottom:-1rem;position:relative;z-index:1;animation:float 3s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-12px) rotate(2deg)}}
+.hero-sub{font-family:var(--font-serif);font-size:1.15rem;font-style:italic;color:rgba(255,255,255,0.7);max-width:600px;margin:0 auto 2rem;line-height:1.6}
+
+/* HERO DEAL BUTTONS - the primary money CTAs, above the fold */
+.deal-label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#7DD3FC;margin-bottom:0.9rem}
+.deal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0.7rem;max-width:720px;margin:0 auto 1.5rem}
+.deal-btn{background:rgba(255,255,255,0.06);border:1px solid rgba(125,211,252,0.25);color:white;padding:0.85rem 1rem;border-radius:12px;font-size:0.95rem;font-weight:700;transition:all 0.18s;display:flex;align-items:center;justify-content:space-between;gap:0.5rem;cursor:pointer}
+.deal-btn:hover{background:rgba(14,165,233,0.22);border-color:var(--sky);transform:translateY(-2px)}
+.deal-btn .route{display:flex;align-items:center;gap:0.4rem}
+.deal-btn .arrow{color:#7DD3FC;font-weight:900}
+.deal-primary{background:var(--sunset);border:none;color:white;display:inline-flex;align-items:center;gap:0.5rem;padding:0.95rem 2.25rem;border-radius:100px;font-size:1.05rem;font-weight:800;cursor:pointer;transition:transform 0.15s,background 0.2s;letter-spacing:-0.01em}
+.deal-primary:hover{background:#ea6a0c;transform:translateY(-2px)}
+.hero-microtrust{font-size:0.8rem;color:rgba(255,255,255,0.45);margin-top:1.1rem}
 
 /* STATS BAR */
 .stats-bar{background:var(--sky);padding:1rem 2rem}
 .stats-inner{display:flex;justify-content:center;gap:3rem;flex-wrap:wrap;max-width:900px;margin:0 auto}
 .stat{text-align:center;color:white}
-.stat-num{font-size:1.5rem;font-weight:900;letter-spacing:-0.02em;display:block}
-.stat-label{font-size:0.7rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;opacity:0.85}
+.stat-num{font-size:1.4rem;font-weight:900;letter-spacing:-0.02em;display:block}
+.stat-label{font-size:0.7rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;opacity:0.9}
 
 /* SECTIONS */
 .section{padding:5rem 2rem}
@@ -107,33 +150,41 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 /* TOOLS */
 .tools{background:white}
 .tools-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;max-width:1100px;margin:0 auto}
-.tool-card{border:1.5px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.2s;position:relative;overflow:hidden}
+.tool-card{border:1.5px solid var(--border);border-radius:16px;padding:2rem;transition:all 0.2s;position:relative;overflow:hidden;display:flex;flex-direction:column}
 .tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
-.tool-card.wayaway::before{background:var(--sky)}
 .tool-card.kiwi::before{background:#FF6B35}
-.tool-card.going::before{background:#7C3AED}
 .tool-card.trip::before{background:#059669}
 .tool-card.expedia::before{background:#FFC72C}
 .tool-card.safety::before{background:#DC2626}
 .tool-card.aviasales::before{background:#FF6B00}
+.tool-card.booking::before{background:#003580}
+.tool-card.experiences::before{background:#7C3AED}
 .tool-card:hover{border-color:var(--sky);transform:translateY(-3px);box-shadow:0 8px 30px rgba(14,165,233,0.1)}
 .tool-badge{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--sky);margin-bottom:0.5rem}
 .tool-card h3{font-size:1.2rem;font-weight:800;color:var(--night);margin-bottom:0.6rem;letter-spacing:-0.02em}
-.tool-card p{font-size:0.875rem;color:var(--muted);line-height:1.65;margin-bottom:1.25rem}
-.tool-link{display:inline-flex;align-items:center;gap:0.4rem;background:var(--night);color:white;padding:0.6rem 1.25rem;border-radius:100px;font-size:0.875rem;font-weight:700;transition:background 0.2s}
+.tool-card p{font-size:0.875rem;color:var(--muted);line-height:1.65;margin-bottom:1.25rem;flex:1}
+.tool-link{display:inline-flex;align-items:center;gap:0.4rem;background:var(--night);color:white;padding:0.6rem 1.25rem;border-radius:100px;font-size:0.875rem;font-weight:700;transition:background 0.2s;align-self:flex-start}
 .tool-link:hover{background:var(--sky)}
+.tool-link.coming{background:var(--surface);color:var(--muted);border:1px dashed var(--border);cursor:default}
 .tool-link-arrow{font-size:0.75rem}
 
+/* WIDGET SECTION HELPERS */
+.widget-wrap{background:var(--night);padding:4rem 2rem;border-top:1px solid rgba(255,255,255,0.08)}
+.widget-wrap.light{background:var(--surface);border-top:1px solid var(--border)}
+.widget-inner{max-width:1000px;margin:0 auto;text-align:center}
+.widget-inner p.lead{font-size:1rem;color:rgba(255,255,255,0.65);margin-bottom:2rem;max-width:540px;margin-left:auto;margin-right:auto}
+.widget-inner.light p.lead{color:var(--muted)}
+
 /* AMAZON */
-.amazon-section{background:var(--surface)}
+.amazon-section{background:white}
 .amazon-inner{max-width:900px;margin:0 auto;text-align:center}
-.amazon-card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:3rem;margin-top:2rem}
+.amazon-card{background:var(--surface);border:1.5px solid var(--border);border-radius:20px;padding:3rem;margin-top:2rem}
 .amazon-card h3{font-size:1.5rem;font-weight:900;color:var(--night);margin-bottom:0.75rem;letter-spacing:-0.02em}
 .amazon-card p{font-size:1rem;color:var(--muted);max-width:560px;margin:0 auto 2rem;line-height:1.75}
 .amazon-btn{display:inline-flex;align-items:center;gap:0.5rem;background:#FF9900;color:var(--night);padding:0.875rem 2rem;border-radius:100px;font-size:1rem;font-weight:800;transition:background 0.2s;letter-spacing:-0.01em}
 .amazon-btn:hover{background:#e68a00}
 .amazon-tags{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin-top:1.5rem}
-.amazon-tag{background:var(--surface);border:1px solid var(--border);color:var(--muted);padding:0.3rem 0.75rem;border-radius:100px;font-size:0.8rem}
+.amazon-tag{background:white;border:1px solid var(--border);color:var(--muted);padding:0.3rem 0.75rem;border-radius:100px;font-size:0.8rem}
 
 /* EMAIL */
 .email-section{background:var(--night);color:white;text-align:center}
@@ -141,24 +192,16 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .email-section h2 em{font-family:var(--font-serif);font-style:italic;color:#7DD3FC;font-weight:400}
 .email-section p{font-size:1rem;color:rgba(255,255,255,0.6);max-width:480px;margin:0 auto 2.5rem;line-height:1.75}
 .email-form{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;max-width:500px;margin:0 auto 1rem}
-.email-input{flex:1;min-width:220px;padding:0.875rem 1.25rem;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:100px;font-family:var(--font-body);font-size:1rem;color:white;outline:none;transition:border-color 0.2s}
-.email-input::placeholder{color:rgba(255,255,255,0.35)}
-.email-input:focus{border-color:var(--sky)}
-.email-btn{padding:0.875rem 2rem;background:var(--sky);color:white;border:none;border-radius:100px;font-family:var(--font-body);font-size:1rem;font-weight:700;cursor:pointer;transition:background 0.2s;white-space:nowrap}
-.email-btn:hover{background:var(--sky-dark)}
+.email-btn{padding:0.875rem 2rem;background:var(--sunset);color:white;border:none;border-radius:100px;font-family:var(--font-body);font-size:1rem;font-weight:800;cursor:pointer;transition:background 0.2s;white-space:nowrap}
+.email-btn:hover{background:#ea6a0c}
 .email-note{font-size:0.8rem;color:rgba(255,255,255,0.4)}
 
-/* GPT SECTION */
-.gpt-section{background:var(--surface);border-top:1px solid var(--border)}
-.gpt-inner{max-width:800px;margin:0 auto;text-align:center}
-.gpt-card{background:white;border:1.5px solid var(--border);border-radius:20px;padding:2.5rem;margin-top:2rem}
-.gpt-label{font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);margin-bottom:0.75rem}
-.gpt-card h3{font-size:1.35rem;font-weight:900;color:var(--night);margin-bottom:0.75rem;letter-spacing:-0.02em}
-.gpt-card p{font-size:0.95rem;color:var(--muted);max-width:520px;margin:0 auto 1.75rem;line-height:1.75}
-.gpt-prompts{display:flex;flex-wrap:wrap;gap:0.5rem;justify-content:center;margin-bottom:1.75rem}
-.gpt-prompt{background:var(--surface);border:1px solid var(--border);color:var(--night);padding:0.4rem 0.875rem;border-radius:100px;font-size:0.8rem;font-style:italic}
-.gpt-btn{display:inline-flex;align-items:center;gap:0.5rem;background:var(--night);color:white;padding:0.75rem 1.75rem;border-radius:100px;font-size:0.925rem;font-weight:700;transition:background 0.2s}
-.gpt-btn:hover{background:var(--sky)}
+/* FAQ (SEO + helpful) */
+.faq{background:var(--surface)}
+.faq-grid{max-width:780px;margin:2rem auto 0}
+.faq-item{background:white;border:1px solid var(--border);border-radius:12px;padding:1.5rem 1.75rem;margin-bottom:1rem}
+.faq-item h3{font-size:1.05rem;font-weight:800;color:var(--night);margin-bottom:0.5rem}
+.faq-item p{font-size:0.925rem;color:var(--muted);line-height:1.7}
 
 /* TIPS */
 .tips{background:white}
@@ -168,11 +211,25 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .tip-card h3{font-size:1rem;font-weight:800;color:var(--night);margin-bottom:0.5rem;letter-spacing:-0.01em}
 .tip-card p{font-size:0.875rem;color:var(--muted);line-height:1.65}
 
-/* DISCLOSURE */
+/* GPT (de-emphasized, near footer) */
+.gpt-section{background:var(--surface);border-top:1px solid var(--border);padding:3rem 2rem}
+.gpt-inner{max-width:680px;margin:0 auto;text-align:center}
+.gpt-inner h3{font-size:1.1rem;font-weight:800;color:var(--night);margin-bottom:0.5rem}
+.gpt-inner p{font-size:0.9rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.65}
+.gpt-btn{display:inline-flex;align-items:center;gap:0.5rem;background:transparent;border:1.5px solid var(--border);color:var(--night);padding:0.6rem 1.5rem;border-radius:100px;font-size:0.875rem;font-weight:700;transition:all 0.2s}
+.gpt-btn:hover{border-color:var(--sky);color:var(--sky)}
+
+/* GUIDES */
+.guides-card{background:white;border:1px solid var(--border);border-radius:14px;padding:1.75rem;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block}
+.guides-card:hover{transform:translateY(-3px);border-color:var(--sky);box-shadow:0 8px 24px rgba(14,165,233,0.1)}
+.guides-card .gicon{font-size:1.5rem;margin-bottom:0.75rem}
+.guides-card .gtag{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);margin-bottom:0.5rem;display:block}
+.guides-card h3{font-size:1.1rem;font-weight:800;color:var(--night);margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.25}
+.guides-card p{font-size:0.875rem;color:var(--muted);line-height:1.65}
+
+/* DISCLOSURE / FOOTER */
 .disclosure{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center}
 .disclosure p{font-size:0.8rem;color:var(--muted);max-width:700px;margin:0 auto;line-height:1.6}
-
-/* FOOTER */
 footer{background:var(--night);color:rgba(255,255,255,0.45);padding:2rem;text-align:center}
 footer p{font-size:0.8rem}
 footer a{color:rgba(255,255,255,0.45);margin:0 0.5rem;transition:color 0.2s}
@@ -183,82 +240,23 @@ footer a:hover{color:var(--sky)}
 .hero-badge{animation:fadeUp 0.5s ease forwards}
 .hero h1{animation:fadeUp 0.6s 0.1s ease both}
 .hero-sub{animation:fadeUp 0.6s 0.2s ease both}
-.hero-tools{animation:fadeUp 0.6s 0.3s ease both}
+.deal-label,.deal-grid,.deal-primary,.hero-microtrust{animation:fadeUp 0.6s 0.3s ease both}
 
 /* PINTEREST FLOATING BUTTON */
-.pinterest-float{
-  position:fixed;
-  right:20px;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:999;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:0.35rem;
-  text-decoration:none;
-}
-.pinterest-float-btn{
-  background:#E60023;
-  color:white;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 4px 16px rgba(230,0,35,0.4);
-  transition:transform 0.2s, box-shadow 0.2s;
-  border:none;
-  cursor:pointer;
-}
-.pinterest-float-btn:hover{
-  transform:scale(1.12);
-  box-shadow:0 6px 24px rgba(230,0,35,0.55);
-}
-.pinterest-float-btn svg{
-  width:22px;
-  height:22px;
-  fill:white;
-}
-.pinterest-float-label{
-  font-size:0.6rem;
-  font-weight:700;
-  letter-spacing:0.04em;
-  text-transform:uppercase;
-  color:#E60023;
-  background:white;
-  padding:0.2rem 0.5rem;
-  border-radius:100px;
-  box-shadow:0 2px 8px rgba(0,0,0,0.12);
-  white-space:nowrap;
-  opacity:0;
-  transform:translateX(8px);
-  transition:opacity 0.2s, transform 0.2s;
-}
-.pinterest-float:hover .pinterest-float-label{
-  opacity:1;
-  transform:translateX(0);
-}
+.pinterest-float{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:999;display:flex;flex-direction:column;align-items:center;gap:0.35rem;text-decoration:none}
+.pinterest-float-btn{background:#E60023;color:white;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(230,0,35,0.4);transition:transform 0.2s,box-shadow 0.2s;border:none;cursor:pointer}
+.pinterest-float-btn:hover{transform:scale(1.12);box-shadow:0 6px 24px rgba(230,0,35,0.55)}
+.pinterest-float-btn svg{width:22px;height:22px;fill:white}
+.pinterest-float-label{font-size:0.6rem;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#E60023;background:white;padding:0.2rem 0.5rem;border-radius:100px;box-shadow:0 2px 8px rgba(0,0,0,0.12);white-space:nowrap;opacity:0;transform:translateX(8px);transition:opacity 0.2s,transform 0.2s}
+.pinterest-float:hover .pinterest-float-label{opacity:1;transform:translateX(0)}
 
 @media(max-width:600px){
   nav{padding:0.75rem 1rem}
   .nav-trust{display:none}
   .stats-inner{gap:1.5rem}
-  .hero{padding:4rem 1rem 0}
-  /* Move Pinterest button to bottom-right on mobile so it doesn't overlap content */
-  .pinterest-float{
-    top:auto;
-    bottom:24px;
-    right:16px;
-    transform:none;
-    flex-direction:row;
-  }
-  .pinterest-float-label{
-    opacity:1;
-    transform:none;
-    font-size:0.65rem;
-  }
+  .hero{padding:3.5rem 1rem 3rem}
+  .pinterest-float{top:auto;bottom:24px;right:16px;transform:none;flex-direction:row}
+  .pinterest-float-label{opacity:1;transform:none;font-size:0.65rem}
 }
 </style>
 </head>
@@ -266,83 +264,90 @@ footer a:hover{color:var(--sky)}
 
 <!-- PINTEREST FLOATING SAVE BUTTON -->
 <a class="pinterest-float"
-   href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Ffarefinderai.com&media=https%3A%2F%2Ffarefinderai.com%2Fog-image.jpg&description=Find%20cheaper%20flights%20with%20AI%20%E2%80%94%20hidden%20city%20fares%2C%20mistake%20fares%2C%20cashback%20flights%20and%20more.%205%2C000%2B%20travelers%20already%20flying%20smarter."
-   data-pin-do="none"
-   target="_blank"
-   rel="noopener"
-   aria-label="Save FareFinderAI to Pinterest">
+   href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Ffarefinderai.com&media=https%3A%2F%2Ffarefinderai.com%2Fog-image.jpg&description=Find%20cheaper%20flights%20with%20AI%20%E2%80%94%20hidden%20city%20fares%2C%20mistake%20fares%2C%20cashback%20flights%20and%20more."
+   data-pin-do="none" target="_blank" rel="noopener" aria-label="Save FareFinderAI to Pinterest">
   <div class="pinterest-float-btn">
-    <!-- Pinterest P logo -->
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
-    </svg>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
   </div>
   <span class="pinterest-float-label">Save</span>
 </a>
 
 <nav>
   <div class="nav-logo"><span class="nav-logo-icon">✈</span> FareFinderAI</div>
-  <div class="nav-trust"><span class="nav-trust-dot"></span> 5,000+ travelers flying smarter</div>
-  <button class="nav-cta" onclick="document.getElementById('tools').scrollIntoView({behavior:'smooth'})">Find Cheap Flights</button>
+  <div class="nav-trust"><span class="nav-trust-dot"></span> Free flight search &amp; deal guides</div>
+  <button class="nav-cta" onclick="document.getElementById('search').scrollIntoView({behavior:'smooth'})">Find Cheap Flights</button>
 </nav>
 
-<!-- HERO -->
+<!-- ============ HERO: headline + LIVE deal buttons + email, all above the fold ============ -->
 <section class="hero">
   <div class="hero-clouds"></div>
   <div class="hero-stars"></div>
   <div class="hero-content">
-    <div class="hero-badge"><span class="hero-badge-num">5,000+</span> travelers already flying smarter</div>
-    <h1>Find <span class="sky">Cheaper Flights</span><br>with <span class="sunset">AI</span> - Instantly</h1>
-    <p class="hero-sub">Hidden city fares, mistake fares, cashback flights, and flexible routes. The tools the airlines don't want you to know about.</p>
-    <div style="margin-top:1rem;margin-bottom:2rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem;">
-      <script async src="https://tpwgts.com/content?trs=408984&shmarker=624395&locale=en&curr=USD&default_origin=PHX&powered_by=true&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
+    <div class="hero-badge">AI flight finder · free to use</div>
+    <h1>Find <span class="sky">Cheap Flights</span> to <span class="sunset">Anywhere</span></h1>
+    <p class="hero-sub">Hidden city fares, mistake fares, and flexible routes - the tools the airlines don't advertise. Compare hundreds of airlines in one search.</p>
+
+    <p class="deal-label">Trending destinations - tap to see live fares</p>
+    <div class="deal-grid">
+      <a class="deal-btn" target="_blank" rel="noopener" onclick="trackAffiliate('Aviasales','hero_dest_CUN')" href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com%2Fsearch%3Fmarker%3D624395%26destination%3DCUN&campaign_id=100">
+        <span class="route">✈ Cancún</span><span class="arrow">›</span>
+      </a>
+      <a class="deal-btn" target="_blank" rel="noopener" onclick="trackAffiliate('Aviasales','hero_dest_HNL')" href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com%2Fsearch%3Fmarker%3D624395%26destination%3DHNL&campaign_id=100">
+        <span class="route">✈ Hawaii</span><span class="arrow">›</span>
+      </a>
+      <a class="deal-btn" target="_blank" rel="noopener" onclick="trackAffiliate('Aviasales','hero_dest_LON')" href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com%2Fsearch%3Fmarker%3D624395%26destination%3DLON&campaign_id=100">
+        <span class="route">✈ London</span><span class="arrow">›</span>
+      </a>
+      <a class="deal-btn" target="_blank" rel="noopener" onclick="trackAffiliate('Aviasales','hero_dest_TYO')" href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com%2Fsearch%3Fmarker%3D624395%26destination%3DTYO&campaign_id=100">
+        <span class="route">✈ Tokyo</span><span class="arrow">›</span>
+      </a>
+      <a class="deal-btn" target="_blank" rel="noopener" onclick="trackAffiliate('Aviasales','hero_dest_PAR')" href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com%2Fsearch%3Fmarker%3D624395%26destination%3DPAR&campaign_id=100">
+        <span class="route">✈ Paris</span><span class="arrow">›</span>
+      </a>
+      <a class="deal-btn" target="_blank" rel="noopener" onclick="trackAffiliate('Aviasales','hero_dest_ROM')" href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com%2Fsearch%3Fmarker%3D624395%26destination%3DROM&campaign_id=100">
+        <span class="route">✈ Rome</span><span class="arrow">›</span>
+      </a>
     </div>
+
+    <a class="deal-primary" href="#search" onclick="document.getElementById('search').scrollIntoView({behavior:'smooth'});return false;">Search any route free ✈</a>
+    <p class="hero-microtrust">No account needed · live prices from hundreds of airlines · always free</p>
   </div>
-  <div class="hero-plane">✈️</div>
 </section>
 
-<!-- STATS BAR -->
+<!-- STATS BAR (honest framing) -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat"><span class="stat-num">5,000+</span><span class="stat-label">Travelers using FareFinderAI</span></div>
-    <div class="stat"><span class="stat-num">Up to $500</span><span class="stat-label">Average savings per trip</span></div>
-    <div class="stat"><span class="stat-num">5</span><span class="stat-label">Trusted travel tools</span></div>
+    <div class="stat"><span class="stat-num">100s</span><span class="stat-label">Airlines compared at once</span></div>
+    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Ways AI finds cheaper fares</span></div>
     <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Always free to use</span></div>
+    <div class="stat"><span class="stat-num">$0</span><span class="stat-label">Extra cost - ever</span></div>
   </div>
 </div>
+
+<!-- ============ PRIMARY SEARCH (the widget, now a deliberate destination) ============ -->
+<section class="widget-wrap" id="search">
+  <div class="widget-inner">
+    <p class="eyebrow" style="color:#7DD3FC">Free flight search</p>
+    <h2 class="title" style="color:white;margin-bottom:0.5rem">Search <em style="color:#7DD3FC">Cheap Flights</em> Now</h2>
+    <p class="lead">Enter your route and dates. We compare hundreds of airlines and agencies instantly - no markups, no fees.</p>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem;">
+      <script async src="https://tpwgts.com/content?trs=408984&shmarker=624395&locale=en&curr=USD&powered_by=true&border_radius=0&plain=true&color_button=%23F97316&color_button_text=%23ffffff&color_border=%23F97316&promo_id=4132&campaign_id=121" charset="utf-8"></script>
+    </div>
+  </div>
+</section>
 
 <!-- HOW IT WORKS -->
 <section class="section how">
   <div class="section-inner">
     <p class="eyebrow">How it works</p>
     <h2 class="title">Four Ways AI Finds You <em>Cheaper Flights</em></h2>
-    <p class="subtitle">Most travelers overpay because they only use one booking site. FareFinderAI combines four proven strategies to find fares that generic search engines miss entirely.</p>
+    <p class="subtitle">Most travelers overpay because they only check one booking site. FareFinderAI combines four proven strategies to surface fares that generic search engines miss.</p>
     <div class="how-grid">
-      <div class="how-card">
-        <span class="how-icon">⭐</span>
-        <h3>Find the Lowest Fares Instantly</h3>
-        <p>Aviasales compares prices across hundreds of airlines and booking agencies simultaneously -- with no extra fees or markups. It even suggests alternative dates when prices could be lower, so you never overpay for a flight.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">🔀</span>
-        <h3>Hidden City Fare Hacking</h3>
-        <p>Airlines price routes in counterintuitive ways. Kiwi connects flights from airlines that don't normally work together to create cheaper combined itineraries -- finding routes that mainstream search engines miss entirely.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">🌍</span>
-        <h3>Global Routes and Bundles</h3>
-        <p>Trip.com covers over 2 million flight routes connecting more than 5,000 cities worldwide. Bundle flights with hotels for exclusive pricing not available when booking separately -- ideal for international travel planning.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">🏨</span>
-        <h3>Complete Trip Planning in One Place</h3>
-        <p>Expedia bundles flights, hotels, car rentals, and activities into one booking -- saving up to $500 compared to booking each separately. With 140,000+ properties and 500+ airline partnerships, Expedia covers every destination globally.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">🛡</span>
-        <h3>Travel Insurance That Works Everywhere</h3>
-        <p>EKTA travel insurance is accepted by the majority of embassies for visa applications, covers ages 2 months to 100 years, and issues your policy within minutes. Never travel without coverage -- EKTA makes it effortless.</p>
-      </div>
+      <div class="how-card"><span class="how-icon">⭐</span><h3>Compare Hundreds of Airlines</h3><p>Aviasales scans prices across hundreds of airlines and agencies at once - no markups - and suggests alternative dates when fares are lower.</p></div>
+      <div class="how-card"><span class="how-icon">🔀</span><h3>Hidden City &amp; Split Tickets</h3><p>Kiwi combines flights from airlines that don't normally connect, creating cheaper itineraries that mainstream engines never show you.</p></div>
+      <div class="how-card"><span class="how-icon">🌍</span><h3>Global Routes &amp; Bundles</h3><p>Trip.com covers 2M+ routes across 5,000+ cities. Bundle flights with hotels for pricing you can't get booking separately.</p></div>
+      <div class="how-card"><span class="how-icon">🏨</span><h3>Hotels &amp; Whole Trips</h3><p>Expedia and Booking.com bundle flights, hotels, and cars - often the biggest savings on the whole trip come from the hotel, not the flight.</p></div>
+      <div class="how-card"><span class="how-icon">🛡</span><h3>Travel Insurance That Works</h3><p>EKTA issues embassy-accepted policies in minutes, covering ages 2 months to 100 years. Never travel a big trip uncovered.</p></div>
     </div>
   </div>
 </section>
@@ -351,61 +356,93 @@ footer a:hover{color:var(--sky)}
 <section class="section tools" id="tools">
   <div class="section-inner">
     <p class="eyebrow">Flight tools we recommend</p>
-    <h2 class="title">The Best AI Flight Tools <em>Ranked and Reviewed</em></h2>
-    <p class="subtitle">Every tool below is one we have tested and recommend for finding cheaper flights, travel insurance, and smarter routes.</p>
+    <h2 class="title">The Best AI Flight Tools <em>Ranked &amp; Reviewed</em></h2>
+    <p class="subtitle">Every tool below is one we've tested for finding cheaper flights, hotels, and smarter routes.</p>
     <div class="tools-grid">
       <div class="tool-card aviasales">
-        <div class="tool-badge">Editor's Pick -- Best Fare Search</div>
+        <div class="tool-badge">Editor's Pick - Best Fare Search</div>
         <h3>Aviasales</h3>
-        <p>Aviasales is a trusted flight search engine that finds the lowest possible prices from reliable agencies -- with no extra fees or markups. Their innovative search compares results across hundreds of airlines and suggests alternative dates when prices could be even lower. Smart filters let you customize results by airline, stops, departure time, and more -- so you always find exactly the flight you want at the best available price.</p>
-        <a href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com&campaign_id=100" target="_blank" rel="noopener" class="tool-link">Search Flights on Aviasales <span class="tool-link-arrow">→</span></a>
+        <p>A trusted flight search engine that finds the lowest prices from reliable agencies with no extra fees. Compares hundreds of airlines and suggests cheaper alternative dates. Smart filters by airline, stops, and departure time.</p>
+        <a href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com&campaign_id=100" target="_blank" rel="noopener" class="tool-link" onclick="trackAffiliate('Aviasales','tool_card')">Search Flights on Aviasales <span class="tool-link-arrow">→</span></a>
+      </div>
+      <div class="tool-card booking">
+        <div class="tool-badge">Best for Hotels - Highest Conversions</div>
+        <h3>Booking.com</h3>
+        <p>The most-trusted name in hotels, with millions of properties and free cancellation on most stays. Hotels convert faster and pay more than flights - so if you're booking a trip, lock the room here. <em>(Apply for Booking.com inside your Travelpayouts dashboard, then drop your link here.)</em></p>
+        <a class="tool-link coming">Add your Booking.com link</a>
       </div>
       <div class="tool-card kiwi">
-        <div class="tool-badge">Best for Hidden City and Flexible Routes</div>
+        <div class="tool-badge">Best for Hidden City &amp; Flexible Routes</div>
         <h3>Kiwi.com</h3>
-        <p>Kiwi.com is a pioneer in virtual interlining -- connecting flights from airlines that don't normally codeshare to create cheaper combined itineraries. If you have any flexibility on routes, connections, or travel dates, Kiwi consistently finds fares that traditional search engines miss entirely. An extensive database of low-cost flights, an interactive route map, and unique combination tickets make Kiwi one of the most powerful flight tools available.</p>
-        <a href="https://tp.media/r?marker=624395&trs=408984&p=3791&u=https%3A%2F%2Fwww.kiwi.com&campaign_id=100" target="_blank" rel="noopener" class="tool-link">Find Hidden Fares on Kiwi <span class="tool-link-arrow">→</span></a>
-      </div>
-      <div class="tool-card expedia">
-        <div class="tool-badge">Best for Complete Trip Planning</div>
-        <h3>Expedia</h3>
-        <p>Expedia is one of the world's leading full-service travel platforms -- covering flights, hotels, vacation packages, car rentals, cruises, activities, and attractions all in one place. With 140,000+ properties worldwide, 500+ direct airline and hotel partnerships, and savings of up to $500 when you bundle your flight and hotel together, Expedia is the go-to platform for travelers who want to plan their entire trip without switching between multiple sites. No booking fees on single-carrier flights and global coverage across all destinations.</p>
-        <a href="https://tp.media/r?campaign_id=594&marker=624395&p=8645&trs=408984&u=https%3A%2F%2Fwww.expedia.com%2F" target="_blank" rel="noopener" class="tool-link">Book Your Trip on Expedia <span class="tool-link-arrow">→</span></a>
+        <p>A pioneer of virtual interlining - connecting airlines that don't normally codeshare into cheaper combined itineraries. If you have any flexibility on routes or dates, Kiwi consistently finds fares others miss.</p>
+        <a href="https://tp.media/r?marker=624395&trs=408984&p=3791&u=https%3A%2F%2Fwww.kiwi.com&campaign_id=100" target="_blank" rel="noopener" class="tool-link" onclick="trackAffiliate('Kiwi','tool_card')">Find Hidden Fares on Kiwi <span class="tool-link-arrow">→</span></a>
       </div>
       <div class="tool-card trip">
         <div class="tool-badge">Best for International Bookings</div>
         <h3>Trip.com</h3>
-        <p>Trip.com is one of the world's leading online travel agencies -- part of the NASDAQ-listed Ctrip Group with over 300 million members. Book flights, hotels, trains, buses, car rentals, and attractions all in one place across 200 countries and regions. With over 2 million individual flight routes connecting more than 5,000 cities globally, 24/7 English customer support, and exclusive bundle pricing, Trip.com is the go-to platform for international travel planning.</p>
-        <a href="https://tp.media/r?marker=624395&trs=408984&p=8626&u=https%3A%2F%2Ftrip.com&campaign_id=121" target="_blank" rel="noopener" class="tool-link">Book on Trip.com <span class="tool-link-arrow">→</span></a>
+        <p>A leading global OTA (part of NASDAQ-listed Ctrip) with 300M+ members. Flights, hotels, trains, and cars across 200 countries - plus exclusive bundle pricing and 24/7 English support. Best value is in the hotel bundles.</p>
+        <a href="https://tp.media/r?marker=624395&trs=408984&p=8626&u=https%3A%2F%2Ftrip.com&campaign_id=121" target="_blank" rel="noopener" class="tool-link" onclick="trackAffiliate('Trip.com','tool_card')">Book on Trip.com <span class="tool-link-arrow">→</span></a>
+      </div>
+      <div class="tool-card expedia">
+        <div class="tool-badge">Best for Complete Trip Planning</div>
+        <h3>Expedia</h3>
+        <p>One of the world's leading full-service travel platforms - flights, hotels, packages, cars, and activities in one place. 140,000+ properties and savings of up to $500 when you bundle flight + hotel.</p>
+        <a href="https://tp.media/r?campaign_id=594&marker=624395&p=8645&trs=408984&u=https%3A%2F%2Fwww.expedia.com%2F" target="_blank" rel="noopener" class="tool-link" onclick="trackAffiliate('Expedia','tool_card')">Book Your Trip on Expedia <span class="tool-link-arrow">→</span></a>
+      </div>
+      <div class="tool-card experiences">
+        <div class="tool-badge">Best for Tours &amp; Activities</div>
+        <h3>Things to Do</h3>
+        <p>Tours and experiences convert fast and pay well - a natural add-on once someone's booked a flight. Sign up for Viator or GetYourGuide (both on Travelpayouts/CJ), then feature "things to do in [your top destinations]" right here. <em>(Placeholder - add your link.)</em></p>
+        <a class="tool-link coming">Add Viator / GetYourGuide</a>
       </div>
       <div class="tool-card safety">
         <div class="tool-badge">Best Travel Insurance</div>
         <h3>EKTA Travel Insurance</h3>
-        <p>EKTA offers comprehensive travel insurance accepted by the majority of embassies worldwide for visa applications. Coverage spans ages 2 months to 100 years with policies issued within 2 to 3 minutes directly to your inbox. Available globally, EKTA includes optional extreme sports coverage, 24/7 multilingual technical support, and an in-house assistance service for claims. Whether you're a tourist, digital nomad, or frequent traveler -- EKTA has you covered in every country.</p>
-        <a href="https://tp.media/r?marker=624395&trs=408984&p=5869&u=https%3A%2F%2Fektatraveling.com&campaign_id=225" target="_blank" rel="noopener" class="tool-link">Get EKTA Travel Insurance <span class="tool-link-arrow">→</span></a>
+        <p>Comprehensive cover accepted by most embassies for visa applications, issued in 2–3 minutes. Ages 2 months to 100 years, optional extreme-sports cover, 24/7 multilingual support.</p>
+        <a href="https://tp.media/r?marker=624395&trs=408984&p=5869&u=https%3A%2F%2Fektatraveling.com&campaign_id=225" target="_blank" rel="noopener" class="tool-link" onclick="trackAffiliate('EKTA','tool_card')">Get EKTA Travel Insurance <span class="tool-link-arrow">→</span></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING CALENDAR WIDGET -->
-<section style="background:var(--night);padding:4rem 2rem;border-top:1px solid rgba(255,255,255,0.08)">
-  <div style="max-width:1000px;margin:0 auto;text-align:center">
-    <p class="eyebrow" style="color:#7DD3FC">Price calendar</p>
-    <h2 class="title" style="color:white;margin-bottom:0.5rem">See the <em>Cheapest Days</em> to Fly</h2>
-    <p style="font-size:1rem;color:rgba(255,255,255,0.6);margin-bottom:2rem;max-width:540px;margin-left:auto;margin-right:auto">Browse fares by month to find the lowest prices before you pick your travel dates.</p>
+<!-- HOTEL WIDGET - moved UP, right after tools -->
+<section class="widget-wrap">
+  <div class="widget-inner">
+    <p class="eyebrow" style="color:#7DD3FC">Hotel search</p>
+    <h2 class="title" style="color:white;margin-bottom:0.5rem">Find Cheap <em style="color:#7DD3FC">Hotel Deals</em> Too</h2>
+    <p class="lead">Hotels are where the real savings hide. Bundle your flight with a hotel and save up to $500 on the trip.</p>
+    <script async src="https://tpwgts.com/content?trs=408984&shmarker=624395&tab=H%2CFH&background=1&overlay=000000&button_color=FFCB00&target=2&powered_by=true&campaign_id=594&promo_id=8682" charset="utf-8"></script>
+  </div>
+</section>
+
+<!-- EMAIL CAPTURE - moved up, mid-page where intent is high -->
+<section class="section email-section" id="email">
+  <h2>Get Flight Deals <em>Before</em> They Sell Out</h2>
+  <p>Join our newsletter for AI-powered flight hacks, mistake-fare alerts, and smarter routes - straight to your inbox.</p>
+  <div class="email-form">
+    <a href="https://farefinderai.beehiiv.com/subscribe" class="email-btn" target="_blank" rel="noopener" onclick="trackAffiliate('Newsletter','email_capture')">Get Free Deal Alerts</a>
+  </div>
+  <p class="email-note">No spam. Just smarter travel. Unsubscribe anytime.</p>
+</section>
+
+<!-- PRICE CALENDAR -->
+<section class="widget-wrap light">
+  <div class="widget-inner light">
+    <p class="eyebrow">Price calendar</p>
+    <h2 class="title">See the <em>Cheapest Days</em> to Fly</h2>
+    <p class="lead">Browse fares by month to find the lowest prices before you lock in your dates.</p>
     <script async src="https://tpwgts.com/content?currency=usd&trs=408984&shmarker=624395&show_hotels=true&powered_by=true&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=0&plain=false&promo_id=7879&campaign_id=100" charset="utf-8"></script>
   </div>
 </section>
 
-<!-- POPULAR ROUTES WIDGET -->
-<section style="background:var(--surface);padding:4rem 2rem;border-top:1px solid var(--border)">
-  <div style="max-width:1000px;margin:0 auto;text-align:center">
+<!-- POPULAR ROUTES -->
+<section class="widget-wrap light">
+  <div class="widget-inner light">
     <p class="eyebrow">Popular routes</p>
     <h2 class="title">Top Flight Deals <em>Right Now</em></h2>
-    <p style="font-size:1rem;color:var(--muted);margin-bottom:2rem;max-width:540px;margin-left:auto;margin-right:auto">The most popular routes travelers are booking today -- with live pricing from Phoenix.</p>
-    <div style="width:620px;margin:0 auto;text-align:left">
-      <script async src="https://tpwgts.com/content?currency=usd&trs=408984&shmarker=624395&destination=PHX&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=true&primary=%230085FF&promo_id=4044&campaign_id=100" charset="utf-8"></script>
+    <p class="lead">The most popular routes travelers are booking today - with live pricing.</p>
+    <div style="max-width:620px;margin:0 auto;text-align:left">
+      <script async src="https://tpwgts.com/content?currency=usd&trs=408984&shmarker=624395&target_host=www.aviasales.com%2Fsearch&locale=en&limit=6&powered_by=true&primary=%230085FF&promo_id=4044&campaign_id=100" charset="utf-8"></script>
     </div>
   </div>
 </section>
@@ -415,127 +452,50 @@ footer a:hover{color:var(--sky)}
   <div class="section-inner">
     <p class="eyebrow">Flight hacking tips</p>
     <h2 class="title">How to Find <em>Cheaper Flights</em> Every Time</h2>
-    <p class="subtitle" style="margin-bottom:2.5rem">The strategies frequent travelers use to pay less on every booking -- regardless of where they fly.</p>
+    <p class="subtitle" style="margin-bottom:2.5rem">The strategies frequent travelers use to pay less on every booking - wherever they fly.</p>
     <div class="tips-grid">
-      <div class="tip-card">
-        <div class="tip-num">Tip 01</div>
-        <h3>Search in Incognito Mode</h3>
-        <p>Flight prices can increase when booking sites detect you have searched the same route multiple times. Always search for cheap flights in a private or incognito browser window to see the lowest available fares.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 02</div>
-        <h3>Be Flexible on Departure Airports</h3>
-        <p>Flying from a nearby airport instead of your closest one can save hundreds of dollars. Kiwi's flexible route search automatically compares nearby airports to find hidden city fares you would never discover manually.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 03</div>
-        <h3>Book Tuesday and Wednesday Flights</h3>
-        <p>Flights departing on Tuesday and Wednesday are consistently cheaper than weekend flights. If your schedule allows any flexibility on travel days, mid-week departures are one of the easiest ways to find cheaper airfare.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 04</div>
-        <h3>Use Kiwi for Split Ticket Savings</h3>
-        <p>Kiwi's virtual interlining technology combines tickets from multiple airlines into one cheaper itinerary. For long haul routes especially, splitting your journey across carriers can save significantly more than booking a single through ticket.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 05</div>
-        <h3>Always Buy Travel Insurance Before You Fly</h3>
-        <p>EKTA travel insurance policies are issued within minutes and accepted by embassies worldwide for visa applications. At a fraction of the cost of a medical emergency abroad, travel insurance is the smartest money you spend on any trip.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 06</div>
-        <h3>Bundle Flights and Hotels on Trip.com</h3>
-        <p>Trip.com's bundle pricing gives you exclusive discounts when you book flights and hotels together. For international trips especially, bundling can save significantly more than booking each component separately.</p>
-      </div>
+      <div class="tip-card"><div class="tip-num">Tip 01</div><h3>Search in Incognito Mode</h3><p>Prices can creep up when sites detect repeat searches on the same route. Search in a private/incognito window to see the lowest fares.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 02</div><h3>Be Flexible on Airports</h3><p>Flying from a nearby airport can save hundreds. Kiwi's flexible search compares nearby airports automatically.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 03</div><h3>Fly Tuesday or Wednesday</h3><p>Mid-week departures are consistently cheaper than weekends. Any flexibility on travel days is one of the easiest ways to save.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 04</div><h3>Use Kiwi for Split Tickets</h3><p>Virtual interlining combines tickets from multiple airlines into one cheaper itinerary - especially on long-haul routes.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 05</div><h3>Insure Before You Fly</h3><p>EKTA policies issue in minutes and are accepted by embassies. A fraction of the cost of one medical emergency abroad.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 06</div><h3>Bundle Flights + Hotels</h3><p>Trip.com and Expedia give exclusive discounts when you book flight and hotel together - bigger savings on international trips.</p></div>
     </div>
   </div>
 </section>
 
-  <section style="padding:5rem 2rem;background:var(--surface,#F0F9FF);border-top:1px solid var(--border,#E2EFF8)">
-  <div style="max-width:1200px;margin:0 auto">
-    
+<!-- GUIDES & REVIEWS (internal links = SEO) -->
+<section class="section" style="background:var(--surface);border-top:1px solid var(--border)">
+  <div class="section-inner">
     <div style="text-align:center;margin-bottom:3rem">
-      <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky,#0EA5E9);margin-bottom:0.75rem">Guides & reviews</p>
-      <h2 style="font-size:clamp(1.75rem,4vw,2.75rem);font-weight:900;letter-spacing:-0.03em;color:var(--night,#0C1445);margin-bottom:1rem;line-height:1.1">Everything You Need to <em style="font-family:'Lora',Georgia,serif;font-style:italic;color:var(--sky,#0EA5E9);font-weight:400">Fly for Less</em></h2>
-      <p style="font-size:1.05rem;color:var(--muted,rgba(12,20,69,0.55));max-width:560px;margin:0 auto;line-height:1.75">Deep guides on every flight hack, fare strategy, and search tool we use to save thousands on travel each year.</p>
+      <p class="eyebrow">Guides &amp; reviews</p>
+      <h2 class="title">Everything You Need to <em>Fly for Less</em></h2>
+      <p class="subtitle" style="margin-left:auto;margin-right:auto;text-align:center">Deep guides on every flight hack, fare strategy, and search tool we use to save on travel.</p>
     </div>
- 
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;max-width:1100px;margin:0 auto">
- 
-      <!-- Hidden City Flights -->
-      <a href="/guides/hidden-city-flights" style="background:white;border:1px solid var(--border,#E2EFF8);border-radius:14px;padding:1.75rem;text-decoration:none;color:inherit;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='var(--sky,#0EA5E9)';this.style.boxShadow='0 8px 24px rgba(14,165,233,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border,#E2EFF8)';this.style.boxShadow='none'">
-        <div style="font-size:1.5rem;margin-bottom:0.75rem">🎯</div>
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky,#0EA5E9);margin-bottom:0.5rem">Pillar Guide</div>
-        <h3 style="font-size:1.1rem;font-weight:800;color:var(--night,#0C1445);margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.25">Hidden City Flights — Save Up to 60%</h3>
-        <p style="font-size:0.875rem;color:var(--muted,rgba(12,20,69,0.55));line-height:1.65">The complete 2026 guide to hidden city ticketing, the legal status, and how to find these fares safely.</p>
-      </a>
- 
-      <!-- Is Skiplagging Legal -->
-      <a href="/guides/is-skiplagging-legal" style="background:white;border:1px solid var(--border,#E2EFF8);border-radius:14px;padding:1.75rem;text-decoration:none;color:inherit;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='var(--sky,#0EA5E9)';this.style.boxShadow='0 8px 24px rgba(14,165,233,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border,#E2EFF8)';this.style.boxShadow='none'">
-        <div style="font-size:1.5rem;margin-bottom:0.75rem">⚖️</div>
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky,#0EA5E9);margin-bottom:0.5rem">Legal Guide</div>
-        <h3 style="font-size:1.1rem;font-weight:800;color:var(--night,#0C1445);margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.25">Is Skiplagging Legal? (2026)</h3>
-        <p style="font-size:0.875rem;color:var(--muted,rgba(12,20,69,0.55));line-height:1.65">Yes — but airlines can still penalize you. What the May 2025 court ruling means and what they can actually do.</p>
-      </a>
- 
-      <!-- Mistake Fares -->
-      <a href="/mistake-fares.html" style="background:white;border:1px solid var(--border,#E2EFF8);border-radius:14px;padding:1.75rem;text-decoration:none;color:inherit;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='var(--sky,#0EA5E9)';this.style.boxShadow='0 8px 24px rgba(14,165,233,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border,#E2EFF8)';this.style.boxShadow='none'">
-        <div style="font-size:1.5rem;margin-bottom:0.75rem">✈️</div>
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky,#0EA5E9);margin-bottom:0.5rem">Flight Hack</div>
-        <h3 style="font-size:1.1rem;font-weight:800;color:var(--night,#0C1445);margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.25">Mistake Fares — Fly for 50-90% Less</h3>
-        <p style="font-size:0.875rem;color:var(--muted,rgba(12,20,69,0.55));line-height:1.65">Airline pricing errors let savvy travelers fly business class at economy prices. Here's how to find and book them.</p>
-      </a>
- 
-      <!-- Aviasales Review -->
-      <a href="/aviasales-review.html" style="background:white;border:1px solid var(--border,#E2EFF8);border-radius:14px;padding:1.75rem;text-decoration:none;color:inherit;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='var(--sky,#0EA5E9)';this.style.boxShadow='0 8px 24px rgba(14,165,233,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border,#E2EFF8)';this.style.boxShadow='none'">
-        <div style="font-size:1.5rem;margin-bottom:0.75rem">⭐</div>
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky,#0EA5E9);margin-bottom:0.5rem">Tool Review · 9.1/10</div>
-        <h3 style="font-size:1.1rem;font-weight:800;color:var(--night,#0C1445);margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.25">Aviasales Review — Is It Worth Using?</h3>
-        <p style="font-size:0.875rem;color:var(--muted,rgba(12,20,69,0.55));line-height:1.65">We tested Aviasales against Google Flights, Kayak, and Skyscanner. The verdict: our top-rated flight search tool.</p>
-      </a>
- 
-      <!-- Cheap Flights Finder -->
-      <a href="/cheap-flights-finder.html" style="background:white;border:1px solid var(--border,#E2EFF8);border-radius:14px;padding:1.75rem;text-decoration:none;color:inherit;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='var(--sky,#0EA5E9)';this.style.boxShadow='0 8px 24px rgba(14,165,233,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border,#E2EFF8)';this.style.boxShadow='none'">
-        <div style="font-size:1.5rem;margin-bottom:0.75rem">🔍</div>
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky,#0EA5E9);margin-bottom:0.5rem">Comparison</div>
-        <h3 style="font-size:1.1rem;font-weight:800;color:var(--night,#0C1445);margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.25">Best Cheap Flights Finder Tools</h3>
-        <p style="font-size:0.875rem;color:var(--muted,rgba(12,20,69,0.55));line-height:1.65">Aviasales vs Kiwi vs Trip.com vs Expedia — ranked and reviewed. Which one finds the lowest fares on your route?</p>
-      </a>
- 
-      <!-- AI Flight Deals -->
-      <a href="/ai-flight-deals.html" style="background:white;border:1px solid var(--border,#E2EFF8);border-radius:14px;padding:1.75rem;text-decoration:none;color:inherit;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='var(--sky,#0EA5E9)';this.style.boxShadow='0 8px 24px rgba(14,165,233,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border,#E2EFF8)';this.style.boxShadow='none'">
-        <div style="font-size:1.5rem;margin-bottom:0.75rem">🤖</div>
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky,#0EA5E9);margin-bottom:0.5rem">AI Guide</div>
-        <h3 style="font-size:1.1rem;font-weight:800;color:var(--night,#0C1445);margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.25">AI Flight Deals — Smarter Search</h3>
-        <p style="font-size:0.875rem;color:var(--muted,rgba(12,20,69,0.55));line-height:1.65">How AI analyzes billions of fare combinations to find cheaper flights humans would never discover manually.</p>
-      </a>
- 
-      <!-- Flight Deal Alerts -->
-      <a href="/flight-deal-alerts.html" style="background:white;border:1px solid var(--border,#E2EFF8);border-radius:14px;padding:1.75rem;text-decoration:none;color:inherit;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='var(--sky,#0EA5E9)';this.style.boxShadow='0 8px 24px rgba(14,165,233,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border,#E2EFF8)';this.style.boxShadow='none'">
-        <div style="font-size:1.5rem;margin-bottom:0.75rem">🔔</div>
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky,#0EA5E9);margin-bottom:0.5rem">Tool Guide</div>
-        <h3 style="font-size:1.1rem;font-weight:800;color:var(--night,#0C1445);margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.25">Flight Deal Alerts — Book First</h3>
-        <p style="font-size:0.875rem;color:var(--muted,rgba(12,20,69,0.55));line-height:1.65">Set alerts once, save every time. How to never miss a fare drop on your favorite routes.</p>
-      </a>
- 
-      <!-- WayAway Cashback -->
-      <a href="/wayaway-cashback-flights.html" style="background:white;border:1px solid var(--border,#E2EFF8);border-radius:14px;padding:1.75rem;text-decoration:none;color:inherit;transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='var(--sky,#0EA5E9)';this.style.boxShadow='0 8px 24px rgba(14,165,233,0.1)'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border,#E2EFF8)';this.style.boxShadow='none'">
-        <div style="font-size:1.5rem;margin-bottom:0.75rem">💸</div>
-        <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky,#0EA5E9);margin-bottom:0.5rem">Cashback</div>
-        <h3 style="font-size:1.1rem;font-weight:800;color:var(--night,#0C1445);margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.25">WayAway — Get Paid to Book Flights</h3>
-        <p style="font-size:0.875rem;color:var(--muted,rgba(12,20,69,0.55));line-height:1.65">Up to 10% cashback on flights and hotels. Is WayAway Plus worth the $49.99/year? Real math inside.</p>
-      </a>
- 
+      <a href="/guides/hidden-city-flights" class="guides-card"><div class="gicon">🎯</div><span class="gtag">Pillar Guide</span><h3>Hidden City Flights - Save Up to 60%</h3><p>The complete 2026 guide to hidden city ticketing, its legal status, and how to find these fares safely.</p></a>
+      <a href="/guides/is-skiplagging-legal" class="guides-card"><div class="gicon">⚖️</div><span class="gtag">Legal Guide</span><h3>Is Skiplagging Legal? (2026)</h3><p>Yes - but airlines can still penalize you. What the May 2025 court ruling means and what they can actually do.</p></a>
+      <a href="/mistake-fares.html" class="guides-card"><div class="gicon">✈️</div><span class="gtag">Flight Hack</span><h3>Mistake Fares - Fly for 50–90% Less</h3><p>Airline pricing errors let savvy travelers fly business at economy prices. How to find and book them fast.</p></a>
+      <a href="/aviasales-review.html" class="guides-card"><div class="gicon">⭐</div><span class="gtag">Tool Review · 9.1/10</span><h3>Aviasales Review - Worth It?</h3><p>We tested Aviasales against Google Flights, Kayak, and Skyscanner. The verdict: our top-rated search tool.</p></a>
+      <a href="/cheap-flights-finder.html" class="guides-card"><div class="gicon">🔍</div><span class="gtag">Comparison</span><h3>Best Cheap Flights Finder Tools</h3><p>Aviasales vs Kiwi vs Trip.com vs Expedia - ranked and reviewed. Which finds the lowest fare on your route?</p></a>
+      <a href="/ai-flight-deals.html" class="guides-card"><div class="gicon">🤖</div><span class="gtag">AI Guide</span><h3>AI Flight Deals - Smarter Search</h3><p>How AI analyzes billions of fare combinations to find cheaper flights humans would never spot manually.</p></a>
+      <a href="/flight-deal-alerts.html" class="guides-card"><div class="gicon">🔔</div><span class="gtag">Tool Guide</span><h3>Flight Deal Alerts - Book First</h3><p>Set alerts once, save every time. How to never miss a fare drop on your favorite routes.</p></a>
+      <a href="/wayaway-cashback-flights.html" class="guides-card"><div class="gicon">💸</div><span class="gtag">Cashback</span><h3>WayAway - Get Paid to Book</h3><p>Up to 10% cashback on flights and hotels. Is WayAway Plus worth $49.99/year? Real math inside.</p></a>
     </div>
   </div>
 </section>
-<!-- EXPEDIA HOTEL WIDGET -->
-<section style="background:var(--night);padding:4rem 2rem;border-top:1px solid rgba(255,255,255,0.08)">
-  <div style="max-width:1000px;margin:0 auto;text-align:center">
-    <p class="eyebrow" style="color:#7DD3FC">Hotel search</p>
-    <h2 class="title" style="color:white;margin-bottom:0.5rem">Find the Best <em>Hotel Deals</em> Too</h2>
-    <p style="font-size:1rem;color:rgba(255,255,255,0.6);margin-bottom:2rem;max-width:540px;margin-left:auto;margin-right:auto">Bundle your flight with a hotel on Expedia and save up to $500 on your trip.</p>
-    <script async src="https://tpwgts.com/content?trs=408984&shmarker=624395&tab=H%2CFH&background=1&overlay=000000&button_color=FFCB00&target=2&powered_by=true&campaign_id=594&promo_id=8682" charset="utf-8"></script>
+
+<!-- FAQ (matches schema above - SEO rich results) -->
+<section class="section faq">
+  <div class="section-inner" style="text-align:center">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="title">Cheap Flight <em>Questions</em>, Answered</h2>
+    <div class="faq-grid" style="text-align:left">
+      <div class="faq-item"><h3>How do I find the cheapest flights from Phoenix?</h3><p>Search flexible dates across multiple airlines at once. FareFinderAI compares Aviasales, Kiwi, and Trip.com so you see the lowest fare on your route - plus nearby airports and alternate dates that are often cheaper.</p></div>
+      <div class="faq-item"><h3>What is a hidden city fare?</h3><p>A hidden city (or skiplagging) fare is a flight where your real destination is a layover city - you book a longer itinerary and get off early. It can save up to 60% on some routes, though it carries airline-policy risks. See our full guide.</p></div>
+      <div class="faq-item"><h3>Are mistake fares real?</h3><p>Yes. Airlines occasionally publish pricing errors - fares 50–90% below normal. They get corrected fast, so the key is finding and booking them quickly.</p></div>
+      <div class="faq-item"><h3>Is FareFinderAI free to use?</h3><p>Yes. Every search tool and guide here is free. We earn an affiliate commission when you book through our partner links, at no extra cost to you.</p></div>
+    </div>
   </div>
 </section>
 
@@ -546,61 +506,40 @@ footer a:hover{color:var(--sky)}
     <h2 class="title">The <em>Travel Gear</em> We Actually Use</h2>
     <div class="amazon-card">
       <h3>Curated Travel Essentials on Amazon</h3>
-      <p>From carry-on luggage to noise cancelling headphones, packing cubes to portable chargers -- our Amazon storefront features the exact travel gear we recommend to every FareFinderAI traveler. All tested, all worth it.</p>
-      <a href="https://amzn.to/4iOOdjp" target="_blank" rel="noopener" class="amazon-btn">Shop Travel Gear on Amazon ✈</a>
+      <p>From carry-on luggage to noise-cancelling headphones, packing cubes to portable chargers - our Amazon storefront features the exact gear we recommend. All tested, all worth it.</p>
+      <a href="https://amzn.to/4iOOdjp" target="_blank" rel="noopener" class="amazon-btn" onclick="trackAffiliate('Amazon','gear_storefront')">Shop Travel Gear on Amazon ✈</a>
       <div class="amazon-tags">
-        <span class="amazon-tag">Carry-on luggage</span>
-        <span class="amazon-tag">Packing cubes</span>
-        <span class="amazon-tag">Noise cancelling headphones</span>
-        <span class="amazon-tag">Portable chargers</span>
-        <span class="amazon-tag">Travel pillows</span>
-        <span class="amazon-tag">TSA-friendly accessories</span>
-        <span class="amazon-tag">Digital nomad essentials</span>
+        <span class="amazon-tag">Carry-on luggage</span><span class="amazon-tag">Packing cubes</span><span class="amazon-tag">Noise-cancelling headphones</span><span class="amazon-tag">Portable chargers</span><span class="amazon-tag">Travel pillows</span><span class="amazon-tag">TSA-friendly accessories</span><span class="amazon-tag">Digital nomad essentials</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EMAIL -->
-<section class="section email-section" id="email">
-  <h2>Travel <em>Smarter</em> with AI</h2>
-  <p>Join thousands of travelers getting AI-powered travel tips, flight hacking strategies, and smarter routes straight to their inbox.</p>
-  <div class="email-form">
-    <a href="https://farefinderai.beehiiv.com/subscribe" class="email-btn">Get Travel Tips</a>
-  </div>
-  <p class="email-note">No spam. Just smarter travel. Unsubscribe anytime.</p>
-</section>
-
-<!-- GPT -->
-<section class="section gpt-section">
+<!-- GPT - de-emphasized, near footer so it no longer leaks mid-page traffic -->
+<section class="gpt-section">
   <div class="gpt-inner">
-    <p class="eyebrow">Bonus AI tool</p>
-    <h2 class="title">Ask Our <em>Free AI</em> Flight Assistant</h2>
-    <div class="gpt-card">
-      <div class="gpt-label">FareFinder Pro -- Free to use, no account required</div>
-      <h3>Get Personalized Flight Advice from AI</h3>
-      <p>Not sure which tool to use or which dates to fly? Ask FareFinder Pro -- our free AI assistant trained to find cheaper flights, recommend booking strategies, and answer any travel question instantly.</p>
-      <div class="gpt-prompts">
-        <span class="gpt-prompt">"Want to travel more often or work remotely?"</span>
-        <span class="gpt-prompt">"Need a last-minute flight deal for a weekend?"</span>
-        <span class="gpt-prompt">"Looking for cheap flights from LA to Europe?"</span>
-      </div>
-      <a href="https://chatgpt.com/g/g-680292ae432c8191a3beabc960394468-farefinder-pro" target="_blank" rel="noopener" class="gpt-btn">Try FareFinder Pro Free ✈</a>
-    </div>
+    <p class="eyebrow">Bonus tool</p>
+    <h3>Still deciding? Ask our free AI flight assistant</h3>
+    <p>FareFinder Pro can recommend which tool to use, the cheapest dates to fly, and answer any travel question. Free, no account needed.</p>
+    <a href="https://chatgpt.com/g/g-680292ae432c8191a3beabc960394468-farefinder-pro" target="_blank" rel="noopener" class="gpt-btn" onclick="trackAffiliate('FareFinderPro_GPT','footer_bonus')">Try FareFinder Pro Free ✈</a>
   </div>
 </section>
+
+<div class="disclosure">
+  <p>This site contains affiliate links. We may earn a commission if you book or sign up through our links - at no extra cost to you. Hidden city ticketing and skiplagging carry airline-policy risks; read our guides before booking.</p>
+</div>
 
 <footer>
-  <p>This site contains affiliate links. We may earn a commission if you sign up through our links at no extra cost to you.</p>
-  <p style="margin-top:0.5rem">&copy; 2026 FareFinderAI.com by Automated Income Tools LLC. All rights reserved.
-  <a href="mailto:hello@farefinderai.com">Contact</a>
-  <a href="https://automatedincometools.com/pages/privacy-policy">Privacy Policy</a>
-  <a href="https://automatedincometools.com/pages/terms-of-use">Terms of Use</a>
-  <a href="https://automatedincometools.com/pages/affiliate-disclosure">Affiliate Disclosure</a>
-  <a href="https://automatedincometools.com">Automated Income Tools</a></p>
+  <p>&copy; 2026 FareFinderAI.com by Automated Income Tools LLC. All rights reserved.</p>
+  <p style="margin-top:0.5rem">
+    <a href="mailto:hello@farefinderai.com">Contact</a>
+    <a href="https://automatedincometools.com/pages/privacy-policy">Privacy Policy</a>
+    <a href="https://automatedincometools.com/pages/terms-of-use">Terms of Use</a>
+    <a href="https://automatedincometools.com/pages/affiliate-disclosure">Affiliate Disclosure</a>
+    <a href="https://automatedincometools.com">Automated Income Tools</a>
+  </p>
 </footer>
 
-<!-- Pinterest JS SDK — loads once, enables Save buttons and cookie tagging -->
 <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
 
 </body>
