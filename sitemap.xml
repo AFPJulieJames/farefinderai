@@ -58,4 +58,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- Destination Pages -->
+  <url>
+    <loc>https://farefinderai.com/cheap-flights-to-cancun.html</loc>
+    <lastmod>2026-05-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
