@@ -8,18 +8,22 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-T1HYCKVZ48');
+
+  // Outbound affiliate click tracking - fires a GA4 event tagged with program + placement.
+  function trackAffiliate(program, placement){
+    try{ gtag('event','affiliate_click',{'affiliate_program':program,'placement':placement||'unknown'}); }catch(e){}
+    return true;
+  }
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mistake Fares 2026: How to Find Airline Pricing Errors (Save 50–90%) | FareFinderAI</title>
-<meta name="description" content="Mistake fares are accidental airline pricing errors that can save you 50–90% on flights. Learn how to find mistake fares, which tools alert you first, and how to book before they disappear.">
+<title>Mistake Fares 2026: How to Find Airline Pricing Errors (Save 50 to 90%) | FareFinderAI</title>
+<meta name="description" content="Mistake fares are accidental airline pricing errors that can save you 50 to 90% on flights. Learn how to find mistake fares, which tools alert you first, and how to book before they disappear.">
 <meta name="keywords" content="mistake fares, error fares, airline pricing errors, cheap flights, mistake fare alerts, how to find mistake fares, business class mistake fares, fly cheap">
 <meta name="author" content="Julie James">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://farefinderai.com/mistake-fares.html">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Mistake Fares 2026: How to Find Airline Pricing Errors (Save 50–90%)">
-<meta property="og:description" content="Mistake fares are accidental airline pricing errors that can save you 50–90% on flights. Learn how to find them and book before they disappear.">
+<meta property="og:title" content="Mistake Fares 2026: How to Find Airline Pricing Errors (Save 50 to 90%)">
+<meta property="og:description" content="Mistake fares are accidental airline pricing errors that can save you 50 to 90% on flights. Learn how to find them and book before they disappear.">
 <meta property="og:image" content="https://farefinderai.com/og-image.jpg">
 <meta property="og:url" content="https://farefinderai.com/mistake-fares.html">
 <meta property="og:type" content="article">
@@ -27,174 +31,53 @@
 <meta property="article:published_time" content="2026-05-12">
 <meta property="article:modified_time" content="2026-05-12">
 <meta property="article:author" content="Julie James">
-
-<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mistake Fares 2026: How to Find Airline Pricing Errors (Save 50–90%)">
-<meta name="twitter:description" content="Business class to Europe for $300. Round trip to Japan for $180. Mistake fares are real — here's how to catch them.">
+<meta name="twitter:title" content="Mistake Fares 2026: How to Find Airline Pricing Errors (Save 50 to 90%)">
+<meta name="twitter:description" content="Business class to Europe for $300. Round trip to Japan for $180. Mistake fares are real, here's how to catch them.">
 <meta name="twitter:image" content="https://farefinderai.com/og-image.jpg">
-
-<!-- Article Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Mistake Fares 2026: How to Find Airline Pricing Errors (Save 50–90%)",
-  "description": "Mistake fares are accidental airline pricing errors that can save you 50–90% on flights. Learn how to find mistake fares, which tools alert you first, and how to book before they disappear.",
+  "headline": "Mistake Fares 2026: How to Find Airline Pricing Errors (Save 50 to 90%)",
+  "description": "Mistake fares are accidental airline pricing errors that can save you 50 to 90% on flights.",
   "image": "https://farefinderai.com/og-image.jpg",
-  "author": {
-    "@type": "Person",
-    "name": "Julie James",
-    "url": "https://farefinderai.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "FareFinderAI",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://farefinderai.com/og-image.jpg"
-    }
-  },
-  "datePublished": "2026-05-12",
-  "dateModified": "2026-05-12",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://farefinderai.com/mistake-fares.html"
-  }
+  "author": {"@type": "Person","name": "Julie James","url": "https://farefinderai.com"},
+  "publisher": {"@type": "Organization","name": "FareFinderAI","logo": {"@type": "ImageObject","url": "https://farefinderai.com/og-image.jpg"}},
+  "datePublished": "2026-05-12","dateModified": "2026-05-12",
+  "mainEntityOfPage": {"@type": "WebPage","@id": "https://farefinderai.com/mistake-fares.html"}
 }
 </script>
-
-<!-- HowTo Schema (for the booking steps) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HowTo",
-  "name": "How to Book a Mistake Fare Before It Disappears",
-  "description": "Step-by-step process for catching and booking airline mistake fares before they're corrected.",
-  "step": [
-    {
-      "@type": "HowToStep",
-      "position": 1,
-      "name": "Set Up Fare Alerts",
-      "text": "Mistake fares disappear within hours — sometimes minutes. Set up price alerts on Aviasales for your most-traveled routes so you're notified the moment a fare drops unusually low."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 2,
-      "name": "Book Immediately",
-      "text": "When you spot a price that seems too good to be true, book it first and research it second. A mistake fare that disappears while you're deciding is gone for good."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 3,
-      "name": "Get Confirmation in Writing",
-      "text": "Make sure you receive a full booking confirmation email with a ticket number — not just a booking reference. A confirmed ticket number is what the airline must honor."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 4,
-      "name": "Wait Before Making Plans",
-      "text": "Give the airline 24–48 hours to either honor or cancel the ticket. Most honor mistake fares quietly. If they cancel, DOT regulations require a full refund."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 5,
-      "name": "Book Refundable Hotels Separately",
-      "text": "Once the airline confirms the ticket, book refundable accommodations. Keep everything refundable until you know the airline has locked in your seat."
-    },
-    {
-      "@type": "HowToStep",
-      "position": 6,
-      "name": "Add Travel Insurance",
-      "text": "Add travel insurance to cover the trip. For an already-discounted fare, coverage costs almost nothing relative to the savings."
-    }
-  ]
-}
-</script>
-
-<!-- FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do airlines have to honor mistake fares?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "In the US, the Department of Transportation has historically required airlines to honor mistake fares once a ticket is issued with a confirmation number. In practice, most major airlines honor mistake fares quietly to avoid negative publicity. Always get a ticket number, not just a booking reference, to maximize your protection."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long do mistake fares last?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most mistake fares last between 2 and 12 hours before the airline or booking system corrects the price. Some last only minutes. Weekend mistake fares sometimes last longer. Speed is the single most important factor — book first, research second."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What if the airline cancels my mistake fare ticket?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "If the airline cancels your ticket, they are required to provide a full refund. You cannot be charged a cancellation fee on a ticket the airline chose to void. In practice, most airlines simply honor the ticket rather than deal with the customer service fallout of mass cancellations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do I find mistake fares before they disappear?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Set up fare price alerts on Aviasales for your target routes and check them regularly. Unusually low prices stand out immediately when you're used to seeing normal fare ranges for a route. FareFinderAI also features the Aviasales pricing calendar to spot sudden drops in monthly fare averages."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is booking a mistake fare ethical?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Airlines use sophisticated yield management systems to maximize revenue from passengers at every opportunity. Booking a mistake fare is simply taking advantage of a pricing error. The practice is legal, increasingly common, and entirely risk-free for the traveler since you receive a full refund if the airline cancels."
-      }
-    }
+    {"@type": "Question","name": "Do airlines have to honor mistake fares?","acceptedAnswer": {"@type": "Answer","text": "In the US, the Department of Transportation has historically required airlines to honor mistake fares once a ticket is issued with a confirmation number. In practice, most major airlines honor mistake fares quietly. Always get a ticket number, not just a booking reference."}},
+    {"@type": "Question","name": "How long do mistake fares last?","acceptedAnswer": {"@type": "Answer","text": "Most mistake fares last between 2 and 12 hours before the price is corrected. Some last only minutes. Book first, research second."}},
+    {"@type": "Question","name": "What if the airline cancels my mistake fare ticket?","acceptedAnswer": {"@type": "Answer","text": "If the airline cancels your ticket, they are required to provide a full refund. You cannot be charged a cancellation fee on a ticket the airline chose to void."}},
+    {"@type": "Question","name": "How do I find mistake fares before they disappear?","acceptedAnswer": {"@type": "Answer","text": "Set up fare price alerts on Aviasales for your target routes and check them regularly. Unusually low prices stand out immediately when you know the normal fare range."}},
+    {"@type": "Question","name": "Is booking a mistake fare ethical?","acceptedAnswer": {"@type": "Answer","text": "Yes. Booking a mistake fare is simply taking advantage of a pricing error. The practice is legal and risk-free for the traveler since you receive a full refund if the airline cancels."}}
   ]
 }
 </script>
-
-<!-- Breadcrumb Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://farefinderai.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Flight Hacks",
-      "item": "https://farefinderai.com/#tips"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Mistake Fares"
-    }
+    {"@type": "ListItem","position": 1,"name": "Home","item": "https://farefinderai.com/"},
+    {"@type": "ListItem","position": 2,"name": "Flight Hacks","item": "https://farefinderai.com/#tips"},
+    {"@type": "ListItem","position": 3,"name": "Mistake Fares"}
   ]
 }
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sky:#0EA5E9;--sky-dark:#0284C7;--sky-light:#E0F2FE;--night:#0C1445;--night2:#111827;--sunset:#F97316;--white:#FAFEFF;--muted:rgba(12,20,69,0.55);--border:#E2EFF8;--surface:#F0F9FF;--font-display:'Cabinet Grotesk',sans-serif;--font-body:'Cabinet Grotesk',sans-serif;--font-serif:'Lora',Georgia,serif}
+:root{--sky:#0EA5E9;--sky-dark:#0284C7;--sky-light:#E0F2FE;--night:#0C1445;--night2:#111827;--sunset:#F97316;--white:#FAFEFF;--muted:rgba(12,20,69,0.55);--border:#E2EFF8;--surface:#F0F9FF;--font-body:'Cabinet Grotesk',sans-serif;--font-serif:'Lora',Georgia,serif}
 body{font-family:var(--font-body);background:var(--white);color:var(--night);line-height:1.65;font-size:16px;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
@@ -269,7 +152,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .faq-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem}
 .faq-item{background:white;border:1px solid var(--border);border-radius:14px;overflow:hidden}
 .faq-q{font-size:1rem;font-weight:800;color:var(--night);padding:1.25rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;letter-spacing:-0.01em}
-.faq-q::after{content:'＋';font-size:1.1rem;color:var(--sky);flex-shrink:0;transition:transform 0.2s}
+.faq-q::after{content:'+';font-size:1.1rem;color:var(--sky);flex-shrink:0;transition:transform 0.2s}
 .faq-item.open .faq-q::after{transform:rotate(45deg)}
 .faq-a{font-size:0.9rem;color:var(--muted);line-height:1.75;padding:0 1.5rem 1.25rem;display:none}
 .faq-item.open .faq-a{display:block}
@@ -291,21 +174,19 @@ footer a:hover{color:var(--sky)}
 <body>
 <nav>
   <a href="/" class="nav-logo"><span class="nav-logo-icon">✈</span> FareFinderAI</a>
-  <div class="nav-trust"><span class="nav-trust-dot"></span> 5,000+ travelers flying smarter</div>
+  <div class="nav-trust"><span class="nav-trust-dot"></span> Free flight search &amp; deal guides</div>
   <a href="/" class="nav-cta">Find Cheap Flights</a>
 </nav>
-
 <div class="breadcrumb-bar">
   <a href="/">Home</a><span>›</span><a href="/#tips">Flight Hacks</a><span>›</span>Mistake Fares
 </div>
-
 <section class="hero">
   <div class="hero-clouds"></div>
   <div class="hero-stars"></div>
   <div class="hero-content">
     <div class="hero-badge"><span class="hero-badge-num">GUIDE</span> Airline pricing errors</div>
-    <h1>Mistake Fares — <span class="sky">Fly Business</span><br>Class for <span class="sunset">Economy</span> Prices</h1>
-    <p class="hero-sub">Mistake fares are accidental airline pricing errors that let savvy travelers fly for 50–90% less. Here's how to find them before they disappear.</p>
+    <h1>Mistake Fares: <span class="sky">Fly Business</span><br>Class for <span class="sunset">Economy</span> Prices</h1>
+    <p class="hero-sub">Mistake fares are accidental airline pricing errors that let savvy travelers fly for 50 to 90% less. Here's how to find them before they disappear.</p>
     <div class="hero-byline">
       <span class="byline-avatar">JJ</span>
       <span>By <strong style="color:white">Julie James</strong></span>
@@ -317,259 +198,115 @@ footer a:hover{color:var(--sky)}
   </div>
   <div class="hero-plane">✈️</div>
 </section>
-
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat"><span class="stat-num">50–90%</span><span class="stat-label">Typical mistake fare savings</span></div>
+    <div class="stat"><span class="stat-num">50 to 90%</span><span class="stat-label">Typical mistake fare savings</span></div>
     <div class="stat"><span class="stat-num">Hours</span><span class="stat-label">How long they last</span></div>
-    <div class="stat"><span class="stat-num">5,000+</span><span class="stat-label">Travelers using FareFinderAI</span></div>
+    <div class="stat"><span class="stat-num">100s</span><span class="stat-label">Airlines compared at once</span></div>
     <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Always free to search</span></div>
   </div>
 </div>
-
 <section class="section" style="background:var(--surface)">
   <div class="section-inner">
     <p class="eyebrow">What is a mistake fare?</p>
     <h2 class="title">When Airlines Accidentally <em>Underprice</em> Flights</h2>
-    <p class="subtitle">Mistake fares happen when airlines, booking agencies, or fare aggregators publish tickets at prices far below their intended rate — due to currency conversion errors, missing fuel surcharges, fat-finger pricing mistakes, or system glitches. These fares can be 50% to 90% cheaper than the same route normally costs. A business class seat to Europe for $300. A round trip to Japan for $180. They're real, they get honored more often than not, and they disappear within hours.</p>
+    <p class="subtitle">Mistake fares happen when airlines, booking agencies, or fare aggregators publish tickets at prices far below their intended rate, due to currency conversion errors, missing fuel surcharges, fat-finger pricing mistakes, or system glitches. These fares can be 50% to 90% cheaper than the same route normally costs. A business class seat to Europe for $300. A round trip to Japan for $180. They're real, they get honored more often than not, and they disappear within hours.</p>
     <div class="how-grid">
-      <div class="how-card">
-        <span class="how-icon">💱</span>
-        <h3>Currency Conversion Errors</h3>
-        <p>A fare gets priced in one currency and incorrectly converted to another — often at the wrong decimal point. These are among the most dramatic mistake fares, sometimes off by 10x or more.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">⛽</span>
-        <h3>Missing Fuel Surcharges</h3>
-        <p>Airlines sometimes publish a fare without the fuel surcharge applied. On long-haul international routes, this can shave $300–$800 off the ticket price instantly.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">⌨️</span>
-        <h3>Fat-Finger Pricing</h3>
-        <p>A human enters $1,400 as $140, or a $900 fare as $90. It happens more than airlines admit. These errors go live on booking sites before anyone catches them.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">🖥️</span>
-        <h3>System Glitches</h3>
-        <p>Automated fare pricing systems can misfire during updates or integrations, briefly publishing routes at broken prices. These often affect entire routes for a short window.</p>
-      </div>
+      <div class="how-card"><span class="how-icon">💱</span><h3>Currency Conversion Errors</h3><p>A fare gets priced in one currency and incorrectly converted to another, often at the wrong decimal point. These are among the most dramatic mistake fares, sometimes off by 10x or more.</p></div>
+      <div class="how-card"><span class="how-icon">⛽</span><h3>Missing Fuel Surcharges</h3><p>Airlines sometimes publish a fare without the fuel surcharge applied. On long-haul international routes, this can shave $300 to $800 off the ticket price instantly.</p></div>
+      <div class="how-card"><span class="how-icon">⌨️</span><h3>Fat-Finger Pricing</h3><p>A human enters $1,400 as $140, or a $900 fare as $90. It happens more than airlines admit. These errors go live on booking sites before anyone catches them.</p></div>
+      <div class="how-card"><span class="how-icon">🖥️</span><h3>System Glitches</h3><p>Automated fare pricing systems can misfire during updates or integrations, briefly publishing routes at broken prices. These often affect entire routes for a short window.</p></div>
     </div>
   </div>
 </section>
-
 <section class="examples-section">
   <div class="examples-inner">
     <p class="eyebrow" style="color:#7DD3FC">Real examples</p>
     <h2 class="title" style="color:white">Mistake Fares That <em>Actually Happened</em></h2>
     <p style="font-size:1rem;color:rgba(255,255,255,0.6);max-width:560px;line-height:1.75">These are real mistake fares that travelers booked and flew. Airlines honored most of them.</p>
     <div class="examples-grid">
-      <div class="example-card">
-        <div class="example-route">New York → Paris</div>
-        <div class="example-normal">Normal price: $1,200</div>
-        <div class="example-mistake">$130</div>
-        <div class="example-savings">89% off — honored</div>
-        <p class="example-note">Business class seats accidentally priced at economy rates due to a currency error. Lasted about 4 hours before being corrected.</p>
-      </div>
-      <div class="example-card">
-        <div class="example-route">Los Angeles → Tokyo</div>
-        <div class="example-normal">Normal price: $900</div>
-        <div class="example-mistake">$180</div>
-        <div class="example-savings">80% off — honored</div>
-        <p class="example-note">A missing fuel surcharge on a major carrier's pricing system. Thousands of travelers booked before it was pulled.</p>
-      </div>
-      <div class="example-card">
-        <div class="example-route">Chicago → London</div>
-        <div class="example-normal">Normal price: $800</div>
-        <div class="example-mistake">$250</div>
-        <div class="example-savings">69% off — honored</div>
-        <p class="example-note">Fat-finger error during a seasonal sale upload. The airline honored all tickets booked during the 6-hour window.</p>
-      </div>
-      <div class="example-card">
-        <div class="example-route">Miami → Cancun</div>
-        <div class="example-normal">Normal price: $320</div>
-        <div class="example-mistake">$38</div>
-        <div class="example-savings">88% off — honored</div>
-        <p class="example-note">A third-party agency incorrectly loaded the fare without taxes. The airline still honored every booking made during the window.</p>
-      </div>
-      <div class="example-card">
-        <div class="example-route">Dallas → Dublin</div>
-        <div class="example-normal">Normal price: $950</div>
-        <div class="example-mistake">$290</div>
-        <div class="example-savings">69% off — honored</div>
-        <p class="example-note">A transatlantic business class mistake fare that stayed live for nearly 12 hours over a weekend before the airline noticed.</p>
-      </div>
-      <div class="example-card">
-        <div class="example-route">Seattle → Bangkok</div>
-        <div class="example-normal">Normal price: $1,100</div>
-        <div class="example-mistake">$220</div>
-        <div class="example-savings">80% off — honored</div>
-        <p class="example-note">A system integration error during a GDS update. All tickets issued during the error window were honored by the carrier.</p>
-      </div>
+      <div class="example-card"><div class="example-route">New York to Paris</div><div class="example-normal">Normal price: $1,200</div><div class="example-mistake">$130</div><div class="example-savings">89% off, honored</div><p class="example-note">Business class seats accidentally priced at economy rates due to a currency error. Lasted about 4 hours before being corrected.</p></div>
+      <div class="example-card"><div class="example-route">Los Angeles to Tokyo</div><div class="example-normal">Normal price: $900</div><div class="example-mistake">$180</div><div class="example-savings">80% off, honored</div><p class="example-note">A missing fuel surcharge on a major carrier's pricing system. Thousands of travelers booked before it was pulled.</p></div>
+      <div class="example-card"><div class="example-route">Chicago to London</div><div class="example-normal">Normal price: $800</div><div class="example-mistake">$250</div><div class="example-savings">69% off, honored</div><p class="example-note">Fat-finger error during a seasonal sale upload. The airline honored all tickets booked during the 6-hour window.</p></div>
+      <div class="example-card"><div class="example-route">Miami to Cancun</div><div class="example-normal">Normal price: $320</div><div class="example-mistake">$38</div><div class="example-savings">88% off, honored</div><p class="example-note">A third-party agency incorrectly loaded the fare without taxes. The airline still honored every booking made during the window.</p></div>
+      <div class="example-card"><div class="example-route">Dallas to Dublin</div><div class="example-normal">Normal price: $950</div><div class="example-mistake">$290</div><div class="example-savings">69% off, honored</div><p class="example-note">A transatlantic business class mistake fare that stayed live for nearly 12 hours over a weekend before the airline noticed.</p></div>
+      <div class="example-card"><div class="example-route">Seattle to Bangkok</div><div class="example-normal">Normal price: $1,100</div><div class="example-mistake">$220</div><div class="example-savings">80% off, honored</div><p class="example-note">A system integration error during a GDS update. All tickets issued during the error window were honored by the carrier.</p></div>
     </div>
   </div>
 </section>
-
 <section class="section" style="background:white">
   <div class="section-inner">
     <p class="eyebrow">Step by step</p>
     <h2 class="title">How to Book a <em>Mistake Fare</em> Before It Disappears</h2>
     <p class="subtitle">Speed is everything with mistake fares. Here's the process that gives you the best chance of locking one in.</p>
     <div class="how-grid">
-      <div class="how-card">
-        <span class="how-icon">🔔</span>
-        <div class="how-step">Step 01</div>
-        <h3>Set Up Fare Alerts</h3>
-        <p>Mistake fares disappear within hours — sometimes minutes. Set up price alerts on Aviasales for your most-traveled routes so you're notified the moment a fare drops unusually low.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">⚡</span>
-        <div class="how-step">Step 02</div>
-        <h3>Book Immediately</h3>
-        <p>When you spot a price that seems too good to be true, book it first and research it second. A mistake fare that disappears while you're deciding is gone for good. You can always cancel within 24 hours if needed.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">📧</span>
-        <div class="how-step">Step 03</div>
-        <h3>Get Confirmation in Writing</h3>
-        <p>Make sure you receive a full booking confirmation email with a ticket number — not just a booking reference. A confirmed ticket number is what the airline must honor, even after correcting the fare.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">⏳</span>
-        <div class="how-step">Step 04</div>
-        <h3>Wait Before Making Plans</h3>
-        <p>Give the airline 24–48 hours to either honor or cancel the ticket. Most honor mistake fares quietly. If they cancel, DOT regulations in the US require a full refund — so you never lose money on a mistake fare.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">📅</span>
-        <div class="how-step">Step 05</div>
-        <h3>Book Refundable Hotels Separately</h3>
-        <p>Once the airline confirms the ticket, book refundable accommodations through Expedia or Trip.com. Keep everything refundable until you know the airline has locked in your seat.</p>
-      </div>
-      <div class="how-card">
-        <span class="how-icon">🛡</span>
-        <div class="how-step">Step 06</div>
-        <h3>Add Travel Insurance</h3>
-        <p>Even after confirmation, add EKTA travel insurance to cover the trip. Policies issue in minutes. For an already-discounted fare, coverage costs almost nothing relative to the savings.</p>
-      </div>
+      <div class="how-card"><span class="how-icon">🔔</span><div class="how-step">Step 01</div><h3>Set Up Fare Alerts</h3><p>Mistake fares disappear within hours, sometimes minutes. Set up price alerts on Aviasales for your most-traveled routes so you're notified the moment a fare drops unusually low.</p></div>
+      <div class="how-card"><span class="how-icon">⚡</span><div class="how-step">Step 02</div><h3>Book Immediately</h3><p>When you spot a price that seems too good to be true, book it first and research it second. A mistake fare that disappears while you're deciding is gone for good. You can always cancel within 24 hours if needed.</p></div>
+      <div class="how-card"><span class="how-icon">📧</span><div class="how-step">Step 03</div><h3>Get Confirmation in Writing</h3><p>Make sure you receive a full booking confirmation email with a ticket number, not just a booking reference. A confirmed ticket number is what the airline must honor, even after correcting the fare.</p></div>
+      <div class="how-card"><span class="how-icon">⏳</span><div class="how-step">Step 04</div><h3>Wait Before Making Plans</h3><p>Give the airline 24 to 48 hours to either honor or cancel the ticket. Most honor mistake fares quietly. If they cancel, DOT regulations in the US require a full refund, so you never lose money on a mistake fare.</p></div>
+      <div class="how-card"><span class="how-icon">📅</span><div class="how-step">Step 05</div><h3>Book Refundable Hotels Separately</h3><p>Once the airline confirms the ticket, book refundable accommodations through Expedia or Trip.com. Keep everything refundable until you know the airline has locked in your seat.</p></div>
+      <div class="how-card"><span class="how-icon">🛡</span><div class="how-step">Step 06</div><h3>Add Travel Insurance</h3><p>Even after confirmation, add EKTA travel insurance to cover the trip. Policies issue in minutes. For an already-discounted fare, coverage costs almost nothing relative to the savings.</p></div>
     </div>
   </div>
 </section>
-
 <section style="background:var(--night);padding:4rem 2rem">
   <div style="max-width:1000px;margin:0 auto;text-align:center">
     <p class="eyebrow" style="color:#7DD3FC">Search flights now</p>
     <h2 class="title" style="color:white;margin-bottom:0.5rem">Spot <em>Unusual Fare Drops</em> in Real Time</h2>
-    <p style="font-size:1rem;color:rgba(255,255,255,0.6);margin-bottom:2rem;max-width:540px;margin-left:auto;margin-right:auto">Search now and compare hundreds of airlines — unusually low fares stand out immediately when you see live pricing.</p>
+    <p style="font-size:1rem;color:rgba(255,255,255,0.6);margin-bottom:2rem;max-width:540px;margin-left:auto;margin-right:auto">Search now and compare hundreds of airlines. Unusually low fares stand out immediately when you see live pricing.</p>
     <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem">
-      <script async src="https://tpwgts.com/content?trs=408984&shmarker=624395&locale=en&curr=USD&default_origin=PHX&powered_by=true&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
+      <script async src="https://tpwgts.com/content?trs=408984&shmarker=624395&locale=en&curr=USD&powered_by=true&border_radius=0&plain=true&color_button=%232681ff&color_button_text=%23ffffff&color_border=%232681ff&promo_id=4132&campaign_id=121" charset="utf-8"></script>
     </div>
   </div>
 </section>
-
 <section class="section tips" style="background:var(--surface)">
   <div class="section-inner">
     <p class="eyebrow">Pro tips</p>
     <h2 class="title">How to <em>Never Miss</em> a Mistake Fare</h2>
     <p class="subtitle" style="margin-bottom:2.5rem">The habits that frequent mistake fare hunters use to catch deals before they vanish.</p>
     <div class="tips-grid">
-      <div class="tip-card">
-        <div class="tip-num">Tip 01</div>
-        <h3>Check Prices on Tuesday and Wednesday</h3>
-        <p>Airline pricing systems update most frequently mid-week. Mistake fares caused by system updates or new fare loads are most likely to appear Tuesday through Wednesday.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 02</div>
-        <h3>Monitor Routes You Want — Not Just Dates</h3>
-        <p>Mistake fares don't appear on the dates you want. Set alerts for your target routes broadly and be ready to adjust your travel dates when a deal appears.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 03</div>
-        <h3>US DOT Rules Protect You</h3>
-        <p>In the US, airlines are required to honor mistake fares that were issued with a ticket number. Even if they don't, DOT rules require a full refund — you never lose money on a mistake fare booking.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 04</div>
-        <h3>Don't Tell the Airline It's a Mistake</h3>
-        <p>When calling to confirm your booking, never reference the price being unusual. Simply confirm your itinerary and ticket number. The less attention drawn to the fare, the better.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 05</div>
-        <h3>Business and First Class Errors Are Common</h3>
-        <p>Premium cabin mistake fares occur more than economy ones because the pricing is more complex. A business class mistake fare can represent $2,000+ in savings on a single long-haul ticket.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-num">Tip 06</div>
-        <h3>Combine With Hidden City Strategies</h3>
-        <p>Occasionally a mistake fare appears on a route that also has hidden city potential. FareFinderAI covers both — check our <a href="/guides/hidden-city-flights">hidden city flights guide</a> for the full breakdown.</p>
-      </div>
+      <div class="tip-card"><div class="tip-num">Tip 01</div><h3>Check Prices on Tuesday and Wednesday</h3><p>Airline pricing systems update most frequently mid-week. Mistake fares caused by system updates or new fare loads are most likely to appear Tuesday through Wednesday.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 02</div><h3>Monitor Routes You Want, Not Just Dates</h3><p>Mistake fares don't appear on the dates you want. Set alerts for your target routes broadly and be ready to adjust your travel dates when a deal appears.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 03</div><h3>US DOT Rules Protect You</h3><p>In the US, airlines are required to honor mistake fares that were issued with a ticket number. Even if they don't, DOT rules require a full refund, you never lose money on a mistake fare booking.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 04</div><h3>Don't Tell the Airline It's a Mistake</h3><p>When calling to confirm your booking, never reference the price being unusual. Simply confirm your itinerary and ticket number. The less attention drawn to the fare, the better.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 05</div><h3>Business and First Class Errors Are Common</h3><p>Premium cabin mistake fares occur more than economy ones because the pricing is more complex. A business class mistake fare can represent $2,000+ in savings on a single long-haul ticket.</p></div>
+      <div class="tip-card"><div class="tip-num">Tip 06</div><h3>Combine With Hidden City Strategies</h3><p>Occasionally a mistake fare appears on a route that also has hidden city potential. FareFinderAI covers both, check our <a href="/guides/hidden-city-flights">hidden city flights guide</a> for the full breakdown.</p></div>
     </div>
   </div>
 </section>
-
 <section class="faq">
   <div class="faq-inner">
     <p class="eyebrow">Common questions</p>
-    <h2 class="title">Mistake Fares — <em>FAQ</em></h2>
+    <h2 class="title">Mistake Fares, <em>FAQ</em></h2>
     <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q">Do airlines have to honor mistake fares?</div>
-        <div class="faq-a">In the US, the Department of Transportation (DOT) has historically required airlines to honor mistake fares once a ticket is issued with a confirmation number. However, policy interpretations have shifted over the years. In practice, most major airlines honor mistake fares quietly to avoid negative publicity — especially when many passengers booked the same error. Always get a ticket number, not just a booking reference, to maximize your protection.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How long do mistake fares last?</div>
-        <div class="faq-a">Most mistake fares last between 2 and 12 hours before the airline or booking system corrects the price. Some last only minutes if they're caught by automated pricing systems. Weekend mistake fares sometimes last longer because airline pricing teams aren't monitoring systems as closely. Speed is the single most important factor — book first, research second.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">What if the airline cancels my mistake fare ticket?</div>
-        <div class="faq-a">If the airline cancels your ticket, they are required to provide a full refund. You cannot be charged a cancellation fee on a ticket the airline chose to void. In practice, most airlines simply honor the ticket rather than deal with the customer service fallout of mass cancellations. Either way, you don't lose money — the worst case is a refund.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">How do I find mistake fares before they disappear?</div>
-        <div class="faq-a">The best approach is to set up fare price alerts on Aviasales for your target routes and check them regularly. Unusually low prices stand out immediately when you're used to seeing normal fare ranges for a route. FareFinderAI also features the Aviasales pricing calendar, which makes it easy to spot sudden drops in monthly fare averages that can signal a mistake fare or flash sale.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Is booking a mistake fare ethical?</div>
-        <div class="faq-a">Yes. Airlines use sophisticated yield management systems to maximize revenue from passengers at every opportunity. Booking a mistake fare is simply taking advantage of a pricing error in the same way airlines take advantage of demand signals to raise prices. The practice is legal, increasingly common, and — since you receive a full refund if the airline cancels — entirely risk-free for the traveler.</div>
-      </div>
+      <div class="faq-item"><div class="faq-q">Do airlines have to honor mistake fares?</div><div class="faq-a">In the US, the Department of Transportation (DOT) has historically required airlines to honor mistake fares once a ticket is issued with a confirmation number. However, policy interpretations have shifted over the years. In practice, most major airlines honor mistake fares quietly to avoid negative publicity, especially when many passengers booked the same error. Always get a ticket number, not just a booking reference, to maximize your protection.</div></div>
+      <div class="faq-item"><div class="faq-q">How long do mistake fares last?</div><div class="faq-a">Most mistake fares last between 2 and 12 hours before the airline or booking system corrects the price. Some last only minutes if they're caught by automated pricing systems. Weekend mistake fares sometimes last longer because airline pricing teams aren't monitoring systems as closely. Speed is the single most important factor, book first, research second.</div></div>
+      <div class="faq-item"><div class="faq-q">What if the airline cancels my mistake fare ticket?</div><div class="faq-a">If the airline cancels your ticket, they are required to provide a full refund. You cannot be charged a cancellation fee on a ticket the airline chose to void. In practice, most airlines simply honor the ticket rather than deal with the customer service fallout of mass cancellations. Either way, you don't lose money, the worst case is a refund.</div></div>
+      <div class="faq-item"><div class="faq-q">How do I find mistake fares before they disappear?</div><div class="faq-a">The best approach is to set up fare price alerts on Aviasales for your target routes and check them regularly. Unusually low prices stand out immediately when you're used to seeing normal fare ranges for a route. FareFinderAI also features the Aviasales pricing calendar, which makes it easy to spot sudden drops in monthly fare averages that can signal a mistake fare or flash sale.</div></div>
+      <div class="faq-item"><div class="faq-q">Is booking a mistake fare ethical?</div><div class="faq-a">Yes. Airlines use sophisticated yield management systems to maximize revenue from passengers at every opportunity. Booking a mistake fare is simply taking advantage of a pricing error in the same way airlines take advantage of demand signals to raise prices. The practice is legal, increasingly common, and since you receive a full refund if the airline cancels, entirely risk-free for the traveler.</div></div>
     </div>
   </div>
 </section>
-
 <section class="related-section">
   <div class="related-inner">
     <p class="eyebrow">Related guides</p>
     <h2 class="title">More <em>Flight Hacks</em> to Save Big</h2>
     <div class="related-grid">
-      <a href="/guides/hidden-city-flights" class="related-card">
-        <div class="label">Pillar Guide</div>
-        <h4>Hidden City Flights: How to Save Up to 60% on Airfare</h4>
-      </a>
-      <a href="/flight-deal-alerts.html" class="related-card">
-        <div class="label">Tool Guide</div>
-        <h4>Flight Deal Alerts — Book Before Prices Go Up</h4>
-      </a>
-      <a href="/cheap-flights-finder.html" class="related-card">
-        <div class="label">Comparison</div>
-        <h4>The Best Cheap Flights Finder Tools Right Now</h4>
-      </a>
-      <a href="/wayaway-cashback-flights.html" class="related-card">
-        <div class="label">Cashback</div>
-        <h4>WayAway Cashback — Get Paid to Book Flights</h4>
-      </a>
+      <a href="/guides/hidden-city-flights" class="related-card"><div class="label">Pillar Guide</div><h4>Hidden City Flights: How to Save Up to 60% on Airfare</h4></a>
+      <a href="/flight-deal-alerts.html" class="related-card"><div class="label">Tool Guide</div><h4>Flight Deal Alerts, Book Before Prices Go Up</h4></a>
+      <a href="/cheap-flights-finder.html" class="related-card"><div class="label">Comparison</div><h4>The Best Cheap Flights Finder Tools Right Now</h4></a>
+      <a href="/wayaway-cashback-flights.html" class="related-card"><div class="label">Cashback</div><h4>WayAway Cashback, Get Paid to Book Flights</h4></a>
     </div>
   </div>
 </section>
-
 <section class="cta-strip">
   <h2>Start Hunting for <em>Mistake Fares</em> Today</h2>
-  <p>FareFinderAI brings together the best fare search tools — free to use, no account required.</p>
+  <p>FareFinderAI brings together the best fare search tools, free to use, no account required.</p>
   <a href="/" class="cta-btn">✈ Search Flights on FareFinderAI</a>
 </section>
-
 <div class="disclosure">
   <p>FareFinderAI contains affiliate links. We may earn a commission if you book through our links at no extra cost to you. All tools featured are independently selected based on our testing and research.</p>
 </div>
-
 <footer>
   <p>This site contains affiliate links. We may earn a commission if you sign up through our links at no extra cost to you.</p>
   <p style="margin-top:0.5rem">&copy; 2026 FareFinderAI.com by Automated Income Tools LLC. All rights reserved.
