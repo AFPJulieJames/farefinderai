@@ -157,7 +157,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .tool-card.expedia::before{background:#FFC72C}
 .tool-card.safety::before{background:#DC2626}
 .tool-card.aviasales::before{background:#FF6B00}
-.tool-card.booking::before{background:#003580}
 .tool-card.experiences::before{background:#7C3AED}
 .tool-card:hover{border-color:var(--sky);transform:translateY(-3px);box-shadow:0 8px 30px rgba(14,165,233,0.1)}
 .tool-badge{font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--sky);margin-bottom:0.5rem}
@@ -165,7 +164,6 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .tool-card p{font-size:0.875rem;color:var(--muted);line-height:1.65;margin-bottom:1.25rem;flex:1}
 .tool-link{display:inline-flex;align-items:center;gap:0.4rem;background:var(--night);color:white;padding:0.6rem 1.25rem;border-radius:100px;font-size:0.875rem;font-weight:700;transition:background 0.2s;align-self:flex-start}
 .tool-link:hover{background:var(--sky)}
-.tool-link.coming{background:var(--surface);color:var(--muted);border:1px dashed var(--border);cursor:default}
 .tool-link-arrow{font-size:0.75rem}
 
 /* WIDGET SECTION HELPERS */
@@ -346,7 +344,7 @@ footer a:hover{color:var(--sky)}
       <div class="how-card"><span class="how-icon">⭐</span><h3>Compare Hundreds of Airlines</h3><p>Aviasales scans prices across hundreds of airlines and agencies at once - no markups - and suggests alternative dates when fares are lower.</p></div>
       <div class="how-card"><span class="how-icon">🔀</span><h3>Hidden City &amp; Split Tickets</h3><p>Kiwi combines flights from airlines that don't normally connect, creating cheaper itineraries that mainstream engines never show you.</p></div>
       <div class="how-card"><span class="how-icon">🌍</span><h3>Global Routes &amp; Bundles</h3><p>Trip.com covers 2M+ routes across 5,000+ cities. Bundle flights with hotels for pricing you can't get booking separately.</p></div>
-      <div class="how-card"><span class="how-icon">🏨</span><h3>Hotels &amp; Whole Trips</h3><p>Expedia and Booking.com bundle flights, hotels, and cars - often the biggest savings on the whole trip come from the hotel, not the flight.</p></div>
+      <div class="how-card"><span class="how-icon">🏨</span><h3>Hotels &amp; Whole Trips</h3><p>Expedia and Trip.com bundle flights, hotels, and cars - often the biggest savings on the whole trip come from the hotel, not the flight.</p></div>
       <div class="how-card"><span class="how-icon">🛡</span><h3>Travel Insurance That Works</h3><p>EKTA issues embassy-accepted policies in minutes, covering ages 2 months to 100 years. Never travel a big trip uncovered.</p></div>
     </div>
   </div>
@@ -364,12 +362,6 @@ footer a:hover{color:var(--sky)}
         <h3>Aviasales</h3>
         <p>A trusted flight search engine that finds the lowest prices from reliable agencies with no extra fees. Compares hundreds of airlines and suggests cheaper alternative dates. Smart filters by airline, stops, and departure time.</p>
         <a href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com&campaign_id=100" target="_blank" rel="noopener" class="tool-link" onclick="trackAffiliate('Aviasales','tool_card')">Search Flights on Aviasales <span class="tool-link-arrow">→</span></a>
-      </div>
-      <div class="tool-card booking">
-        <div class="tool-badge">Best for Hotels - Highest Conversions</div>
-        <h3>Booking.com</h3>
-        <p>The most-trusted name in hotels, with millions of properties and free cancellation on most stays. Hotels convert faster and pay more than flights - so if you're booking a trip, lock the room here. <em>(Apply for Booking.com inside your Travelpayouts dashboard, then drop your link here.)</em></p>
-        <a class="tool-link coming">Add your Booking.com link</a>
       </div>
       <div class="tool-card kiwi">
         <div class="tool-badge">Best for Hidden City &amp; Flexible Routes</div>
@@ -391,14 +383,14 @@ footer a:hover{color:var(--sky)}
       </div>
       <div class="tool-card experiences">
         <div class="tool-badge">Best for Tours &amp; Activities</div>
-        <h3>Things to Do</h3>
-        <p>Tours and experiences convert fast and pay well - a natural add-on once someone's booked a flight. Sign up for Viator or GetYourGuide (both on Travelpayouts/CJ), then feature "things to do in [your top destinations]" right here. <em>(Placeholder - add your link.)</em></p>
-        <a class="tool-link coming">Add Viator / GetYourGuide</a>
+        <h3>Klook</h3>
+        <p>Book cheap tours, attraction tickets, and things to do at your destination, often at lower prices than buying at the gate. Klook covers skip-the-line theme park tickets, guided day trips, airport transfers, city passes, and local experiences across 2,500+ destinations worldwide, with especially strong coverage in Asia, Europe, and major US cities. The smartest way to plan what to do once your flight is booked.</p>
+        <a href="https://tp.media/r?marker=624395&trs=408984&p=4110&u=https%3A%2F%2Fklook.com&campaign_id=137" target="_blank" rel="noopener" class="tool-link" onclick="trackAffiliate('Klook','tool_card')">Find Things to Do on Klook <span class="tool-link-arrow">→</span></a>
       </div>
       <div class="tool-card safety">
         <div class="tool-badge">Best Travel Insurance</div>
         <h3>EKTA Travel Insurance</h3>
-        <p>Comprehensive cover accepted by most embassies for visa applications, issued in 2–3 minutes. Ages 2 months to 100 years, optional extreme-sports cover, 24/7 multilingual support.</p>
+        <p>Comprehensive cover accepted by most embassies for visa applications, issued in 2-3 minutes. Ages 2 months to 100 years, optional extreme-sports cover, 24/7 multilingual support.</p>
         <a href="https://tp.media/r?marker=624395&trs=408984&p=5869&u=https%3A%2F%2Fektatraveling.com&campaign_id=225" target="_blank" rel="noopener" class="tool-link" onclick="trackAffiliate('EKTA','tool_card')">Get EKTA Travel Insurance <span class="tool-link-arrow">→</span></a>
       </div>
     </div>
@@ -475,7 +467,7 @@ footer a:hover{color:var(--sky)}
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;max-width:1100px;margin:0 auto">
       <a href="/guides/hidden-city-flights" class="guides-card"><div class="gicon">🎯</div><span class="gtag">Pillar Guide</span><h3>Hidden City Flights - Save Up to 60%</h3><p>The complete 2026 guide to hidden city ticketing, its legal status, and how to find these fares safely.</p></a>
       <a href="/guides/is-skiplagging-legal" class="guides-card"><div class="gicon">⚖️</div><span class="gtag">Legal Guide</span><h3>Is Skiplagging Legal? (2026)</h3><p>Yes - but airlines can still penalize you. What the May 2025 court ruling means and what they can actually do.</p></a>
-      <a href="/mistake-fares.html" class="guides-card"><div class="gicon">✈️</div><span class="gtag">Flight Hack</span><h3>Mistake Fares - Fly for 50–90% Less</h3><p>Airline pricing errors let savvy travelers fly business at economy prices. How to find and book them fast.</p></a>
+      <a href="/mistake-fares.html" class="guides-card"><div class="gicon">✈️</div><span class="gtag">Flight Hack</span><h3>Mistake Fares - Fly for 50 to 90% Less</h3><p>Airline pricing errors let savvy travelers fly business at economy prices. How to find and book them fast.</p></a>
       <a href="/aviasales-review.html" class="guides-card"><div class="gicon">⭐</div><span class="gtag">Tool Review · 9.1/10</span><h3>Aviasales Review - Worth It?</h3><p>We tested Aviasales against Google Flights, Kayak, and Skyscanner. The verdict: our top-rated search tool.</p></a>
       <a href="/cheap-flights-finder.html" class="guides-card"><div class="gicon">🔍</div><span class="gtag">Comparison</span><h3>Best Cheap Flights Finder Tools</h3><p>Aviasales vs Kiwi vs Trip.com vs Expedia - ranked and reviewed. Which finds the lowest fare on your route?</p></a>
       <a href="/ai-flight-deals.html" class="guides-card"><div class="gicon">🤖</div><span class="gtag">AI Guide</span><h3>AI Flight Deals - Smarter Search</h3><p>How AI analyzes billions of fare combinations to find cheaper flights humans would never spot manually.</p></a>
@@ -491,9 +483,9 @@ footer a:hover{color:var(--sky)}
     <p class="eyebrow">FAQ</p>
     <h2 class="title">Cheap Flight <em>Questions</em>, Answered</h2>
     <div class="faq-grid" style="text-align:left">
-      <div class="faq-item"><h3>How do I find the cheapest flights from Phoenix?</h3><p>Search flexible dates across multiple airlines at once. FareFinderAI compares Aviasales, Kiwi, and Trip.com so you see the lowest fare on your route - plus nearby airports and alternate dates that are often cheaper.</p></div>
+      <div class="faq-item"><h3>How do I find the cheapest flights with AI?</h3><p>Search flexible dates across multiple airlines at once. FareFinderAI compares Aviasales, Kiwi, and Trip.com so you see the lowest fare on your route - plus nearby airports and alternate dates that are often cheaper.</p></div>
       <div class="faq-item"><h3>What is a hidden city fare?</h3><p>A hidden city (or skiplagging) fare is a flight where your real destination is a layover city - you book a longer itinerary and get off early. It can save up to 60% on some routes, though it carries airline-policy risks. See our full guide.</p></div>
-      <div class="faq-item"><h3>Are mistake fares real?</h3><p>Yes. Airlines occasionally publish pricing errors - fares 50–90% below normal. They get corrected fast, so the key is finding and booking them quickly.</p></div>
+      <div class="faq-item"><h3>Are mistake fares real?</h3><p>Yes. Airlines occasionally publish pricing errors - fares 50 to 90% below normal. They get corrected fast, so the key is finding and booking them quickly.</p></div>
       <div class="faq-item"><h3>Is FareFinderAI free to use?</h3><p>Yes. Every search tool and guide here is free. We earn an affiliate commission when you book through our partner links, at no extra cost to you.</p></div>
     </div>
   </div>
