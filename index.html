@@ -533,6 +533,70 @@ footer a:hover{color:var(--sky)}
 </footer>
 
 <script async defer src="//assets.pinterest.com/js/pinit.js"></script>
+  <!-- ============ EMAIL POPUP (exit-intent desktop / timer mobile, once per visitor) ============ -->
+<div id="ffa-modal-overlay" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(12,20,69,0.72);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:1rem">
+  <div id="ffa-modal" role="dialog" aria-modal="true" aria-labelledby="ffa-modal-title" style="position:relative;background:#FAFEFF;border-radius:20px;max-width:440px;width:100%;box-shadow:0 24px 80px rgba(12,20,69,0.4);overflow:hidden;animation:ffaPop 0.25s ease">
+    <button id="ffa-modal-close" aria-label="Close" style="position:absolute;top:10px;right:10px;z-index:2;width:32px;height:32px;border:none;border-radius:50%;background:rgba(12,20,69,0.08);color:#0C1445;font-size:1.1rem;line-height:1;cursor:pointer;transition:background 0.2s">&times;</button>
+    <div style="background:#0C1445;color:#fff;padding:1.75rem 1.75rem 1.5rem;text-align:center">
+      <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#7DD3FC;margin-bottom:0.6rem">Free deal alerts</div>
+      <h3 id="ffa-modal-title" style="font-size:1.4rem;font-weight:900;letter-spacing:-0.02em;line-height:1.15;margin:0 0 0.5rem">Get Cheap Flight Deals Before They Sell Out</h3>
+      <p style="font-size:0.875rem;color:rgba(255,255,255,0.65);margin:0;line-height:1.5">Mistake fares, hidden-city routes, and AI flight hacks — straight to your inbox. No spam, unsubscribe anytime.</p>
+    </div>
+    <div style="padding:0.5rem 0.75rem 0.75rem">
+      <iframe src="https://farefinderai.beehiiv.com/subscribe" title="Subscribe to FareFinderAI" style="width:100%;height:320px;border:none;border-radius:0 0 16px 16px" loading="lazy"></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY = 'ffa_popup_seen_v1';
+  var overlay = document.getElementById('ffa-modal-overlay');
+  var closeBtn = document.getElementById('ffa-modal-close');
+  if(!overlay) return;
+
+  var shown = false;
+  function hasSeen(){
+    try { return localStorage.getItem(KEY) === '1'; } catch(e){ return false; }
+  }
+  function markSeen(){
+    try { localStorage.setItem(KEY, '1'); } catch(e){}
+  }
+  function openModal(){
+    if(shown || hasSeen()) return;
+    shown = true;
+    overlay.style.display = 'flex';
+    markSeen();
+    if(window.trackAffiliate){ trackAffiliate('Newsletter','popup_shown'); }
+  }
+  function closeModal(){
+    overlay.style.display = 'none';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  var isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+
+  if(isTouch){
+    // Mobile: 35s timer fallback (no exit-intent on touch devices)
+    setTimeout(openModal, 35000);
+  } else {
+    // Desktop: fire when cursor leaves toward the top (close/back/tab)
+    document.addEventListener('mouseout', function(e){
+      if(!e.relatedTarget && e.clientY <= 0){ openModal(); }
+    });
+    // Safety-net timer in case exit-intent never triggers
+    setTimeout(openModal, 60000);
+  }
+})();
+</script>
+
+<style>
+@keyframes ffaPop{from{opacity:0;transform:translateY(12px) scale(0.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+#ffa-modal-close:hover{background:rgba(12,20,69,0.16)}
+</style>
 
 </body>
 </html>
