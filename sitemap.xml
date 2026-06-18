@@ -3,11 +3,43 @@
   <!-- Homepage -->
   <url>
     <loc>https://farefinderai.com/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <!-- Tier 1: Pillar Guides (under /guides/) -->
+  <!-- Blog hub -->
+  <url>
+    <loc>https://farefinderai.com/blog/</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Blog posts -->
+  <url>
+    <loc>https://farefinderai.com/blog/cheapest-days-to-fly</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://farefinderai.com/blog/when-to-book-flights</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://farefinderai.com/blog/google-flights-tricks</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://farefinderai.com/blog/cheapest-places-to-fly-2026</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Tier 1: Pillar Guides -->
   <url>
     <loc>https://farefinderai.com/guides/hidden-city-flights</loc>
     <lastmod>2026-05-12</lastmod>
@@ -20,7 +52,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Tier 2: Tool Reviews & Comparison Pages (root level) -->
+  <!-- Tier 2: Tool Reviews & Comparison Pages -->
   <url>
     <loc>https://farefinderai.com/aviasales-review.html</loc>
     <lastmod>2026-05-28</lastmod>
@@ -39,7 +71,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <!-- Tier 3: Flight Hack Guides (root level) -->
+  <!-- Tier 3: Flight Hack Guides -->
   <url>
     <loc>https://farefinderai.com/mistake-fares.html</loc>
     <lastmod>2026-05-28</lastmod>

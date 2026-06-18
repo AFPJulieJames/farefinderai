@@ -1,0 +1,5 @@
+# OS / editor / mount artifacts - never commit these
+.DS_Store
+.fuse_hidden*
+*.swp
+Thumbs.db
