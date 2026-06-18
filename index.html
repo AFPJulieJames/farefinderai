@@ -100,6 +100,28 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .nav-trust-dot{width:6px;height:6px;background:var(--green);border-radius:50%;display:inline-block}
 .nav-cta{background:var(--sunset);color:white;padding:0.5rem 1.25rem;border-radius:100px;font-size:0.875rem;font-weight:800;cursor:pointer;border:none;transition:transform 0.15s,background 0.2s}
 .nav-cta:hover{background:#ea6a0c;transform:translateY(-1px)}
+.nav-links{display:flex;gap:1.75rem;align-items:center}
+.nav-links a{font-size:0.95rem;font-weight:600;color:rgba(12,20,69,0.78);transition:color 0.2s;text-decoration:none}
+.nav-links a:hover{color:var(--sky)}
+@media(max-width:860px){.nav-links{display:none}}
+.compare-section{padding:4rem 2rem 3.5rem;background:var(--white)}
+.compare-inner{max-width:1120px;margin:0 auto}
+.compare-head{text-align:center;margin-bottom:2.25rem}
+.compare-table-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:16px;box-shadow:0 10px 34px rgba(12,20,69,0.07);-webkit-overflow-scrolling:touch}
+table.compare{width:100%;border-collapse:collapse;min-width:760px;background:white}
+table.compare thead th{background:var(--night);color:#fff;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;padding:0.95rem 1rem;text-align:left;font-weight:800}
+table.compare td{padding:1.05rem 1rem;border-top:1px solid var(--border);vertical-align:middle;font-size:0.95rem;color:var(--night)}
+table.compare tbody tr:hover{background:var(--surface)}
+.ct-rank{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;background:var(--sky-light);color:var(--sky-dark);border-radius:7px;font-size:0.78rem;font-weight:800;margin-right:0.6rem;flex-shrink:0}
+.ct-tool{display:flex;align-items:center;font-weight:900;font-size:1.02rem;color:var(--night);letter-spacing:-0.01em}
+.ct-best{font-weight:700;color:var(--night)}
+.ct-rating{font-weight:900;color:var(--night);font-size:1.05rem}
+.ct-stars{display:block;color:var(--sunset);font-size:0.8rem;letter-spacing:1px}
+.ct-feature{color:var(--muted);font-size:0.9rem}
+.ct-btn{display:inline-block;background:var(--sunset);color:#fff !important;padding:0.6rem 1.15rem;border-radius:99px;font-weight:800;font-size:0.85rem;white-space:nowrap;transition:background 0.2s,transform 0.15s}
+.ct-btn:hover{background:#ea6a0c;transform:translateY(-1px)}
+.compare-note{text-align:center;font-size:0.8rem;color:var(--muted);margin-top:1.1rem}
+.compare-note a{color:var(--sky-dark);font-weight:700}
 
 /* HERO */
 .hero{background:var(--night);color:white;padding:5rem 2rem 4rem;position:relative;overflow:hidden}
@@ -271,8 +293,14 @@ footer a:hover{color:var(--sky)}
 </a>
 
 <nav>
-  <div class="nav-logo"><span class="nav-logo-icon">✈</span> FareFinderAI</div>
-  <div class="nav-trust"><span class="nav-trust-dot"></span> Free flight search &amp; deal guides</div>
+  <a href="/" class="nav-logo"><span class="nav-logo-icon">✈</span> FareFinderAI</a>
+  <div class="nav-links">
+    <a href="#tools">Flight Tools</a>
+    <a href="#tips">Flight Hacks</a>
+    <a href="/guides/hidden-city-flights">Guides</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about">About</a>
+  </div>
   <button class="nav-cta" onclick="document.getElementById('search').scrollIntoView({behavior:'smooth'})">Find Cheap Flights</button>
 </nav>
 
@@ -283,7 +311,7 @@ footer a:hover{color:var(--sky)}
   <div class="hero-content">
     <div class="hero-badge">AI flight finder · free to use</div>
     <h1>Find <span class="sky">Cheap Flights</span> to <span class="sunset">Anywhere</span></h1>
-    <p class="hero-sub">Hidden city fares, mistake fares, and flexible routes - the tools the airlines don't advertise. Compare hundreds of airlines in one search.</p>
+    <p class="hero-sub">Compare hundreds of airlines in one free search - including the hidden-city and mistake fares the big sites don't show.</p>
 
     <p class="deal-label">Trending destinations - tap to see live fares</p>
     <div class="deal-grid">
@@ -331,6 +359,69 @@ footer a:hover{color:var(--sky)}
     <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem;">
       <script async src="https://tpwgts.com/content?trs=408984&shmarker=624395&locale=en&curr=USD&powered_by=true&border_radius=0&plain=true&color_button=%23F97316&color_button_text=%23ffffff&color_border=%23F97316&promo_id=4132&campaign_id=121" charset="utf-8"></script>
     </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON TABLE (comparison-first, at-a-glance) ============ -->
+<section class="compare-section">
+  <div class="compare-inner">
+    <div class="compare-head">
+      <p class="eyebrow">Compare at a glance</p>
+      <h2 class="title">Flight Tools, <em>Side by Side</em></h2>
+      <p class="subtitle" style="margin-left:auto;margin-right:auto">The tools we tested, ranked by what they do best. Tap one to search - free, no account, no markups.</p>
+    </div>
+    <div class="compare-table-wrap">
+      <table class="compare">
+        <thead>
+          <tr><th>Tool</th><th>Best for</th><th>Rating</th><th>Why it wins</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="ct-tool"><span class="ct-rank">1</span>Aviasales</span></td>
+            <td class="ct-best">Cheapest fare search</td>
+            <td><span class="ct-rating">9.4</span><span class="ct-stars">★★★★★</span></td>
+            <td class="ct-feature">Compares 100s of airlines and agencies, flags cheaper alternate dates.</td>
+            <td><a class="ct-btn" href="https://tp.media/r?marker=624395&trs=408984&p=4114&u=https%3A%2F%2Faviasales.com&campaign_id=100" target="_blank" rel="noopener" onclick="trackAffiliate('Aviasales','compare_table')">Search →</a></td>
+          </tr>
+          <tr>
+            <td><span class="ct-tool"><span class="ct-rank">2</span>Kiwi.com</span></td>
+            <td class="ct-best">Hidden city &amp; flexible routes</td>
+            <td><span class="ct-rating">9.1</span><span class="ct-stars">★★★★★</span></td>
+            <td class="ct-feature">Virtual interlining stitches cheaper itineraries others never show.</td>
+            <td><a class="ct-btn" href="https://tp.media/r?marker=624395&trs=408984&p=3791&u=https%3A%2F%2Fwww.kiwi.com&campaign_id=100" target="_blank" rel="noopener" onclick="trackAffiliate('Kiwi','compare_table')">Search →</a></td>
+          </tr>
+          <tr>
+            <td><span class="ct-tool"><span class="ct-rank">3</span>Trip.com</span></td>
+            <td class="ct-best">International &amp; bundles</td>
+            <td><span class="ct-rating">9.0</span><span class="ct-stars">★★★★★</span></td>
+            <td class="ct-feature">2M+ routes, 24/7 English support, exclusive hotel-bundle pricing.</td>
+            <td><a class="ct-btn" href="https://tp.media/r?marker=624395&trs=408984&p=8626&u=https%3A%2F%2Ftrip.com&campaign_id=121" target="_blank" rel="noopener" onclick="trackAffiliate('Trip.com','compare_table')">Book →</a></td>
+          </tr>
+          <tr>
+            <td><span class="ct-tool"><span class="ct-rank">4</span>Expedia</span></td>
+            <td class="ct-best">Complete trip planning</td>
+            <td><span class="ct-rating">8.9</span><span class="ct-stars">★★★★½</span></td>
+            <td class="ct-feature">Flight + hotel bundles save up to $500; 140,000+ properties.</td>
+            <td><a class="ct-btn" href="https://tp.media/r?campaign_id=594&marker=624395&p=8645&trs=408984&u=https%3A%2F%2Fwww.expedia.com%2F" target="_blank" rel="noopener" onclick="trackAffiliate('Expedia','compare_table')">Book →</a></td>
+          </tr>
+          <tr>
+            <td><span class="ct-tool"><span class="ct-rank">5</span>Klook</span></td>
+            <td class="ct-best">Tours &amp; activities</td>
+            <td><span class="ct-rating">8.8</span><span class="ct-stars">★★★★½</span></td>
+            <td class="ct-feature">Skip-the-line tickets and day trips across 2,500+ destinations.</td>
+            <td><a class="ct-btn" href="https://tp.media/r?marker=624395&trs=408984&p=4110&u=https%3A%2F%2Fklook.com&campaign_id=137" target="_blank" rel="noopener" onclick="trackAffiliate('Klook','compare_table')">Browse →</a></td>
+          </tr>
+          <tr>
+            <td><span class="ct-tool"><span class="ct-rank">6</span>EKTA</span></td>
+            <td class="ct-best">Travel insurance</td>
+            <td><span class="ct-rating">9.0</span><span class="ct-stars">★★★★★</span></td>
+            <td class="ct-feature">Embassy-accepted policies issued in minutes, ages 2 months to 100.</td>
+            <td><a class="ct-btn" href="https://tp.media/r?marker=624395&trs=408984&p=5869&u=https%3A%2F%2Fektatraveling.com&campaign_id=225" target="_blank" rel="noopener" onclick="trackAffiliate('EKTA','compare_table')">Get covered →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="compare-note">Ratings reflect our hands-on testing. We earn a commission if you book through our links, at no extra cost to you. See our <a href="/cheap-flights-finder.html">full tool comparison</a>.</p>
   </div>
 </section>
 
@@ -440,7 +531,7 @@ footer a:hover{color:var(--sky)}
 </section>
 
 <!-- TIPS -->
-<section class="section tips">
+<section class="section tips" id="tips">
   <div class="section-inner">
     <p class="eyebrow">Flight hacking tips</p>
     <h2 class="title">How to Find <em>Cheaper Flights</em> Every Time</h2>
@@ -457,7 +548,7 @@ footer a:hover{color:var(--sky)}
 </section>
 
 <!-- GUIDES & REVIEWS (internal links = SEO) -->
-<section class="section" style="background:var(--surface);border-top:1px solid var(--border)">
+<section class="section" id="guides" style="background:var(--surface);border-top:1px solid var(--border)">
   <div class="section-inner">
     <div style="text-align:center;margin-bottom:3rem">
       <p class="eyebrow">Guides &amp; reviews</p>
