@@ -39,6 +39,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://farefinderai.com/blog/cheap-flights-to-dominican-republic</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- About -->
+  <url>
+    <loc>https://farefinderai.com/about</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
   <!-- Tier 1: Pillar Guides -->
   <url>
     <loc>https://farefinderai.com/guides/hidden-city-flights</loc>
@@ -51,6 +64,24 @@
     <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://farefinderai.com/guides/skiplagging-with-checked-bags</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://farefinderai.com/guides/best-airports-for-hidden-city-fares</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://farefinderai.com/compare/going-vs-skiplagged</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <!-- Tier 2: Tool Reviews & Comparison Pages -->
   <url>
