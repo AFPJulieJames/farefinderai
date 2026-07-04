@@ -166,7 +166,55 @@ footer p{font-size:0.8rem}
 footer a{color:rgba(255,255,255,0.45);margin:0 0.5rem;transition:color 0.2s}
 footer a:hover{color:var(--sky)}
 @media(max-width:600px){nav{padding:0.75rem 1rem}.nav-trust{display:none}.stats-inner{gap:1.5rem}.hero{padding:4rem 1rem 2rem}.breadcrumb-bar{padding:0.5rem 1rem;font-size:0.75rem}}
-.tldr{max-width:780px;margin:2.5rem auto;padding:1.75rem 2rem;background:var(--surface-warm,#FFF7ED);border-left:4px solid var(--sunset);border-radius:8px}.tldr-label{font-size:0.75rem;font-weight:800;letter-spacing:0.15em;color:var(--sunset);text-transform:uppercase;margin-bottom:0.6rem}.tldr p{font-size:1rem;line-height:1.7;color:var(--night);margin:0}</style>
+.tldr{max-width:780px;margin:2.5rem auto;padding:1.75rem 2rem;background:var(--surface-warm,#FFF7ED);border-left:4px solid var(--sunset);border-radius:8px}.tldr-label{font-size:0.75rem;font-weight:800;letter-spacing:0.15em;color:var(--sunset);text-transform:uppercase;margin-bottom:0.6rem}.tldr p{font-size:1rem;line-height:1.7;color:var(--night);margin:0}.faq{background:var(--surface);padding:5rem 2rem}.faq-inner{max-width:800px;margin:0 auto}.faq-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem}.faq-item{background:white;border:1px solid var(--border);border-radius:14px;overflow:hidden}.faq-q{font-size:1rem;font-weight:800;color:var(--night);padding:1.25rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;letter-spacing:-0.01em}.faq-q::after{content:'+';font-size:1.1rem;color:var(--sky);flex-shrink:0;transition:transform 0.2s}.faq-item.open .faq-q::after{transform:rotate(45deg)}.faq-a{font-size:0.9rem;color:var(--muted);line-height:1.75;padding:0 1.5rem 1.25rem;display:none}.faq-item.open .faq-a{display:block}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do flight deal alerts work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Flight deal alerts watch your chosen routes or a home airport and notify you by email or app when a fare drops or a deal appears, so you do not have to keep searching manually."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are flight deal alerts free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many are free, including route price alerts on major search tools. Some curated deal services charge for a premium tier with faster, hand-picked international deals, but free tiers still catch plenty of drops."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best way to set up flight price alerts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set a flexible route alert as soon as you know your trip, add a home-airport deal alert for spontaneous travel, and stack two or three tools since each catches different fares. Keep your dates flexible for the best hits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much can flight deal alerts save?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It varies by route, but alerts help you catch mistake fares, flash sales, and normal price dips that can cut 20 to 60% off, mainly by getting you to a low fare before it disappears."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to act fast on a deal alert?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Often yes. The best fares, especially mistake and error fares, can vanish within hours. When an alert lands a price in the low range for your route, book quickly and hold off on non-refundable extras until it is confirmed."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav>
@@ -276,6 +324,19 @@ footer a:hover{color:var(--sky)}
     </div>
   </div>
 </section>
+<section class="faq">
+  <div class="faq-inner">
+    <p class="eyebrow">Common questions</p>
+    <h2 class="title">Flight Deal Alerts, <em>FAQ</em></h2>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">How do flight deal alerts work?</div><div class="faq-a">Flight deal alerts watch your chosen routes or a home airport and notify you by email or app when a fare drops or a deal appears, so you do not have to keep searching manually.</div></div>
+      <div class="faq-item"><div class="faq-q">Are flight deal alerts free?</div><div class="faq-a">Many are free, including route price alerts on major search tools. Some curated deal services charge for a premium tier with faster, hand-picked international deals, but free tiers still catch plenty of drops.</div></div>
+      <div class="faq-item"><div class="faq-q">What is the best way to set up flight price alerts?</div><div class="faq-a">Set a flexible route alert as soon as you know your trip, add a home-airport deal alert for spontaneous travel, and stack two or three tools since each catches different fares. Keep your dates flexible for the best hits.</div></div>
+      <div class="faq-item"><div class="faq-q">How much can flight deal alerts save?</div><div class="faq-a">It varies by route, but alerts help you catch mistake fares, flash sales, and normal price dips that can cut 20 to 60% off, mainly by getting you to a low fare before it disappears.</div></div>
+      <div class="faq-item"><div class="faq-q">Do I need to act fast on a deal alert?</div><div class="faq-a">Often yes. The best fares, especially mistake and error fares, can vanish within hours. When an alert lands a price in the low range for your route, book quickly and hold off on non-refundable extras until it is confirmed.</div></div>
+    </div>
+  </div>
+</section>
 <section class="cta-strip">
   <h2>Start Tracking <em>Flight Deal Alerts</em> Now</h2>
   <p>FareFinderAI brings together the best fare monitoring tools, all in one place, always free.</p>
@@ -293,5 +354,15 @@ footer a:hover{color:var(--sky)}
   <a href="https://automatedincometools.com/pages/affiliate-disclosure">Affiliate Disclosure</a>
   <a href="https://automatedincometools.com">Automated Income Tools</a></p>
 </footer>
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
 </body>
 </html>

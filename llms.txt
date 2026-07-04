@@ -1,0 +1,29 @@
+# FareFinderAI
+
+> FareFinderAI helps travelers find cheaper flights with a free, AI-powered flight search that compares hundreds of airlines and agencies, plus honest guides to fare tactics like hidden city fares, mistake fares, cashback flights, and flexible-date routing. No account required.
+
+FareFinderAI is an independent flight-deal resource run by Julie James. Pages are tested and kept current for 2026. The site earns affiliate commissions from some of the flight tools it links to, at no cost to the reader; recommendations are based on hands-on testing.
+
+## Core pages
+- [Cheap flights finder (tool rankings)](https://farefinderai.com/cheap-flights-finder.html): Ranked comparison of Aviasales, Kiwi.com, Trip.com, and Expedia for finding the cheapest fares.
+- [AI flight deals](https://farefinderai.com/ai-flight-deals.html): How AI finds cheaper fares and which tools to use.
+- [Mistake fares](https://farefinderai.com/mistake-fares.html): How airline pricing errors work and how to find and book one safely.
+- [Flight deal alerts](https://farefinderai.com/flight-deal-alerts.html): How to get notified when fares drop on your routes.
+
+## Reviews
+- [Aviasales review](https://farefinderai.com/aviasales-review.html): Hands-on review of the Aviasales flight search engine, rated 9.1/10.
+- [WayAway cashback review](https://farefinderai.com/wayaway-cashback-flights.html): Whether the WayAway Plus cashback membership is worth the fee.
+
+## Guides and blog
+- [Guides hub](https://farefinderai.com/guides/): Hidden city ticketing, skiplagging, its 2026 legal status, and the best airports for hidden city fares.
+- [Hidden city flights guide](https://farefinderai.com/guides/hidden-city-flights): What hidden city ticketing is and when it saves money.
+- [Blog](https://farefinderai.com/blog/): Data-backed guides on when to book, the cheapest days to fly, Google Flights tricks, and the cheapest places to fly in 2026.
+
+## Popular destinations
+- [Cheap flights to Cancun](https://farefinderai.com/cheap-flights-to-cancun.html)
+- [Cheap flights to London](https://farefinderai.com/cheap-flights-to-london.html)
+- [Cheap flights to Tokyo](https://farefinderai.com/cheap-flights-to-tokyo.html)
+- [Cheap flights to Paris](https://farefinderai.com/cheap-flights-to-paris.html)
+
+## About
+- [About FareFinderAI](https://farefinderai.com/about): Who runs the site and how pages are tested.

@@ -154,7 +154,55 @@ footer p{font-size:0.8rem}
 footer a{color:rgba(255,255,255,0.45);margin:0 0.5rem;transition:color 0.2s}
 footer a:hover{color:var(--sky)}
 @media(max-width:600px){nav{padding:0.75rem 1rem}.nav-trust{display:none}.stats-inner{gap:1.5rem}.hero{padding:4rem 1rem 2rem}.breadcrumb-bar{padding:0.5rem 1rem;font-size:0.75rem}}
-.tldr{max-width:780px;margin:2.5rem auto;padding:1.75rem 2rem;background:var(--surface-warm,#FFF7ED);border-left:4px solid var(--sunset);border-radius:8px}.tldr-label{font-size:0.75rem;font-weight:800;letter-spacing:0.15em;color:var(--sunset);text-transform:uppercase;margin-bottom:0.6rem}.tldr p{font-size:1rem;line-height:1.7;color:var(--night);margin:0}</style>
+.tldr{max-width:780px;margin:2.5rem auto;padding:1.75rem 2rem;background:var(--surface-warm,#FFF7ED);border-left:4px solid var(--sunset);border-radius:8px}.tldr-label{font-size:0.75rem;font-weight:800;letter-spacing:0.15em;color:var(--sunset);text-transform:uppercase;margin-bottom:0.6rem}.tldr p{font-size:1rem;line-height:1.7;color:var(--night);margin:0}.faq{background:var(--surface);padding:5rem 2rem}.faq-inner{max-width:800px;margin:0 auto}.faq-list{margin-top:2.5rem;display:flex;flex-direction:column;gap:1rem}.faq-item{background:white;border:1px solid var(--border);border-radius:14px;overflow:hidden}.faq-q{font-size:1rem;font-weight:800;color:var(--night);padding:1.25rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;letter-spacing:-0.01em}.faq-q::after{content:'+';font-size:1.1rem;color:var(--sky);flex-shrink:0;transition:transform 0.2s}.faq-item.open .faq-q::after{transform:rotate(45deg)}.faq-a{font-size:0.9rem;color:var(--muted);line-height:1.75;padding:0 1.5rem 1.25rem;display:none}.faq-item.open .faq-a{display:block}</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does AI find cheaper flights?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI flight tools scan billions of fare and routing combinations across hundreds of airlines and dates at once, far more than a person could check by hand. They surface flexible-date options, nearby-airport swaps, and split-ticket routings that often beat a standard search."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are AI flight deal tools free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most are free to search. Tools like Aviasales and Kiwi.com earn a referral when you book, so you compare and search at no cost and only pay the airline or agency when you book."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is AI flight search better than Google Flights?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They overlap, but AI-driven metasearch tools often cover more budget carriers and agencies than Google Flights and are stronger at flexible-date and multi-city routing. The best results come from comparing two tools before you book."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can AI predict when flight prices will drop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some tools estimate price trends and suggest whether to book now or wait, but no tool can predict fares with certainty. Price alerts are more reliable: set one and book when the fare lands in a low range for your route."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I book directly with the airline when I use an AI tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually you book on the airline or agency site the tool links to, not on the tool itself. Always confirm the final price and the baggage and change rules on the booking page before you pay."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav>
@@ -267,6 +315,19 @@ footer a:hover{color:var(--sky)}
     <a href="https://chatgpt.com/g/g-680292ae432c8191a3beabc960394468-farefinder-pro" target="_blank" rel="noopener" class="gpt-btn" onclick="trackAffiliate('FareFinderPro_GPT','ai_deals_bonus')">Try FareFinder Pro Free ✈</a>
   </div>
 </section>
+<section class="faq">
+  <div class="faq-inner">
+    <p class="eyebrow">Common questions</p>
+    <h2 class="title">AI Flight Deals, <em>FAQ</em></h2>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q">How does AI find cheaper flights?</div><div class="faq-a">AI flight tools scan billions of fare and routing combinations across hundreds of airlines and dates at once, far more than a person could check by hand. They surface flexible-date options, nearby-airport swaps, and split-ticket routings that often beat a standard search.</div></div>
+      <div class="faq-item"><div class="faq-q">Are AI flight deal tools free?</div><div class="faq-a">Most are free to search. Tools like Aviasales and Kiwi.com earn a referral when you book, so you compare and search at no cost and only pay the airline or agency when you book.</div></div>
+      <div class="faq-item"><div class="faq-q">Is AI flight search better than Google Flights?</div><div class="faq-a">They overlap, but AI-driven metasearch tools often cover more budget carriers and agencies than Google Flights and are stronger at flexible-date and multi-city routing. The best results come from comparing two tools before you book.</div></div>
+      <div class="faq-item"><div class="faq-q">Can AI predict when flight prices will drop?</div><div class="faq-a">Some tools estimate price trends and suggest whether to book now or wait, but no tool can predict fares with certainty. Price alerts are more reliable: set one and book when the fare lands in a low range for your route.</div></div>
+      <div class="faq-item"><div class="faq-q">Do I book directly with the airline when I use an AI tool?</div><div class="faq-a">Usually you book on the airline or agency site the tool links to, not on the tool itself. Always confirm the final price and the baggage and change rules on the booking page before you pay.</div></div>
+    </div>
+  </div>
+</section>
 <section class="cta-strip">
   <h2>Find Your Next <em>AI Flight Deal</em></h2>
   <p>FareFinderAI brings together the best AI-powered flight tools, free to use, no account required.</p>
@@ -284,5 +345,15 @@ footer a:hover{color:var(--sky)}
   <a href="https://automatedincometools.com/pages/affiliate-disclosure">Affiliate Disclosure</a>
   <a href="https://automatedincometools.com">Automated Income Tools</a></p>
 </footer>
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+</script>
 </body>
 </html>
