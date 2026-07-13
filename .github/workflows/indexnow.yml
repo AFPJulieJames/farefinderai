@@ -1,0 +1,122 @@
+name: IndexNow
+
+# Pings IndexNow whenever HTML content changes on main, so Bing (and therefore
+# Microsoft Copilot, which cites this site heavily) picks up new and updated
+# pages in minutes instead of waiting for a crawl.
+#
+# Setup: the key file c809c9d1...f297.txt is served at the site root. IndexNow
+# verifies ownership by fetching it. The key is public by design.
+#
+# Can also be run by hand from the Actions tab (workflow_dispatch), with an
+# optional single URL, or left blank to submit every page in sitemap.xml.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+      - 'sitemap.xml'
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'Single URL to submit (leave blank to submit the whole sitemap)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2   # need the previous commit to diff against
+
+      - name: Wait for GitHub Pages to deploy
+        if: github.event_name == 'push'
+        run: sleep 90   # Pages needs a moment; submitting a stale page is worse than waiting
+
+      - name: Work out which URLs to submit
+        id: urls
+        run: |
+          set -euo pipefail
+          HOST="farefinderai.com"
+
+          if [ -n "${{ github.event.inputs.url }}" ]; then
+            # Manual run with a specific URL
+            echo "${{ github.event.inputs.url }}" > urls.txt
+
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            # Manual run, no URL given: submit everything in the sitemap
+            grep -oP '(?<=<loc>)[^<]+' sitemap.xml > urls.txt
+
+          else
+            # Push: submit only the pages that actually changed
+            git diff --name-only HEAD^ HEAD -- '*.html' > changed.txt || true
+
+            : > urls.txt
+            while IFS= read -r f; do
+              [ -z "$f" ] && continue
+              [ ! -f "$f" ] && continue   # deleted file, skip
+
+              case "$f" in
+                index.html)            echo "https://$HOST/" >> urls.txt ;;
+                */index.html)          echo "https://$HOST/${f%index.html}" >> urls.txt ;;
+                blog/*|guides/*|compare/*)
+                  # these declare extensionless canonicals
+                  echo "https://$HOST/${f%.html}" >> urls.txt ;;
+                *)                     echo "https://$HOST/$f" >> urls.txt ;;
+              esac
+            done < changed.txt
+          fi
+
+          sort -u urls.txt -o urls.txt
+          COUNT=$(wc -l < urls.txt | tr -d ' ')
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "Submitting $COUNT URL(s):"
+          cat urls.txt
+
+      - name: Submit to IndexNow
+        if: steps.urls.outputs.count != '0'
+        run: |
+          set -euo pipefail
+          KEY="c809c9d1f6226aa65666f76d3451162306aa9ef4c341b4510bd8b7d638e7f297"
+
+          # Build the JSON payload IndexNow expects
+          python3 - <<'PY' > payload.json
+          import json
+          urls = [l.strip() for l in open('urls.txt') if l.strip()]
+          print(json.dumps({
+              "host": "farefinderai.com",
+              "key": "c809c9d1f6226aa65666f76d3451162306aa9ef4c341b4510bd8b7d638e7f297",
+              "keyLocation": "https://farefinderai.com/c809c9d1f6226aa65666f76d3451162306aa9ef4c341b4510bd8b7d638e7f297.txt",
+              "urlList": urls[:10000]
+          }))
+          PY
+
+          echo "--- payload ---"
+          cat payload.json
+          echo
+
+          CODE=$(curl -sS -o response.txt -w '%{http_code}' \
+            -X POST "https://api.indexnow.org/IndexNow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data @payload.json)
+
+          echo "HTTP $CODE"
+          cat response.txt || true
+
+          # 200 = accepted, 202 = accepted, key validation pending. Both fine.
+          if [ "$CODE" = "200" ] || [ "$CODE" = "202" ]; then
+            echo "IndexNow accepted the submission."
+          else
+            echo "::error::IndexNow returned HTTP $CODE"
+            exit 1
+          fi
