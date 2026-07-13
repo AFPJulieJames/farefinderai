@@ -79,13 +79,9 @@
     {"@type": "ListItem", "position": 3, "name": "Aviasales Review"}
   ]
 }
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<style>
+</script><style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sky:#0EA5E9;--sky-dark:#0284C7;--sky-light:#E0F2FE;--night:#0C1445;--sunset:#F97316;--white:#FAFEFF;--muted:rgba(12,20,69,0.55);--border:#E2EFF8;--surface:#F0F9FF;--font-body:'Cabinet Grotesk',sans-serif;--font-serif:'Lora',Georgia,serif}
+:root{--sky:#0EA5E9;--sky-dark:#0369A1;--sky-light:#E0F2FE;--night:#0C1445;--sunset:#F97316;--white:#FAFEFF;--muted:rgba(12,20,69,0.60);--border:#E2EFF8;--surface:#F0F9FF;--font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;--font-serif:Georgia,'Iowan Old Style','Times New Roman',Times,serif}
 body{font-family:var(--font-body);background:var(--white);color:var(--night);line-height:1.65;font-size:16px;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
@@ -134,9 +130,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .score-label strong{display:block;font-size:1.1rem;color:var(--night);font-weight:800}
 .verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
 @media(max-width:600px){.verdict-grid{grid-template-columns:1fr}}
-.verdict-col h4{font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem}
-.verdict-col.pros h4{color:#16A34A}
-.verdict-col.cons h4{color:#DC2626}
+.verdict-col h3{font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem}
+.verdict-col.pros h3{color:#16A34A}
+.verdict-col.cons h3{color:#DC2626}
 .verdict-item{font-size:0.875rem;color:var(--muted);line-height:1.6;margin-bottom:0.5rem;padding-left:1.25rem;position:relative}
 .verdict-item::before{position:absolute;left:0}
 .verdict-col.pros .verdict-item::before{content:'✓';color:#16A34A;font-weight:700}
@@ -172,7 +168,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .related-card{background:var(--surface);padding:1.5rem;border-radius:12px;border:1px solid var(--border);transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block}
 .related-card:hover{transform:translateY(-3px);border-color:var(--sky);box-shadow:0 8px 24px rgba(14,165,233,0.1)}
 .related-card .label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);margin-bottom:0.5rem}
-.related-card h4{font-size:1rem;font-weight:800;color:var(--night);line-height:1.3}
+.related-card h3{font-size:1rem;font-weight:800;color:var(--night);line-height:1.3}
 .cta-strip{background:var(--sky);padding:4rem 2rem;text-align:center}
 .cta-strip h2{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:900;color:white;letter-spacing:-0.03em;margin-bottom:0.75rem;line-height:1.15}
 .cta-strip h2 em{font-family:var(--font-serif);font-style:italic;font-weight:400}
@@ -181,9 +177,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .cta-btn:hover{background:var(--sky-light)}
 .disclosure{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center}
 .disclosure p{font-size:0.8rem;color:var(--muted);max-width:700px;margin:0 auto;line-height:1.6}
-footer{background:var(--night);color:rgba(255,255,255,0.45);padding:2rem;text-align:center}
+footer{background:var(--night);color:rgba(255,255,255,0.55);padding:2rem;text-align:center}
 footer p{font-size:0.8rem}
-footer a{color:rgba(255,255,255,0.45);margin:0 0.5rem;transition:color 0.2s}
+footer a{color:rgba(255,255,255,0.55);margin:0 0.5rem;transition:color 0.2s}
 footer a:hover{color:var(--sky)}
 @media(max-width:600px){nav{padding:0.75rem 1rem}.nav-trust{display:none}.stats-inner{gap:1.5rem}.hero{padding:4rem 1rem 2rem}.breadcrumb-bar{padding:0.5rem 1rem;font-size:0.75rem}}
 .tldr{max-width:780px;margin:2.5rem auto;padding:1.75rem 2rem;background:var(--surface-warm,#FFF7ED);border-left:4px solid var(--sunset);border-radius:8px}.tldr-label{font-size:0.75rem;font-weight:800;letter-spacing:0.15em;color:var(--sunset);text-transform:uppercase;margin-bottom:0.6rem}.tldr p{font-size:1rem;line-height:1.7;color:var(--night);margin:0}</style>
@@ -194,6 +190,8 @@ footer a:hover{color:var(--sky)}
   <div class="nav-trust"><span class="nav-trust-dot"></span> Free flight search &amp; deal guides</div>
   <a href="/" class="nav-cta">Find Cheap Flights</a>
 </nav>
+
+<main id="main">
 <div class="breadcrumb-bar">
   <a href="/">Home</a><span>›</span><a href="/#tools">Tool Reviews</a><span>›</span>Aviasales Review
 </div>
@@ -239,7 +237,7 @@ footer a:hover{color:var(--sky)}
       </div>
       <div class="verdict-grid">
         <div class="verdict-col pros">
-          <h4>✓ What Aviasales Does Well</h4>
+          <h3>✓ What Aviasales Does Well</h3>
           <div class="verdict-item">No extra fees or markups on any fare</div>
           <div class="verdict-item">Searches hundreds of agencies simultaneously</div>
           <div class="verdict-item">AI pricing calendar shows cheapest days to fly</div>
@@ -249,7 +247,7 @@ footer a:hover{color:var(--sky)}
           <div class="verdict-item">Trusted by over 100 million travelers globally</div>
         </div>
         <div class="verdict-col cons">
-          <h4>✗ Aviasales Limitations</h4>
+          <h3>✗ Aviasales Limitations</h3>
           <div class="verdict-item">Doesn't combine multi-airline virtual interlining routes (use Kiwi for that)</div>
           <div class="verdict-item">Hotel search is less comprehensive than Expedia</div>
           <div class="verdict-item">Some regional low-cost carriers not fully indexed</div>
@@ -325,10 +323,10 @@ footer a:hover{color:var(--sky)}
     <p class="eyebrow">Related guides</p>
     <h2 class="title">More <em>Flight Tool Reviews</em></h2>
     <div class="related-grid">
-      <a href="/cheap-flights-finder.html" class="related-card"><div class="label">Comparison</div><h4>The Best Cheap Flights Finder Tools Right Now</h4></a>
-      <a href="/wayaway-cashback-flights.html" class="related-card"><div class="label">Tool Review</div><h4>WayAway Cashback - Get Paid to Book Flights</h4></a>
-      <a href="/ai-flight-deals.html" class="related-card"><div class="label">Guide</div><h4>AI Flight Deals: How AI Finds Cheaper Flights</h4></a>
-      <a href="/flight-deal-alerts.html" class="related-card"><div class="label">Tool Guide</div><h4>Flight Deal Alerts - Book Before Prices Rise</h4></a>
+      <a href="/cheap-flights-finder.html" class="related-card"><div class="label">Comparison</div><h3>The Best Cheap Flights Finder Tools Right Now</h3></a>
+      <a href="/wayaway-cashback-flights.html" class="related-card"><div class="label">Tool Review</div><h3>WayAway Cashback - Get Paid to Book Flights</h3></a>
+      <a href="/ai-flight-deals.html" class="related-card"><div class="label">Guide</div><h3>AI Flight Deals: How AI Finds Cheaper Flights</h3></a>
+      <a href="/flight-deal-alerts.html" class="related-card"><div class="label">Tool Guide</div><h3>Flight Deal Alerts - Book Before Prices Rise</h3></a>
     </div>
   </div>
 </section>
@@ -340,6 +338,8 @@ footer a:hover{color:var(--sky)}
 <div class="disclosure">
   <p>FareFinderAI contains affiliate links. We may earn a commission if you book through our links at no extra cost to you. All tools featured are independently selected based on our testing and research.</p>
 </div>
+</main>
+
 <footer>
   <p>This site contains affiliate links. We may earn a commission if you sign up through our links at no extra cost to you.</p>
   <p style="margin-top:0.5rem">&copy; 2026 FareFinderAI.com by Automated Income Tools LLC. All rights reserved.

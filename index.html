@@ -64,30 +64,25 @@
     {"@type":"Question","name":"Is FareFinderAI free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every search tool and guide on FareFinderAI is free. We earn an affiliate commission when you book through our partner links, at no extra cost to you."}}
   ]
 }
-</script>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<style>
+</script><style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
   --sky:#0EA5E9;
-  --sky-dark:#0284C7;
+  --sky-dark:#0369A1;
   --sky-light:#E0F2FE;
   --night:#0C1445;
   --night2:#111827;
   --sunset:#F97316;
   --sunset-light:#FED7AA;
   --white:#FAFEFF;
-  --muted:rgba(12,20,69,0.55);
+  --muted:rgba(12,20,69,0.60);
   --border:#E2EFF8;
   --surface:#F0F9FF;
   --green:#22C55E;
-  --font-display:'Cabinet Grotesk',sans-serif;
-  --font-body:'Cabinet Grotesk',sans-serif;
-  --font-serif:'Lora',Georgia,serif;
+  --font-display:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  --font-serif:Georgia,'Iowan Old Style','Times New Roman',Times,serif;
 }
 
 body{font-family:var(--font-body);background:var(--white);color:var(--night);line-height:1.65;font-size:16px;overflow-x:hidden}
@@ -251,9 +246,9 @@ table.compare tbody tr:hover{background:var(--surface)}
 /* DISCLOSURE / FOOTER */
 .disclosure{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center}
 .disclosure p{font-size:0.8rem;color:var(--muted);max-width:700px;margin:0 auto;line-height:1.6}
-footer{background:var(--night);color:rgba(255,255,255,0.45);padding:2rem;text-align:center}
+footer{background:var(--night);color:rgba(255,255,255,0.55);padding:2rem;text-align:center}
 footer p{font-size:0.8rem}
-footer a{color:rgba(255,255,255,0.45);margin:0 0.5rem;transition:color 0.2s}
+footer a{color:rgba(255,255,255,0.55);margin:0 0.5rem;transition:color 0.2s}
 footer a:hover{color:var(--sky)}
 
 /* ANIMATIONS */
@@ -304,6 +299,8 @@ footer a:hover{color:var(--sky)}
   </div>
   <button class="nav-cta" onclick="document.getElementById('search').scrollIntoView({behavior:'smooth'})">Find Cheap Flights</button>
 </nav>
+
+<main id="main">
 
 <!-- ============ HERO: headline + LIVE deal buttons + email, all above the fold ============ -->
 <section class="hero">
@@ -610,6 +607,8 @@ footer a:hover{color:var(--sky)}
 <div class="disclosure">
   <p>This site contains affiliate links. We may earn a commission if you book or sign up through our links - at no extra cost to you. Hidden city ticketing and skiplagging carry airline-policy risks; read our guides before booking.</p>
 </div>
+
+</main>
 
 <footer>
   <p>&copy; 2026 FareFinderAI.com by Automated Income Tools LLC. All rights reserved.</p>

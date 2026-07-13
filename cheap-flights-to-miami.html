@@ -68,13 +68,9 @@
     {"@type": "ListItem","position": 3,"name": "Cheap Flights to Miami"}
   ]
 }
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-<style>
+</script><style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--sky:#0EA5E9;--sky-dark:#0284C7;--sky-light:#E0F2FE;--night:#0C1445;--sunset:#F97316;--white:#FAFEFF;--muted:rgba(12,20,69,0.55);--border:#E2EFF8;--surface:#F0F9FF;--font-body:'Cabinet Grotesk',sans-serif;--font-serif:'Lora',Georgia,serif}
+:root{--sky:#0EA5E9;--sky-dark:#0369A1;--sky-light:#E0F2FE;--night:#0C1445;--sunset:#F97316;--white:#FAFEFF;--muted:rgba(12,20,69,0.60);--border:#E2EFF8;--surface:#F0F9FF;--font-body:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;--font-serif:Georgia,'Iowan Old Style','Times New Roman',Times,serif}
 body{font-family:var(--font-body);background:var(--white);color:var(--night);line-height:1.65;font-size:16px;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
@@ -145,7 +141,7 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .related-card{background:var(--surface);padding:1.5rem;border-radius:12px;border:1px solid var(--border);transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;display:block}
 .related-card:hover{transform:translateY(-3px);border-color:var(--sky);box-shadow:0 8px 24px rgba(14,165,233,0.1)}
 .related-card .label{font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--sky);margin-bottom:0.5rem}
-.related-card h4{font-size:1rem;font-weight:800;color:var(--night);line-height:1.3}
+.related-card h3{font-size:1rem;font-weight:800;color:var(--night);line-height:1.3}
 .cta-strip{background:var(--sky);padding:4rem 2rem;text-align:center}
 .cta-strip h2{font-size:clamp(1.5rem,3vw,2.25rem);font-weight:900;color:white;letter-spacing:-0.03em;margin-bottom:0.75rem;line-height:1.15}
 .cta-strip h2 em{font-family:var(--font-serif);font-style:italic;font-weight:400}
@@ -154,9 +150,9 @@ nav{position:sticky;top:0;z-index:100;background:rgba(250,254,255,0.96);backdrop
 .cta-btn:hover{background:var(--sky-light)}
 .disclosure{background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem;text-align:center}
 .disclosure p{font-size:0.8rem;color:var(--muted);max-width:700px;margin:0 auto;line-height:1.6}
-footer{background:var(--night);color:rgba(255,255,255,0.45);padding:2rem;text-align:center}
+footer{background:var(--night);color:rgba(255,255,255,0.55);padding:2rem;text-align:center}
 footer p{font-size:0.8rem}
-footer a{color:rgba(255,255,255,0.45);margin:0 0.5rem;transition:color 0.2s}
+footer a{color:rgba(255,255,255,0.55);margin:0 0.5rem;transition:color 0.2s}
 footer a:hover{color:var(--sky)}
 @media(max-width:600px){nav{padding:0.75rem 1rem}.nav-trust{display:none}.stats-inner{gap:1.5rem}.hero{padding:3.5rem 1rem 3rem}.breadcrumb-bar{padding:0.5rem 1rem;font-size:0.75rem}}
 .tldr{max-width:780px;margin:2.5rem auto;padding:1.75rem 2rem;background:var(--surface-warm,#FFF7ED);border-left:4px solid var(--sunset);border-radius:8px}.tldr-label{font-size:0.75rem;font-weight:800;letter-spacing:0.15em;color:var(--sunset);text-transform:uppercase;margin-bottom:0.6rem}.tldr p{font-size:1rem;line-height:1.7;color:var(--night);margin:0}</style>
@@ -167,6 +163,8 @@ footer a:hover{color:var(--sky)}
   <div class="nav-trust"><span class="nav-trust-dot"></span> Free flight search and deal guides</div>
   <a href="#search" class="nav-cta">Search Miami Flights</a>
 </nav>
+
+<main id="main">
 <div class="breadcrumb-bar">
   <a href="/">Home</a><span>›</span><a href="/#destinations">Destinations</a><span>›</span>Cheap Flights to Miami
 </div>
@@ -285,10 +283,10 @@ footer a:hover{color:var(--sky)}
     <p class="eyebrow">Keep saving</p>
     <h2 class="title">More Ways to <em>Fly for Less</em></h2>
     <div class="related-grid">
-      <a href="/cheap-flights-finder.html" class="related-card"><div class="label">Comparison</div><h4>The Best Cheap Flights Finder Tools Right Now</h4></a>
-      <a href="/aviasales-review.html" class="related-card"><div class="label">Tool Review</div><h4>Aviasales Review, Is It Worth Using? (9.1/10)</h4></a>
-      <a href="/mistake-fares.html" class="related-card"><div class="label">Flight Hack</div><h4>Mistake Fares: Fly Business Class for Economy Prices</h4></a>
-      <a href="/flight-deal-alerts.html" class="related-card"><div class="label">Tool Guide</div><h4>Flight Deal Alerts, Book Before Prices Rise</h4></a>
+      <a href="/cheap-flights-finder.html" class="related-card"><div class="label">Comparison</div><h3>The Best Cheap Flights Finder Tools Right Now</h3></a>
+      <a href="/aviasales-review.html" class="related-card"><div class="label">Tool Review</div><h3>Aviasales Review, Is It Worth Using? (9.1/10)</h3></a>
+      <a href="/mistake-fares.html" class="related-card"><div class="label">Flight Hack</div><h3>Mistake Fares: Fly Business Class for Economy Prices</h3></a>
+      <a href="/flight-deal-alerts.html" class="related-card"><div class="label">Tool Guide</div><h3>Flight Deal Alerts, Book Before Prices Rise</h3></a>
     </div>
   </div>
 </section>
@@ -300,6 +298,8 @@ footer a:hover{color:var(--sky)}
 <div class="disclosure">
   <p>This page contains affiliate links. We may earn a commission if you book through our links, at no extra cost to you. Fares and travel conditions change, always confirm current prices and entry requirements before booking.</p>
 </div>
+</main>
+
 <footer>
   <p>&copy; 2026 FareFinderAI.com by Automated Income Tools LLC. All rights reserved.</p>
   <p style="margin-top:0.5rem">
