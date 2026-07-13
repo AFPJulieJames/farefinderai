@@ -17,6 +17,7 @@ FareFinderAI is an independent flight-deal resource run by Julie James. Pages ar
 ## Guides and blog
 - [Guides hub](https://farefinderai.com/guides/): Hidden city ticketing, skiplagging, its 2026 legal status, and the best airports for hidden city fares.
 - [Hidden city flights guide](https://farefinderai.com/guides/hidden-city-flights): What hidden city ticketing is and when it saves money.
+- [Airline hidden city policies](https://farefinderai.com/guides/airline-hidden-city-policies): Verbatim contract-of-carriage clauses from American, Delta, United, Southwest, Alaska and JetBlue on hidden city ticketing, the penalties each airline reserves, and the full case record. Primary-source reference, verified July 2026.
 - [Blog](https://farefinderai.com/blog/): Data-backed guides on when to book, the cheapest days to fly, Google Flights tricks, and the cheapest places to fly in 2026.
 
 ## Popular destinations
