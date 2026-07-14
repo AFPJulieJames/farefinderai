@@ -8,6 +8,19 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-T1HYCKVZ48');
+
+  // Outbound affiliate click tracking - fires a GA4 event tagged with program + placement.
+  function trackAffiliate(program, placement){
+    try{ gtag('event','affiliate_click',{'affiliate_program':program,'placement':placement||'unknown'}); }catch(e){}
+    return true;
+  }
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1HYCKVZ48"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-T1HYCKVZ48');
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WayAway Cashback Review 2026: Is Plus Worth It?</title>
@@ -526,6 +539,18 @@ footer a:hover{color:var(--sky)}
   <p>FareFinderAI contains affiliate links. We may earn a commission if you book through our links at no extra cost to you. All tools featured are independently selected based on our testing and research.</p>
 </div>
 </main>
+
+
+<!-- DEAL ALERTS CAPTURE - the site's only retention mechanism -->
+<section class="newsletter-capture" style="background:#0F1B3D;padding:3.5rem 1.5rem;margin:3rem 0 0">
+  <div style="max-width:660px;margin:0 auto;text-align:center">
+    <div style="color:#7DD3FC;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:.9rem">Free deal alerts</div>
+    <h2 style="color:#fff;font-size:1.85rem;line-height:1.25;margin:0 0 .9rem">The best fares don&rsquo;t wait for you to check.</h2>
+    <p style="color:#C3CEE6;font-size:1.02rem;line-height:1.6;margin:0 0 1.6rem">Mistake fares get fixed within hours. Fare drops don&rsquo;t announce themselves. We send them the moment we find them &mdash; including 50&ndash;90% pricing errors.</p>
+    <a href="https://farefinderai.beehiiv.com/subscribe" target="_blank" rel="noopener" onclick="if(typeof trackAffiliate==='function')trackAffiliate('Newsletter','wayaway_cashback_flights')" style="display:inline-block;background:#E2782F;color:#fff;font-weight:700;font-size:1.02rem;padding:.95rem 2.1rem;border-radius:10px;text-decoration:none">Get Free Deal Alerts &#9992;</a>
+    <p style="color:#8494B4;font-size:.85rem;margin:1.1rem 0 0">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
 
 <footer>
   <p>This site contains affiliate links. We may earn a commission if you sign up through our links at no extra cost to you.</p>
