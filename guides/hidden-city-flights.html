@@ -2,6 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T1HYCKVZ48"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-T1HYCKVZ48');
+
+  // Outbound affiliate click tracking - fires a GA4 event tagged with program + placement.
+  function trackAffiliate(program, placement){
+    try{ gtag('event','affiliate_click',{'affiliate_program':program,'placement':placement||'unknown'}); }catch(e){}
+    return true;
+  }
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hidden City Flights: Save Up to 60% on Airfare (2026)</title>
 <meta name="description" content="Hidden city ticketing can save you 40-60% on flights. Learn how skiplagging works, the 2026 legal status, real risks, and how to find these fares safely.">
@@ -688,6 +701,19 @@ footer a:hover{border-bottom-color:var(--sunset)}
 </div><!-- /article-body -->
 
 </article>
+
+<!-- AIRHELP / PASSENGER RIGHTS CTA - these pages carry 62% of site impressions and previously had zero offer -->
+<section class="rights-cta" style="background:#12233F;border-top:3px solid #E2782F;padding:3rem 1.5rem;margin:3rem 0 0">
+  <div style="max-width:660px;margin:0 auto">
+    <div style="color:#7DD3FC;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:.9rem">Know your rights</div>
+    <h2 style="color:#fff;font-family:var(--font-display,inherit);font-size:1.75rem;line-height:1.25;margin:0 0 .9rem">Airlines hold you to their contract. Hold them to theirs.</h2>
+    <p style="color:#C3CEE6;font-size:1.02rem;line-height:1.65;margin:0 0 1.2rem">Hidden-city ticketing exists because airline pricing is irrational. So does the other side of the ledger: when a carrier delays you 3+ hours, cancels, or denies you boarding through its own fault, EU and UK rules oblige it to pay &euro;250&ndash;600. Most passengers never claim it.</p>
+    <p style="color:#C3CEE6;font-size:1.02rem;line-height:1.65;margin:0 0 1.6rem"><strong style="color:#fff">You can always file the claim yourself, free.</strong> Airlines are legally required to process it. But if you would rather not spend three months chasing them, AirHelp will do it on a no-win, no-fee basis and take a cut of whatever they recover.</p>
+    <a href="https://tp.media/r?campaign_id=120&amp;marker=624395&amp;p=9139&amp;trs=408984&amp;u=https%3A%2F%2Fairhelp.com&amp;sub_id=site_hidden_city" target="_blank" rel="noopener sponsored" onclick="if(typeof trackAffiliate==='function')trackAffiliate('AirHelp','guide_hidden_city')" style="display:inline-block;background:#E2782F;color:#fff;font-weight:700;font-size:1.02rem;padding:.95rem 2.1rem;border-radius:10px;text-decoration:none">Check if your flight qualifies &rarr;</a>
+    <p style="color:#8494B4;font-size:.85rem;margin:1.1rem 0 0">Free to check. No win, no fee. Affiliate link - costs you nothing extra.</p>
+  </div>
+</section>
+
 
 <!-- GUIDE EMAIL CAPTURE - these pages carry the majority of site impressions; capture the reader -->
 <section class="guide-capture" style="background:#0F1B3D;padding:3.5rem 1.5rem;margin:3rem 0 0">
