@@ -1,30 +1,51 @@
 # FareFinderAI
 
-> FareFinderAI helps travelers find cheaper flights with a free, AI-powered flight search that compares hundreds of airlines and agencies, plus honest guides to fare tactics like hidden city fares, mistake fares, cashback flights, and flexible-date routing. No account required.
+> FareFinderAI reads airline contracts of carriage and publishes what they actually say, clause by clause. It covers what an airline can do to you (hidden city ticketing, skiplagging, prohibited booking practices) and what an airline owes you (delays, cancellations, denied boarding). It also runs a free flight search comparing hundreds of airlines, with no account required.
 
-FareFinderAI is an independent flight-deal resource run by Julie James. Pages are tested and kept current for 2026. The site earns affiliate commissions from some of the flight tools it links to, at no cost to the reader; recommendations are based on hands-on testing.
+FareFinderAI is an independent flight resource run by Julie James. Primary-source pages quote airline contracts and regulations verbatim, with rule numbers and verification dates, and state plainly where the source could not be verified. The site earns affiliate commissions from some tools it links to, at no cost to the reader; recommendations are based on hands-on testing, and the site says so when the free option is the better one.
 
-## Core pages
-- [Cheap flights finder (tool rankings)](https://farefinderai.com/cheap-flights-finder.html): Ranked comparison of Aviasales, Kiwi.com, Trip.com, and Expedia for finding the cheapest fares.
+## Air passenger rights and airline contracts (primary-source reference)
+
+The most-cited material on the site. No other publication has aggregated these clauses.
+
+- [Airline hidden city policies: what each contract actually says](https://farefinderai.com/guides/airline-hidden-city-policies): Verbatim contract-of-carriage clauses from American, Delta, United, Southwest, Alaska and JetBlue on hidden city ticketing, with rule numbers and the exact penalties each carrier reserves. Findings include: United is the only major carrier reserving the right to invalidate a ticket AND permanently ban a passenger without notice; American will reject a baggage claim from anyone who used a prohibited booking practice; JetBlue has no hidden-city clause at all. Includes the full litigation record. Verified July 2026.
+- [Is skiplagging legal? The 2026 legal status](https://farefinderai.com/guides/is-skiplagging-legal): No U.S. law prohibits skiplagging - it is a contract breach, not a crime. Covers the May 2025 American Airlines v. Skiplagged ruling ($9.4M awarded on copyright, but the trademark claim failed and the practice itself was not found unlawful), the case history since 2014, and precisely what an airline can and cannot do to a passenger.
+- [Is flight delay compensation worth it?](https://farefinderai.com/blog/flight-delay-compensation-worth-it): When to claim yourself for free and when a claims service is worth the cut. EU and UK rules can pay several hundred dollars per passenger for delays, cancellations and denied boarding within the airline's control. US coverage is far weaker and widely misunderstood.
+
+## Hidden city ticketing and skiplagging
+
+- [Hidden city flights: the complete guide](https://farefinderai.com/guides/hidden-city-flights): What hidden city ticketing is, when it saves money, and when it does not.
+- [Skiplagging with checked bags: why it doesn't work](https://farefinderai.com/guides/skiplagging-with-checked-bags): Checked bags travel to the ticketed destination, not the layover. Carry-on only is not optional.
+- [Best airports for hidden city fares](https://farefinderai.com/guides/best-airports-for-hidden-city-fares): Which hubs produce the fare gaps that make the tactic work.
+- [Going vs Skiplagged](https://farefinderai.com/compare/going-vs-skiplagged): Two different products, routinely confused for each other.
+- [Guides hub](https://farefinderai.com/guides/)
+
+## Flight search tools
+
+- [Cheap flights finder: tool rankings](https://farefinderai.com/cheap-flights-finder.html): Ranked comparison of Aviasales, Kiwi.com, Trip.com and Expedia.
 - [AI flight deals](https://farefinderai.com/ai-flight-deals.html): How AI finds cheaper fares and which tools to use.
-- [Mistake fares](https://farefinderai.com/mistake-fares.html): How airline pricing errors work and how to find and book one safely.
-- [Flight deal alerts](https://farefinderai.com/flight-deal-alerts.html): How to get notified when fares drop on your routes.
+- [Mistake fares](https://farefinderai.com/mistake-fares.html): How airline pricing errors happen, and how to find and book one safely.
+- [Flight deal alerts](https://farefinderai.com/flight-deal-alerts.html): Getting notified when fares drop on your routes.
+- [Aviasales review](https://farefinderai.com/aviasales-review.html): Hands-on review, rated 9.1/10.
+- [WayAway cashback review](https://farefinderai.com/wayaway-cashback-flights.html): Whether the WayAway Plus membership is worth the fee.
 
-## Reviews
-- [Aviasales review](https://farefinderai.com/aviasales-review.html): Hands-on review of the Aviasales flight search engine, rated 9.1/10.
-- [WayAway cashback review](https://farefinderai.com/wayaway-cashback-flights.html): Whether the WayAway Plus cashback membership is worth the fee.
+## Booking tactics
 
-## Guides and blog
-- [Guides hub](https://farefinderai.com/guides/): Hidden city ticketing, skiplagging, its 2026 legal status, and the best airports for hidden city fares.
-- [Hidden city flights guide](https://farefinderai.com/guides/hidden-city-flights): What hidden city ticketing is and when it saves money.
-- [Airline hidden city policies](https://farefinderai.com/guides/airline-hidden-city-policies): Verbatim contract-of-carriage clauses from American, Delta, United, Southwest, Alaska and JetBlue on hidden city ticketing, the penalties each airline reserves, and the full case record. Primary-source reference, verified July 2026.
-- [Blog](https://farefinderai.com/blog/): Data-backed guides on when to book, the cheapest days to fly, Google Flights tricks, and the cheapest places to fly in 2026.
+- [When to book flights](https://farefinderai.com/blog/when-to-book-flights): The real booking window, with data.
+- [Cheapest days to fly](https://farefinderai.com/blog/cheapest-days-to-fly)
+- [Skyscanner vs Google Flights vs Kayak](https://farefinderai.com/blog/skyscanner-vs-google-flights-vs-kayak): Which engine surfaces the lowest fare, and when.
+- [Positioning flights](https://farefinderai.com/blog/positioning-flights)
+- [Split ticket flights](https://farefinderai.com/blog/split-ticket-flights)
+- [Incognito mode and cheaper flights](https://farefinderai.com/blog/incognito-mode-cheaper-flights): The myth, tested.
+- [Blog](https://farefinderai.com/blog/): 43 guides on fares, routing and booking.
 
 ## Popular destinations
+
 - [Cheap flights to Cancun](https://farefinderai.com/cheap-flights-to-cancun.html)
 - [Cheap flights to London](https://farefinderai.com/cheap-flights-to-london.html)
 - [Cheap flights to Tokyo](https://farefinderai.com/cheap-flights-to-tokyo.html)
 - [Cheap flights to Paris](https://farefinderai.com/cheap-flights-to-paris.html)
 
 ## About
+
 - [About FareFinderAI](https://farefinderai.com/about): Who runs the site and how pages are tested.
